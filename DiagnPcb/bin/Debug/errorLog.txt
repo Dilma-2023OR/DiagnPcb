@@ -1,0 +1,23 @@
+
+10-02-2025 13:33:42,Error al obtener los cables:Unknown database 'messystems'
+10-02-2025 13:33:43,Error al obtener las fallas:Unknown database 'messystems'
+10-02-2025 13:33:45,Error al obtener los diagnosticos:Unknown database 'messystems'
+10-02-2025 13:33:46,Error al obtener las ubicaciones:Unknown database 'messystems'
+10-02-2025 13:33:47,Error al obtener los técnicos:Unknown database 'messystems'
+11-02-2025 09:54:31,Error al obtener la información:Referencia a objeto no establecida como instancia de un objeto.
+11-02-2025 10:46:31,Error al conectar a la Base de Datos:Unable to connect to any of the specified MySQL hosts.
+11-02-2025 10:48:15,Error al conectar a la Base de Datos:Unable to connect to any of the specified MySQL hosts.
+11-02-2025 10:56:19,Error al conectar a la Base de Datos:Unable to connect to any of the specified MySQL hosts.
+11-02-2025 10:56:45,Error al conectar a la Base de Datos:Unable to connect to any of the specified MySQL hosts.
+11-02-2025 11:00:36,Error al conectar a la Base de Datos:Unable to connect to any of the specified MySQL hosts.
+11-02-2025 11:03:51,Error al conectar a la Base de Datos:Unable to connect to any of the specified MySQL hosts.
+11-02-2025 11:04:25,Error al conectar a la Base de Datos:Unable to connect to any of the specified MySQL hosts.
+11-02-2025 13:09:04,Error al obtener la información:Unknown column 'dpt.dayregister' in 'where clause'
+11-02-2025 13:10:56,Error al obtener la información:Unknown column 'dpt.dayregister' in 'where clause'
+11-02-2025 13:13:37,Error al obtener la información:Unknown column 'dpt.dayregister' in 'where clause'
+11-02-2025 13:14:53,Error al obtener la información:Unknown column 'dpt.dayregister' in 'where clause'
+11-02-2025 13:23:10,Error al obtener la información:Unknown column 'SE.part_number' in 'where clause'
+11-02-2025 13:23:13,Error al obtener la información:Unknown column 'SE.part_number' in 'where clause'
+19-02-2025 11:53:17,Error al cargar la imagen:No se pudo encontrar el archivo 'openFileDialog1'.
+20-02-2025 07:28:47,Error al cargar la imagen:Error genérico en GDI+.
+20-02-2025 07:28:49,Error al cargar la imagen:Error genérico en GDI+.
