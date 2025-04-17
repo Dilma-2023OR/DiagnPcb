@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grafica1));
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -77,10 +76,11 @@
             this.tableLayoutPanel3.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1619, 123);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1924, 151);
             this.tableLayoutPanel3.TabIndex = 22;
             // 
             // label1
@@ -89,9 +89,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("72 Black", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(575, 0);
+            this.label1.Location = new System.Drawing.Point(670, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(468, 123);
+            this.label1.Size = new System.Drawing.Size(584, 151);
             this.label1.TabIndex = 0;
             this.label1.Text = "Gráfica";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,10 +102,10 @@
             this.flowLayoutPanel1.Controls.Add(this.panel2);
             this.flowLayoutPanel1.Controls.Add(this.tableLayoutPanel1);
             this.flowLayoutPanel1.Controls.Add(this.tableLayoutPanel2);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(536, 130);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(715, 160);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(599, 175);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(799, 215);
             this.flowLayoutPanel1.TabIndex = 23;
             // 
             // panel2
@@ -112,10 +113,10 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.checkedListBox1);
             this.panel2.Controls.Add(this.tbLinea);
-            this.panel2.Location = new System.Drawing.Point(2, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(3, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(190, 164);
+            this.panel2.Size = new System.Drawing.Size(253, 202);
             this.panel2.TabIndex = 1;
             // 
             // label3
@@ -124,10 +125,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ebrima", 19.8F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(4, -2);
+            this.label3.Location = new System.Drawing.Point(5, -2);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 37);
+            this.label3.Size = new System.Drawing.Size(111, 45);
             this.label3.TabIndex = 26;
             this.label3.Text = "Linea:";
             // 
@@ -135,20 +136,20 @@
             // 
             this.checkedListBox1.Font = new System.Drawing.Font("Century Schoolbook", 10.8F);
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(7, 59);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.checkedListBox1.Location = new System.Drawing.Point(9, 73);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(177, 84);
+            this.checkedListBox1.Size = new System.Drawing.Size(235, 124);
             this.checkedListBox1.TabIndex = 4;
             this.checkedListBox1.Visible = false;
             // 
             // tbLinea
             // 
             this.tbLinea.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.tbLinea.Location = new System.Drawing.Point(4, 36);
-            this.tbLinea.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLinea.Location = new System.Drawing.Point(5, 44);
+            this.tbLinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLinea.Name = "tbLinea";
-            this.tbLinea.Size = new System.Drawing.Size(180, 24);
+            this.tbLinea.Size = new System.Drawing.Size(239, 28);
             this.tbLinea.TabIndex = 27;
             this.tbLinea.Text = "Seleccionar opciones..";
             this.tbLinea.Click += new System.EventHandler(this.tbLinea_Click);
@@ -161,16 +162,16 @@
             this.tableLayoutPanel1.Controls.Add(this.dateTimePickerDe, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblA, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePickerA, 0, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(196, 2);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(262, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(233, 160);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(311, 197);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // lblDe
@@ -179,10 +180,10 @@
             this.lblDe.AutoSize = true;
             this.lblDe.Font = new System.Drawing.Font("Ebrima", 15F, System.Drawing.FontStyle.Bold);
             this.lblDe.ForeColor = System.Drawing.Color.Black;
-            this.lblDe.Location = new System.Drawing.Point(0, 2);
+            this.lblDe.Location = new System.Drawing.Point(0, 3);
             this.lblDe.Margin = new System.Windows.Forms.Padding(0);
             this.lblDe.Name = "lblDe";
-            this.lblDe.Size = new System.Drawing.Size(43, 28);
+            this.lblDe.Size = new System.Drawing.Size(54, 35);
             this.lblDe.TabIndex = 30;
             this.lblDe.Text = "De:";
             // 
@@ -190,10 +191,10 @@
             // 
             this.dateTimePickerDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerDe.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.dateTimePickerDe.Location = new System.Drawing.Point(2, 43);
-            this.dateTimePickerDe.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerDe.Location = new System.Drawing.Point(3, 54);
+            this.dateTimePickerDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerDe.Name = "dateTimePickerDe";
-            this.dateTimePickerDe.Size = new System.Drawing.Size(190, 24);
+            this.dateTimePickerDe.Size = new System.Drawing.Size(252, 28);
             this.dateTimePickerDe.TabIndex = 31;
             // 
             // lblA
@@ -202,10 +203,10 @@
             this.lblA.AutoSize = true;
             this.lblA.Font = new System.Drawing.Font("Ebrima", 15F, System.Drawing.FontStyle.Bold);
             this.lblA.ForeColor = System.Drawing.Color.Black;
-            this.lblA.Location = new System.Drawing.Point(0, 93);
+            this.lblA.Location = new System.Drawing.Point(0, 115);
             this.lblA.Margin = new System.Windows.Forms.Padding(0);
             this.lblA.Name = "lblA";
-            this.lblA.Size = new System.Drawing.Size(31, 28);
+            this.lblA.Size = new System.Drawing.Size(40, 35);
             this.lblA.TabIndex = 32;
             this.lblA.Text = "A:";
             // 
@@ -213,10 +214,10 @@
             // 
             this.dateTimePickerA.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerA.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.dateTimePickerA.Location = new System.Drawing.Point(2, 130);
-            this.dateTimePickerA.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerA.Location = new System.Drawing.Point(3, 161);
+            this.dateTimePickerA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerA.Name = "dateTimePickerA";
-            this.dateTimePickerA.Size = new System.Drawing.Size(190, 24);
+            this.dateTimePickerA.Size = new System.Drawing.Size(252, 28);
             this.dateTimePickerA.TabIndex = 33;
             // 
             // tableLayoutPanel2
@@ -226,14 +227,14 @@
             this.tableLayoutPanel2.Controls.Add(this.button1, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnExportar, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnConsultar, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(433, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(579, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(150, 164);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 202);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // button1
@@ -244,9 +245,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Ebrima", 4F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(10, 121);
+            this.button1.Location = new System.Drawing.Point(13, 149);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 33);
+            this.button1.Size = new System.Drawing.Size(173, 41);
             this.button1.TabIndex = 32;
             this.button1.TabStop = false;
             this.button1.Text = "Otra Consulta";
@@ -261,9 +263,10 @@
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExportar.Font = new System.Drawing.Font("Ebrima", 4F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter);
             this.btnExportar.ForeColor = System.Drawing.Color.Black;
-            this.btnExportar.Location = new System.Drawing.Point(11, 68);
+            this.btnExportar.Location = new System.Drawing.Point(14, 84);
+            this.btnExportar.Margin = new System.Windows.Forms.Padding(4);
             this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(128, 31);
+            this.btnExportar.Size = new System.Drawing.Size(171, 38);
             this.btnExportar.TabIndex = 31;
             this.btnExportar.TabStop = false;
             this.btnExportar.Text = "Exportar";
@@ -278,9 +281,10 @@
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Ebrima", 4F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter);
             this.btnConsultar.ForeColor = System.Drawing.Color.Black;
-            this.btnConsultar.Location = new System.Drawing.Point(21, 12);
+            this.btnConsultar.Location = new System.Drawing.Point(28, 15);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(107, 31);
+            this.btnConsultar.Size = new System.Drawing.Size(143, 38);
             this.btnConsultar.TabIndex = 7;
             this.btnConsultar.TabStop = false;
             this.btnConsultar.Text = "CONSULTAR";
@@ -291,10 +295,10 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.Controls.Add(this.gBoxValidation);
-            this.panel1.Location = new System.Drawing.Point(65, 320);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(87, 394);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1425, 541);
+            this.panel1.Size = new System.Drawing.Size(1900, 666);
             this.panel1.TabIndex = 24;
             // 
             // gBoxValidation
@@ -306,8 +310,10 @@
             this.gBoxValidation.Font = new System.Drawing.Font("72 Black", 20F);
             this.gBoxValidation.ForeColor = System.Drawing.Color.Black;
             this.gBoxValidation.Location = new System.Drawing.Point(0, 0);
+            this.gBoxValidation.Margin = new System.Windows.Forms.Padding(4);
             this.gBoxValidation.Name = "gBoxValidation";
-            this.gBoxValidation.Size = new System.Drawing.Size(1425, 541);
+            this.gBoxValidation.Padding = new System.Windows.Forms.Padding(4);
+            this.gBoxValidation.Size = new System.Drawing.Size(1900, 666);
             this.gBoxValidation.TabIndex = 18;
             this.gBoxValidation.TabStop = false;
             this.gBoxValidation.Text = "Diagnostico";
@@ -318,10 +324,10 @@
             this.flowLayoutPanel3.AutoSize = true;
             this.flowLayoutPanel3.Controls.Add(this.chart1);
             this.flowLayoutPanel3.Controls.Add(this.dataGridView1);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(5, 37);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(7, 46);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(1418, 405);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(1891, 498);
             this.flowLayoutPanel3.TabIndex = 35;
             // 
             // chart1
@@ -331,16 +337,13 @@
             chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(2, 2);
-            this.chart1.Margin = new System.Windows.Forms.Padding(2);
+            this.chart1.Location = new System.Drawing.Point(3, 2);
+            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(804, 393);
+            this.chart1.Size = new System.Drawing.Size(1072, 484);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -354,14 +357,14 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(810, 2);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(1081, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(604, 393);
+            this.dataGridView1.Size = new System.Drawing.Size(805, 484);
             this.dataGridView1.TabIndex = 1;
             // 
             // lblVersion
@@ -370,25 +373,25 @@
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Ebrima", 4F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter);
             this.lblVersion.ForeColor = System.Drawing.Color.Black;
-            this.lblVersion.Location = new System.Drawing.Point(1432, 883);
+            this.lblVersion.Location = new System.Drawing.Point(1844, 1090);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(58, 21);
+            this.lblVersion.Size = new System.Drawing.Size(71, 25);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "2.0.0.1";
+            this.lblVersion.Text = "2.0.0.9";
             // 
             // Grafica1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1619, 924);
+            this.ClientSize = new System.Drawing.Size(1924, 1134);
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Grafica1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gráfica por Fecha y Línea";

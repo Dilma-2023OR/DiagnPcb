@@ -1,0 +1,3 @@
+02-04-2025 13:09:46,Defecto registrado para el serial: T1D25021KW0000288 Por el técnico: Charro
+03-04-2025 08:52:56,Defecto registrado para el serial: T3D24244BC0000057 Por el técnico: Gustavo
+12-04-2025 12:59:26,Defecto registrado para el serial: T3D24302JT0000099 Por el técnico: Homero

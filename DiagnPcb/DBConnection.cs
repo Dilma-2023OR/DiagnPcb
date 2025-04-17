@@ -15,6 +15,7 @@ namespace DiagnPcb
         //General Data
         public string dataBase = null;
         public string query = "";
+        public string link = "";
         string msg = "";
         int error = 0;
 
@@ -150,6 +151,69 @@ namespace DiagnPcb
                     //Execute Query
                     var command = new MySqlCommand(query, conn);
                     rowsAffected = command.ExecuteNonQuery();
+                    error = 0;
+                }
+                catch (Exception ex)
+                {
+                    //Response
+                    msg = "Error al insertar en la Base de Datos.";
+                    error = 1;
+
+                    //Log
+                    File.AppendAllText(Directory.GetCurrentDirectory() + "\\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al insertar en la Base de Datos:" + ex.Message + "\n");
+                }
+            }
+
+            //Disconnect
+            disconnectBD();
+
+            //Response
+            result = msg;
+            errors = error;
+
+            //Reader
+            return rowsAffected;
+        }
+
+        public int InsertDataDiagn(out string result, out int errors)
+        {
+            //Reader MySql
+            MySqlDataAdapter reader = new MySqlDataAdapter();
+            int rowsAffected = 0;
+            //Connect
+            connectBD();
+
+            if (error == 0)
+            {
+                try
+                {
+                    byte[] imageBytes = null;
+
+                    if (link == string.Empty)
+                    {
+                        imageBytes = null;
+                    }
+                    else
+                    {
+                        imageBytes = File.ReadAllBytes(link);
+                    }
+
+                    //Execute Query
+                    var command = new MySqlCommand(query, conn);
+
+
+                    if (imageBytes == null)
+                    {
+                        command.Parameters.Add("@Imagen", MySqlDbType.Blob).Value = DBNull.Value;
+                    }
+                    else
+                    {
+                        // Agregar los parámetros a la consulta
+                        command.Parameters.AddWithValue("@Imagen", MySqlDbType.Blob).Value = imageBytes;
+                    }
+
+                    rowsAffected = command.ExecuteNonQuery();
+                    
                     error = 0;
                 }
                 catch (Exception ex)

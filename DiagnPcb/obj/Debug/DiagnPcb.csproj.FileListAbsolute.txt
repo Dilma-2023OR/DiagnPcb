@@ -30,7 +30,6 @@ G:\programs\LABVIEW\MES (RUNCARD)\A. Production Apps\DIAGN PCB\DiagnPcb\DiagnPcb
 G:\programs\LABVIEW\MES (RUNCARD)\A. Production Apps\DIAGN PCB\DiagnPcb\DiagnPcb\obj\Debug\DiagnPcb.csproj.GenerateResource.cache
 G:\programs\LABVIEW\MES (RUNCARD)\A. Production Apps\DIAGN PCB\DiagnPcb\DiagnPcb\obj\Debug\DiagnPcb.csproj.CoreCompileInputs.cache
 G:\programs\LABVIEW\MES (RUNCARD)\A. Production Apps\DIAGN PCB\DiagnPcb\DiagnPcb\obj\Debug\aa\DiagnPcb.resources.dll
-G:\programs\LABVIEW\MES (RUNCARD)\A. Production Apps\DIAGN PCB\DiagnPcb\DiagnPcb\obj\Debug\DiagnPcb.csproj.Up2Date
 G:\programs\LABVIEW\MES (RUNCARD)\A. Production Apps\DIAGN PCB\DiagnPcb\DiagnPcb\obj\Debug\DiagnPcb.exe
 G:\programs\LABVIEW\MES (RUNCARD)\A. Production Apps\DIAGN PCB\DiagnPcb\DiagnPcb\obj\Debug\DiagnPcb.pdb
 G:\programs\LABVIEW\MES (RUNCARD)\A. Production Apps\DIAGN PCB\DiagnPcb\DiagnPcb\obj\Debug\DiagnPcb.FrmInsertar.resources
@@ -65,3 +64,4 @@ G:\programs\LABVIEW\MES (RUNCARD)\A. Production Apps\DIAGN PCB\DiagnPcb\DiagnPcb
 G:\programs\LABVIEW\MES (RUNCARD)\A. Production Apps\DIAGN PCB\DiagnPcb\DiagnPcb\bin\Debug\AForge.Math.xml
 G:\programs\LABVIEW\MES (RUNCARD)\A. Production Apps\DIAGN PCB\DiagnPcb\DiagnPcb\bin\Debug\AForge.Video.xml
 G:\programs\LABVIEW\MES (RUNCARD)\A. Production Apps\DIAGN PCB\DiagnPcb\DiagnPcb\bin\Debug\AForge.Video.DirectShow.xml
+G:\programs\LABVIEW\MES (RUNCARD)\A. Production Apps\DIAGN PCB\DiagnPcb\DiagnPcb\obj\Debug\DiagnPcb.csproj.Up2Date

@@ -16,7 +16,7 @@ using System.Windows.Media;
 
 namespace DiagnPcb
 {
-    public partial class Grafica1 : Form
+    public partial class Grafica1  : Form
     {
         string connect = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
         DBConnection dB = new DBConnection();
@@ -24,11 +24,21 @@ namespace DiagnPcb
         private bool isCheckedListBoxVisible = false;
         private List<bool> m_list = new List<bool>();
         List<Diagnostico> Diagnostics = new List<Diagnostico>();
+        List<Defecto> defectos1 = new List<Defecto>();
         string lineapartes = string.Empty;
 
-        public Grafica1()
+        string estacionRecibida = string.Empty;
+
+        public Grafica1(string estacion)
         {
             InitializeComponent();
+            estacionRecibida = estacion;
+        }
+
+        public class Defecto
+        {
+            public string defect { get; set; }
+            public string linea { get; set; }
         }
 
         private void Grafica1_Load(object sender, EventArgs e)
@@ -67,10 +77,11 @@ namespace DiagnPcb
             checkedListBox1.Items.Add("MARIS 1");
             checkedListBox1.Items.Add("MARIS 2");
             checkedListBox1.Items.Add("SANCO");
+            checkedListBox1.Items.Add("AMPLIFICADORES");
+            checkedListBox1.Items.Add("FILTROS");
 
             // Ocultar el CheckedListBox al inicio
             checkedListBox1.Visible = false;
-
         }
 
         #region opcion si cliquea la opcion linea
@@ -122,41 +133,67 @@ namespace DiagnPcb
                 // Contar los elementos del array
                 int cantidad = partesLineas.Length;
                 lineapartes = string.Empty;
+                string bdatos = string.Empty;
+
+                if (estacionRecibida == "General")
+                {
+                    bdatos = "dpt.";
+                }
+                else
+                {
+                    bdatos = "dse.";
+
+                }
 
                 switch (cantidad)
                 {
                     case 1:
-                        condicion = " WHERE dpt.line IN ('" + partesLineas[0].Trim() + "')";
+                        condicion = " WHERE " + bdatos + "line IN ('" + partesLineas[0].Trim() + "')";
                         break;
                     case 2:
-                        condicion = " WHERE dpt.line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "')";
+                        condicion = " WHERE " + bdatos + "line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "')";
                         break;
                     case 3:
-                        condicion = " WHERE dpt.line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "')";
+                        condicion = " WHERE " + bdatos + "line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "')";
                         break;
                     case 4:
-                        condicion = " WHERE dpt.line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "')";
+                        condicion = " WHERE " + bdatos + "line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "')";
                         break;
                     case 5:
-                        condicion = " WHERE dpt.line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "')";
+                        condicion = " WHERE " + bdatos + "line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "')";
                         break;
                     case 6:
-                        condicion = " WHERE dpt.line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "')";
+                        condicion = " WHERE " + bdatos + "line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "')";
+                        break;
+                    case 7:
+                        condicion = " WHERE " + bdatos + "line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "', '" + partesLineas[6].Trim() + "')";
+                        break;
+                    case 8:
+                        condicion = " WHERE " + bdatos + "line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "', '" + partesLineas[6].Trim() + "', '" + partesLineas[7].Trim() + "')";
                         break;
                 }
+
 
                 DateTime fecha_A = Convert.ToDateTime(dateTimePickerA.Text);
                 DateTime fecha_De = Convert.ToDateTime(dateTimePickerDe.Text);
 
                 string fechaA = fecha_De.ToString("yyyy-MM-dd");
                 string fechaB = fecha_A.ToString("yyyy-MM-dd");
-                
 
-                BD.query = "Select dp.DiagnPcb As 'Diagnostico', dpt.line AS 'linea' " +
-                            "from diagn_pcb.diagnpcbtech dpt " +
-                            "inner join diagn_pcb.DiagnPcb dp on dp.idDiagn = dpt.idDiagn " +
-                            condicion + " and dpt.shift between '" + fechaA + "' and '" + fechaB + "'" +
-                            " order by dp.DiagnPcb;";
+                if (estacionRecibida == "General")
+                {
+                    BD.query = "Select dp.DiagnPcb As 'Diagnostico', dpt.line AS 'linea' " +
+                                "from diagn_pcb.diagnpcbtech dpt " +
+                                "inner join diagn_pcb.DiagnPcb dp on dp.idDiagn = dpt.idDiagn " +
+                                condicion + " and dpt.shift between '" + fechaA + "' and '" + fechaB + "'" +
+                                " order by dp.DiagnPcb;";
+                }
+                else {
+                    BD.query = "select dF.failure as 'Diagnostico', dse.line as 'linea' " +
+                                " from diagn_pcb.DiagnSolEt dse " +
+                                " INNER JOIN diagn_pcb.diagnfailure Df on Df.idFaile = dse.idFaile " + condicion + " and dse.dayregister between '" + fechaA + "' and '" + fechaB + "'" +
+                                " order by dF.failure;";
+                }
 
                 var dbResultCon1 = BD.getData(out dBMsg, out dbError);
                 if (dbError != 0)
@@ -178,7 +215,7 @@ namespace DiagnPcb
                     };
                     Diagnostics.Add(Diagn);
                 }
-
+                
                 //Usar LINQ para contar las ocurrencias de cada diagnostico
                 // Crear un diccionario para contar los diagnósticos por cada línea
                 Dictionary<string, Dictionary<string, int>> conteoPorLinea = new Dictionary<string, Dictionary<string, int>>();
@@ -624,6 +661,175 @@ namespace DiagnPcb
                     chart1.Series.Add(serieLinea5);
                     chart1.Visible = true;
                     break;
+
+                case 7:
+                    // Limpiar cualquier dato previo en el chart
+                    Series serieLinea6 = new Series();
+
+                    // Crear series para "Línea 1" y "Línea 2"
+                    serieLinea = new Series(parts[0].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String // Eje X es de tipo cadena (Diagnóstico)
+                    };
+                    serieLinea1 = new Series(parts[1].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String // Eje X es de tipo cadena (Diagnóstico)
+                    };
+
+                    serieLinea2 = new Series(parts[2].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String // Eje X es de tipo cadena (Diagnóstico)
+                    };
+
+                    serieLinea3 = new Series(parts[3].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String // Eje X es de tipo cadena (Diagnóstico)
+                    };
+
+                    serieLinea4 = new Series(parts[4].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String // Eje X es de tipo cadena (Diagnóstico)
+                    };
+
+                    serieLinea5 = new Series(parts[5].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String // Eje X es de tipo cadena (Diagnóstico)
+                    };
+
+                    serieLinea6 = new Series(parts[6].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String  // Eje X es de tipo cadena (Diagnóstico)
+                    };
+
+                    // Recorrer las filas del DataGridView y agregar los datos a las series
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (row.IsNewRow) continue;
+
+                        string diagnostico = row.Cells[0].Value.ToString(); // Columna Diagnóstico
+                        double linea1 = Convert.ToDouble(row.Cells[1].Value); // Columna Línea 1
+                        double linea2 = Convert.ToDouble(row.Cells[2].Value); // Columna Línea 2
+                        double linea3 = Convert.ToDouble(row.Cells[3].Value); // Columna Línea 3
+                        double linea4 = Convert.ToDouble(row.Cells[4].Value); // Columna Línea 4
+                        double linea5 = Convert.ToDouble(row.Cells[5].Value); // Columna Línea 5
+                        double linea6 = Convert.ToDouble(row.Cells[5].Value); // Columna Línea 6
+                        double linea7 = Convert.ToDouble(row.Cells[6].Value); // Columna Línea 7
+
+                        // Agregar los puntos a las series correspondientes
+                        serieLinea.Points.AddXY(diagnostico, linea1);
+                        serieLinea1.Points.AddXY(diagnostico, linea2);
+                        serieLinea2.Points.AddXY(diagnostico, linea3);
+                        serieLinea3.Points.AddXY(diagnostico, linea4);
+                        serieLinea4.Points.AddXY(diagnostico, linea5);
+                        serieLinea5.Points.AddXY(diagnostico, linea6);
+                        serieLinea6.Points.AddXY(diagnostico, linea7);
+                    }
+
+                    // Agregar las series al gráfico
+                    chart1.Series.Add(serieLinea);
+                    chart1.Series.Add(serieLinea1);
+                    chart1.Series.Add(serieLinea2);
+                    chart1.Series.Add(serieLinea3);
+                    chart1.Series.Add(serieLinea4);
+                    chart1.Series.Add(serieLinea5);
+                    chart1.Series.Add(serieLinea6);
+                    chart1.Visible = true;
+                    break;
+                case 8:
+                    // Limpiar cualquier dato previo en el chart
+                    Series serieLinea7 = new Series();
+
+                    // Crear series para "Línea 1" y "Línea 2"
+                    serieLinea = new Series(parts[0].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String // Eje X es de tipo cadena (Diagnóstico)
+                    };
+                    serieLinea1 = new Series(parts[1].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String // Eje X es de tipo cadena (Diagnóstico)
+                    };
+
+                    serieLinea2 = new Series(parts[2].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String // Eje X es de tipo cadena (Diagnóstico)
+                    };
+
+                    serieLinea3 = new Series(parts[3].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String // Eje X es de tipo cadena (Diagnóstico)
+                    };
+
+                    serieLinea4 = new Series(parts[4].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String // Eje X es de tipo cadena (Diagnóstico)
+                    };
+
+                    serieLinea5 = new Series(parts[5].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String // Eje X es de tipo cadena (Diagnóstico)
+                    };
+
+                    serieLinea6 = new Series(parts[6].Trim())
+                    {
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String  // Eje X es de tipo cadena (Diagnóstico)
+                    };
+
+                    serieLinea7 = new Series(parts[7].Trim())
+                    { 
+                        ChartType = SeriesChartType.Column, // Tipo de gráfico de columnas
+                        XValueType = ChartValueType.String  // Eje X es de tipo cadena (Diagnóstico)
+                    };
+                    // Recorrer las filas del DataGridView y agregar los datos a las series
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (row.IsNewRow) continue;
+
+                        string diagnostico = row.Cells[0].Value.ToString(); // Columna Diagnóstico
+                        double linea1 = Convert.ToDouble(row.Cells[1].Value); // Columna Línea 1
+                        double linea2 = Convert.ToDouble(row.Cells[2].Value); // Columna Línea 2
+                        double linea3 = Convert.ToDouble(row.Cells[3].Value); // Columna Línea 3
+                        double linea4 = Convert.ToDouble(row.Cells[4].Value); // Columna Línea 4
+                        double linea5 = Convert.ToDouble(row.Cells[5].Value); // Columna Línea 5
+                        double linea6 = Convert.ToDouble(row.Cells[5].Value); // Columna Línea 6
+                        double linea7 = Convert.ToDouble(row.Cells[6].Value); // Columna Línea 7
+                        double linea8 = Convert.ToDouble(row.Cells[7].Value); // Columna Línea 8
+
+                        // Agregar los puntos a las series correspondientes
+                        serieLinea.Points.AddXY(diagnostico, linea1);
+                        serieLinea1.Points.AddXY(diagnostico, linea2);
+                        serieLinea2.Points.AddXY(diagnostico, linea3);
+                        serieLinea3.Points.AddXY(diagnostico, linea4);
+                        serieLinea4.Points.AddXY(diagnostico, linea5);
+                        serieLinea5.Points.AddXY(diagnostico, linea6);
+                        serieLinea6.Points.AddXY(diagnostico, linea7);
+                        serieLinea7.Points.AddXY(diagnostico, linea8);
+                    }
+
+                    // Agregar las series al gráfico
+                    chart1.Series.Add(serieLinea);
+                    chart1.Series.Add(serieLinea1);
+                    chart1.Series.Add(serieLinea2);
+                    chart1.Series.Add(serieLinea3);
+                    chart1.Series.Add(serieLinea4);
+                    chart1.Series.Add(serieLinea5);
+                    chart1.Series.Add(serieLinea6);
+                    chart1.Series.Add(serieLinea7);
+                    chart1.Visible = true;
+                    break;
             }
 
 
@@ -633,9 +839,14 @@ namespace DiagnPcb
             chart1.Titles.Clear();
             chart1.Titles.Add("Gráfico de Diagnóstico");
 
-            // Configurar leyenda (opcional)
+            //// Configurar leyenda (opcional)
             chart1.Legends.Clear();
-            chart1.Legends.Add(new System.Windows.Forms.DataVisualization.Charting.Legend("Leyenda"));
+            Legend legend = new Legend("Leyenda");
+            chart1.Legends.Add(legend);
+            legend.Enabled = true;
+
+            legend.IsDockedInsideChartArea = true;
+            legend.Alignment = StringAlignment.Center;
         }
         #endregion
 

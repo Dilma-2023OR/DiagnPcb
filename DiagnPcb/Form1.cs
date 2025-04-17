@@ -25,7 +25,9 @@ namespace DiagnPcb
                 if (!Directory.Exists(Path.GetDirectoryName(localConfig.FilePath)))
                 {
                     Directory.CreateDirectory(Path.GetDirectoryName(localConfig.FilePath));
-                    File.Copy(Directory.GetCurrentDirectory() + @"\config.ini", localConfig.FilePath);
+                    string director = Directory.GetCurrentDirectory() + @"\config.ini";
+                    //File.Copy(Directory.GetCurrentDirectory() + @"\config.ini", localConfig.FilePath);
+                    File.Copy(director, localConfig.FilePath);
                 }
 
                 administrador = localConfig.Read("Privilegios", "Administrador");

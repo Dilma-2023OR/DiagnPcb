@@ -42,36 +42,36 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.94092F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.05908F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtIdFailure, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblVersion, 2, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(-1, 2);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.67516F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.324841F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(760, 510);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1013, 628);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(76, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(102, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(605, 466);
+            this.pictureBox1.Size = new System.Drawing.Size(800, 574);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // txtIdFailure
             // 
             this.txtIdFailure.BackColor = System.Drawing.SystemColors.Control;
-            this.txtIdFailure.Location = new System.Drawing.Point(76, 474);
-            this.txtIdFailure.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIdFailure.Location = new System.Drawing.Point(102, 584);
+            this.txtIdFailure.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdFailure.Name = "txtIdFailure";
-            this.txtIdFailure.Size = new System.Drawing.Size(76, 20);
+            this.txtIdFailure.Size = new System.Drawing.Size(100, 22);
             this.txtIdFailure.TabIndex = 1;
             this.txtIdFailure.Visible = false;
             // 
@@ -82,22 +82,22 @@
             this.lblVersion.Font = new System.Drawing.Font("Ebrima", 4F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter);
             this.lblVersion.ForeColor = System.Drawing.Color.Black;
             this.lblVersion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblVersion.Location = new System.Drawing.Point(702, 480);
+            this.lblVersion.Location = new System.Drawing.Point(942, 592);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(58, 21);
+            this.lblVersion.Size = new System.Drawing.Size(71, 25);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "2.0.0.1";
+            this.lblVersion.Text = "2.0.0.9";
             // 
             // FrmImagen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(762, 515);
+            this.ClientSize = new System.Drawing.Size(1016, 634);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FrmImagen";
             this.Text = "Imagen";

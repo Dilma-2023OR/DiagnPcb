@@ -93,6 +93,11 @@ namespace DiagnPcb
                 int Y = 400;
 
                 tableLayoutPanel4.Location = new System.Drawing.Point(X, Y);
+
+                int PanY = (this.ClientSize.Height - tableLayoutPanel4.Height) / 2;
+                tableLayoutPanel4.Location = new System.Drawing.Point(X, Y+20);
+
+                lblVersion.Location = new System.Drawing.Point(this.ClientSize.Width - lblVersion.Width - 10, this.ClientSize.Height - lblVersion.Height - 10);
             }
         }
         public void ObtenerLinea() {
@@ -107,6 +112,8 @@ namespace DiagnPcb
             checkedListBox1.Items.Add("MARIS 1");
             checkedListBox1.Items.Add("MARIS 2");
             checkedListBox1.Items.Add("SANCO");
+            checkedListBox1.Items.Add("AMPLIFICADORES");
+            checkedListBox1.Items.Add("FILTROS");
 
             // Ocultar el CheckedListBox al inicio
             checkedListBox1.Visible = false;
@@ -680,7 +687,7 @@ namespace DiagnPcb
                         string fechaA = fecha_De.ToString("yyyy-MM-dd");
                         string fechaB = fecha_A.ToString("yyyy-MM-dd");
 
-                        condicion = " WHERE dpt.shift between '" + fechaA + "' and '" + fechaB +"';";
+                        condicion = " WHERE `Turno` between '" + fechaA + "' and '" + fechaB +"';";
                         
                         break;
                     case "Linea":
@@ -694,47 +701,53 @@ namespace DiagnPcb
                         switch (cantidad)
                         {
                             case 1:
-                                condicion = " WHERE dpt.line IN ('" + partesLineas[0].Trim() + "')";
+                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "')";
                                 break;
                             case 2:
-                                condicion = " WHERE dpt.line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "')";
+                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "')";
                                 break;
                             case 3:
-                                condicion = " WHERE dpt.line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "')";
+                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "')";
                                 break;
                             case 4:
-                                condicion = " WHERE dpt.line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "')";
+                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "')";
                                 break;
                             case 5:
-                                condicion = " WHERE dpt.line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "')";
+                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "')";
                                 break;
                             case 6:
-                                condicion = " WHERE dpt.line IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "')";
+                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "')";
+                                break;
+                            case 7:
+                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "', '" + partesLineas[6].Trim() + "')";
+                                break;
+                            case 8:
+                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "', '" + partesLineas[6].Trim() + "', '" + partesLineas[7].Trim() +"')";
                                 break;
                         }
 
                         break;
 
                     case "Cable":
-                        condicion = " WHERE dw.Wire = '" + cbCables.Text + "';";
+                        condicion = " WHERE `Cable` = '" + cbCables.Text + "';";
                         break;
                     case "Diagnostico":
-                        condicion = " WHERE dp.DiagnPcb = '" + cbDiagnostico.Text + "';";
+                        condicion = " WHERE `Diagnostico` = '" + cbDiagnostico.Text + "';";
                         break;
                     case "Falla":
-                        condicion = " WHERE df.failure = '" + cbFallas.Text + "';";
+                        condicion = " WHERE `Falla` = '" + cbFallas.Text + "';";
                         break;
                     case "Número de Parte":
-                        condicion = " WHERE dpt.part_number = '" + cbNumPart.Text + "';";
+                        condicion = " WHERE `Numero de Parte` = '" + cbNumPart.Text + "';";
                         break;
                     case "Owner":
-                        condicion = " WHERE dow.owner_tech = '" + cbOwner.Text + "';";
+                        condicion = " WHERE `Owner` = '" + cbOwner.Text + "';";
                         break;
                     case "Semana":
-                        condicion = " WHERE dpt.productWeek = '" + cbSemana.Text + "';";
+                        condicion = " WHERE `Semana` = '" + cbSemana.Text + "';";
                         break;
                     case "Ubicación":
-                        condicion = " WHERE du.Ubication = '" + cbUbicaciones.Text + "';";
+                        condicion = " WHERE `Ubicacion` = '" + cbUbicaciones.Text + "';";
                         break;
                     case "Grafica fecha y línea":
                         // Separar las lineas seleccionadas y que se encuentran en el textbox de línea
@@ -747,37 +760,37 @@ namespace DiagnPcb
                         switch (cant)
                         {
                             case 1:
-                                condicion = " WHERE dpt.line IN ('" + parts[0].Trim() + "') ";
+                                //condicion = " WHERE dpt.line IN ('" + parts[0].Trim() + "') ";
+                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "')";
                                 break;
                             case 2:
-                                condicion = " WHERE dpt.line IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "')";
+                                //condicion = " WHERE dpt.line IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "')";
+                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "')";
                                 break;
                             case 3:
-                                condicion = " WHERE dpt.line IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "')";
+                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "')";
                                 break;
                             case 4:
-                                condicion = " WHERE dpt.line IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "')";
+                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "')";
                                 break;
                             case 5:
-                                condicion = " WHERE dpt.line IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "')";
+                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "')";
                                 break;
                             case 6:
-                                condicion = " WHERE dpt.line IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "', '" + parts[5].Trim() + "')";
+                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "', '" + parts[5].Trim() + "')";
+                                break;
+                            case 7:
+                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "', '" + parts[5].Trim() + "', '" + parts[6].Trim() + "')";
+                                break;
+                            case 8:
+                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "', '" + parts[5].Trim() + "', '" + parts[6].Trim() + "', '" + parts[7].Trim() + "')";
                                 break;
                         }
                         break;
 
                 }
                 
-                    BD.query = "select dpt.idFailure, dpt.faile_date AS 'Fecha Falla', dpt.serie_num as 'Numero Serie', dpt.part_number as 'Numero de Parte', dpt.productWeek as 'Semana', "
-                                + "dpt.line as 'Linea', df.failure as 'Falla', dp.DiagnPcb as 'Diagnostico', dw.Wire as 'Cable', du.Ubication as 'Ubicacion', dpt.coment AS 'Comentarios', "
-                                + "dpt.shift as 'Turno', dow.owner_tech AS 'Owner' "
-                                + "from diagn_pcb.diagnpcbtech dpt "
-                                + "inner join diagn_pcb.DiagnFailure df on df.idFaile = dpt.idFaile "
-                                + "inner join diagn_pcb.DiagnPcb dp on dp.idDiagn = dpt.idDiagn "
-                                + "inner join diagn_pcb.DiagnWire dw on dw.idWire = dpt.idWire "
-                                + "inner join diagn_pcb.diagnubicacion du on du.idDiagnUbic = dpt.idDiagnUbic "
-                                + "inner join diagn_pcb.diagnowner dow on dow.idOwner = dpt.idOwner "
+                    BD.query = "SELECT * FROM vista_diagnostico "
                                 + condicion;
 
                     Console.WriteLine(BD.query.ToString());
@@ -1110,8 +1123,8 @@ namespace DiagnPcb
                     flowLayoutPanel1.Visible = false;
                     flowLayoutPanel2.Visible = true;
                     btnExportar.Enabled = false;
-
-                    Grafica1 Grafica = new Grafica1();
+                    string estacion = "General";
+                    Grafica1 Grafica = new Grafica1(estacion);
 
                     Grafica.Show();
 
@@ -1159,8 +1172,8 @@ namespace DiagnPcb
                 { 
                     //Obtener el valor de la primera columna (idFailure) de la fila seleccionada
                     string idFailure1 = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    
-                    FrmImagen frmImage = new FrmImagen(idFailure1); ;
+                    string status = "GENERAL";
+                    FrmImagen frmImage = new FrmImagen(idFailure1, status); ;
 
                     frmImage.Show();
                 }

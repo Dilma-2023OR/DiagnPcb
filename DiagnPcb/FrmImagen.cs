@@ -16,7 +16,7 @@ namespace DiagnPcb
     public partial class FrmImagen : Form
     {
 
-        public FrmImagen(string dato)
+        public FrmImagen(string dato, string estatus2)
         {
             InitializeComponent();
 
@@ -24,18 +24,24 @@ namespace DiagnPcb
 
             int id = Convert.ToInt32(txtIdFailure.Text);
 
-            LoadImageFromDataBase(id);
+            LoadImageFromDataBase(id, estatus2);
         }
 
-        private void LoadImageFromDataBase(int id)
+        private void LoadImageFromDataBase(int id, string status)
         {
             
 
             string conectionString = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
-
-            string query = "Select image FROM diagn_pcb.diagnpcbtech WHERE idFailure = @idFailure";
-
+            string query = string.Empty;
+            if (status == "GENERAL")
+            {
+                query = "Select image FROM diagn_pcb.diagnpcbtech WHERE idFailure = @idFailure";
+            }
+            else {
+                query = "Select image FROM diagn_pcb.DiagnSolEt WHERE idRgSolEt = @idFailure";
+            }
             using (MySqlConnection connection = new MySqlConnection(conectionString))
+                
             { 
                 connection.Open();
 

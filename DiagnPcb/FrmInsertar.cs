@@ -25,6 +25,8 @@ using System.Windows.Forms.DataVisualization.Charting;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using System.Diagnostics.Eventing.Reader;
+using static DiagnPcb.RegistroSoldadoEtiquetado;
+using DiagnPcb.Styles;
 
 namespace DiagnPcb
 {
@@ -41,6 +43,7 @@ namespace DiagnPcb
         public FrmInsertar()
         {
             InitializeComponent();
+            MenuRegistros();
             tbNumSerie.Enabled = true;
             tbNumParte.Enabled = false;
             btnGuardar.Enabled = false;
@@ -57,6 +60,7 @@ namespace DiagnPcb
             btnCargarImagen.Enabled = false;
             btnReset.Enabled = false;
 
+            ObtenerLinea();
             ObtenerCable();
             ObtenerFallas();
             ObtenerDiagnostico();
@@ -277,7 +281,7 @@ namespace DiagnPcb
                 DBConnection dB = new DBConnection();
                 DataTable dtResult = new DataTable();
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
-                dB.query = "select idFaile, failure from diagn_pcb.DiagnFailure";
+                dB.query = "select idFaile, failure from diagn_pcb.DiagnFailure where config = 'GENERAL'";
 
                 var dbResult = dB.getData(out dBMsg, out dbError);
 
@@ -464,7 +468,7 @@ namespace DiagnPcb
                 DBConnection dB = new DBConnection();
                 DataTable dtResult = new DataTable();
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
-                dB.query = "select idOwner, owner_tech from diagn_pcb.diagnowner";
+                dB.query = "select idOwner, owner_tech from diagn_pcb.diagnowner where idOwner < 10";
 
                 var dbResult = dB.getData(out dBMsg, out dbError);
 
@@ -722,22 +726,17 @@ namespace DiagnPcb
         }
 
         private void insertarDatos() {
-            string connectionString = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
-
-            MySqlConnection connection = new MySqlConnection(connectionString);
             try
             {
-                connection.Open();
-                // Validar que todos los campos estén completos
 
                 string dBMsg = string.Empty;
-                    //int dbError = 0;
+                int dbError = 0;
 
-                    DateTime fecha_F = Convert.ToDateTime(dateTimePicker1.Text);
+                DateTime fecha_F = Convert.ToDateTime(dateTimePicker1.Text);
 
-                    string fecha_Falla = fecha_F.ToString("yyyy-MM-dd hh:mm:ss");
-                    string fecha_turno = turno.ToString("yyyy-MM-dd hh:mm:ss");
-                    int semana = Convert.ToInt32(tbSemana.Text);
+                string fecha_Falla = fecha_F.ToString("yyyy-MM-dd hh:mm:ss");
+                string fecha_turno = turno.ToString("yyyy-MM-dd hh:mm:ss");
+                int semana = Convert.ToInt32(tbSemana.Text);
                 byte[] imageBytes = null;
 
                 if (link == string.Empty)
@@ -748,30 +747,33 @@ namespace DiagnPcb
                 {
                     imageBytes = File.ReadAllBytes(link);
                 }
-                    //DBConnection dB = new DBConnection();
-                    DataTable dtResult = new DataTable();
-                    
 
-                string query = "Insert into diagn_pcb.diagnpcbtech(qty, faile_date, serie_num, part_number, productWeek, line, idFaile, idDiagn, idWire, idDiagnUbic, coment, image, shift, idOwner)"
+                DBConnection dB = new DBConnection();
+                DataTable dtResult = new DataTable();
+
+                dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
+                dB.query = "Insert into diagn_pcb.diagnpcbtech(qty, faile_date, serie_num, part_number, productWeek, line, idFaile, idDiagn, idWire, idDiagnUbic, coment, image, shift, idOwner)"
                                             + "VALUES(1, '" + fecha_Falla + "', '" + tbNumSerie.Text + "', '" + tbNumParte.Text + "', " + semana + ", '" + cblinea.Text + "', " + idFaile + ", " + idDiagn + ", " + idWire + ", " + idDiagnUbic + ", "
                                             + "'" + tbComentarios.Text + "', @Imagen, '" + fecha_turno + "', " + id_owner + ");";
+                dB.link = link;
 
-                MySqlCommand cmd = new MySqlCommand(query, connection);
+                var dbResult = dB.InsertDataDiagn(out dBMsg, out dbError);
 
-                if (imageBytes == null)
+                if (dbError != 0)
                 {
-                    cmd.Parameters.Add("@Imagen", MySqlDbType.Blob).Value = DBNull.Value;
+                    //Control Adjunt
+                    cbFalla.Enabled = true;
+
+                    //FeedBack
+                    MostrarMensajeFlotanteNoPass(dBMsg);
+                    return;
                 }
-                else
-                {
-                    // Agregar los parámetros a la consulta
-                    cmd.Parameters.AddWithValue("@Imagen", MySqlDbType.Blob).Value = imageBytes;
-                }
-                // Ejecutar la consulta para insertar los datos
-                cmd.ExecuteNonQuery();
+
+                string log = Directory.GetCurrentDirectory() + @"\Log.txt";
+
+                File.AppendAllText(log, DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Defecto registrado para el serial: " + tbNumSerie.Text + " Por el técnico: " + owner_tech + "\n");
 
                 MostrarMensajeFlotante("Registro Exitoso");
-
             }
             catch (Exception ex)
             {
@@ -786,8 +788,6 @@ namespace DiagnPcb
         {
             insertarDatos();
             Limpiar();
-
-            
         }
 
         public void Limpiar() {
@@ -819,6 +819,7 @@ namespace DiagnPcb
             btnGuardar.Enabled = false;
             btnCargarImagen.Enabled = false;
             btnReset.Enabled = false;
+            tbNumSerie.Focus();
         }
 
         private void MostrarMensajeFlotanteNoPass(string mensaje)
@@ -975,6 +976,123 @@ namespace DiagnPcb
                 // Establecer la posición del panel
                 tableLayoutPanel2.Location = new System.Drawing.Point(panelX, panelY);
             }
+        }
+        public class ComboBoxItemLine
+        {
+            public string Line { get; set; }
+
+            public override string ToString()
+            {
+                return Line;
+            }
+        }
+
+        private void cblinea_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cblinea.SelectedItem != null)
+            {
+
+                string linea = cblinea.Text;
+
+                if (linea.Equals("FILTROS") || linea.Equals("AMPLIFICADORES"))
+                {
+
+                    cbCables.Enabled = false;
+                    cbCables.Text = "N/A";
+                    idWire = 6;
+                    wire = "N/A";
+
+                    ComboBoxItemLine selectedItem = (ComboBoxItemLine)cblinea.SelectedItem;
+
+                    linea = selectedItem.Line;
+                }
+                else
+                {
+                    cbCables.Enabled = true;
+
+                    ComboBoxItemLine selectedItem = (ComboBoxItemLine)cblinea.SelectedItem;
+
+                    linea = selectedItem.Line;
+                }
+            }
+        }
+
+        private void ObtenerLinea()
+        {
+            try
+            {
+                // Ejemplo de agregar elementos desde una lista
+                List<string> opciones = new List<string> { "FORD A", "FORD B", "FORD C", "MARIS 1", "MARIS 2", "SANCO", "FILTROS", "AMPLIFICADORES" };
+
+
+                foreach (var item in opciones)
+                {
+                    if (!cblinea.Items.Contains(item.ToString()))
+                    {
+                        string linea = item.ToString();
+
+                        cblinea.Items.Add(new ComboBoxItemLine { Line = linea });
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                //Control Adjust
+                tbNumParte.Enabled = false;
+
+                Message message = new Message("Error al obtener los cables");
+                message.ShowDialog();
+
+                //Log
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al obtener los cables:" + ex.Message + "\n");
+            }
+        }
+
+        private void MenuRegistros()
+        {
+            MenuStrip menuStrip = new MenuStrip();
+
+            //Crear Menú Principal
+            ToolStripMenuItem menuNuevoRegistro = new ToolStripMenuItem("Nuevos Registros");
+
+            //crear submenús
+            ToolStripMenuItem itemFallas = new ToolStripMenuItem("Fallas");
+            ToolStripMenuItem itemUbicacion = new ToolStripMenuItem("Ubicacion");
+            ToolStripMenuItem itemDiagnostico = new ToolStripMenuItem("Diagnostico");
+            ToolStripMenuItem itemTecnico = new ToolStripMenuItem("Técnico");
+
+
+            //Agregar eventos a los submenús 
+            itemFallas.Click += (s, e) => MessageBox.Show("Formulario Fallas");
+
+            //Agregar submenu al menu principal
+
+            menuNuevoRegistro.DropDownItems.Add(itemFallas);
+            menuNuevoRegistro.DropDownItems.Add(itemUbicacion);
+            menuNuevoRegistro.DropDownItems.Add(itemDiagnostico);
+            menuNuevoRegistro.DropDownItems.Add(itemTecnico);
+
+            //Estilo general del menú
+            menuStrip.BackColor = Color.DarkSlateBlue;
+            menuStrip.ForeColor = Color.White;
+            menuStrip.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            menuStrip.Renderer = new CustomMenuRender();
+
+            //Estilo para los items
+            foreach (ToolStripMenuItem item in menuNuevoRegistro.DropDownItems)
+            {
+                item.BackColor = Color.WhiteSmoke;
+                item.ForeColor = Color.DarkSlateBlue;
+                item.Font = new Font("Segoe UI", 9);
+            }
+
+            //Agregar el Menú principal al MenuStrip
+            menuStrip.Items.Add(menuNuevoRegistro);
+
+            //Agregar el MenuStrip al Formulario
+            this.MainMenuStrip = menuStrip;
+            this.Controls.Add(menuStrip);
         }
     }
 }

@@ -3,10 +3,59 @@
   "WorkspaceRootPath": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\diagnpcb\\frminsertar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\frminsertar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\diagnpcb\\registrosoldadoetiquetado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\registrosoldadoetiquetado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|g:\\programs\\labview\\mes (runcard)\\a. production apps\\diagn pcb\\diagnpcb\\diagnpcb\\styles\\custommenurender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\styles\\custommenurender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\diagnpcb\\consulta\\consoldadoet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\consoldadoet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|g:\\programs\\labview\\mes (runcard)\\a. production apps\\diagn pcb\\diagnpcb\\diagnpcb\\consulta\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\diagnpcb\\frminsertar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\frminsertar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\diagnpcb\\frmimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\frmimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|DiagnPcb||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|g:\\programs\\labview\\mes (runcard)\\a. production apps\\diagn pcb\\diagnpcb\\diagnpcb\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|cc4014f5-b18d-439c-9352-f99d984cca85"
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\diagnpcb\\grafica1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\grafica1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\diagnpcb\\grafica1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\grafica1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\diagnpcb\\consulta\\consoldadoet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\consoldadoet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\diagnpcb\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\diagnpcb\\consulta\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\diagnpcb\\registrosoldadoetiquetado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\registrosoldadoetiquetado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -16,8 +65,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ConSoldadoEt.cs [Design]",
+              "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Consulta\\ConSoldadoEt.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\ConSoldadoEt.cs",
+              "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Consulta\\ConSoldadoEt.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\ConSoldadoEt.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T15:34:44.582Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -32,15 +94,161 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomMenuRender.cs",
+              "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Styles\\CustomMenuRender.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Styles\\CustomMenuRender.cs",
+              "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Styles\\CustomMenuRender.cs",
+              "RelativeToolTip": "DiagnPcb\\Styles\\CustomMenuRender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T15:17:23.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FrmInsertar.cs",
+              "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\FrmInsertar.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\FrmInsertar.cs",
+              "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\FrmInsertar.cs",
+              "RelativeToolTip": "DiagnPcb\\FrmInsertar.cs",
+              "ViewState": "AgIAACEDAAAAAAAAAAAuwDgEAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T15:22:49.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmImagen.cs [Design]",
+              "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\FrmImagen.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\FrmImagen.cs",
+              "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\FrmImagen.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\FrmImagen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T20:09:48.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Form1.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Form1.cs",
+              "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Form1.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T20:09:36.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Grafica1.cs",
+              "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Grafica1.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Grafica1.cs",
+              "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Grafica1.cs",
+              "RelativeToolTip": "DiagnPcb\\Grafica1.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAgwL4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T19:55:37.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RegistroSoldadoEtiquetado.cs [Design]",
+              "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\RegistroSoldadoEtiquetado.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\RegistroSoldadoEtiquetado.cs",
+              "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\RegistroSoldadoEtiquetado.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\RegistroSoldadoEtiquetado.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T16:45:59.972Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Consulta.cs",
+              "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Consulta\\Consulta.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\Consulta.cs",
+              "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Consulta\\Consulta.cs",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\Consulta.cs",
+              "ViewState": "AgIAAHQEAAAAAAAAAAAMwJgCAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T14:27:33.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConSoldadoEt.cs",
+              "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Consulta\\ConSoldadoEt.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\ConSoldadoEt.cs",
+              "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Consulta\\ConSoldadoEt.cs",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\ConSoldadoEt.cs",
+              "ViewState": "AgIAAKQBAAAAAAAAAAAqwMMBAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T18:32:33.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegistroSoldadoEtiquetado.cs",
+              "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\RegistroSoldadoEtiquetado.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\RegistroSoldadoEtiquetado.cs",
+              "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\RegistroSoldadoEtiquetado.cs",
+              "RelativeToolTip": "DiagnPcb\\RegistroSoldadoEtiquetado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T17:57:43.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmInsertar.cs [Design]",
+              "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\FrmInsertar.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\FrmInsertar.cs",
+              "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\FrmInsertar.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\FrmInsertar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T15:35:56.16Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Consulta.cs [Design]",
+              "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Consulta\\Consulta.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\Consulta.cs",
+              "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Consulta\\Consulta.cs [Design]*",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\Consulta.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T16:56:54.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Grafica1.cs [Design]",
+              "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Grafica1.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Grafica1.cs",
+              "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\Grafica1.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Grafica1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T16:10:12.111Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DiagnPcb",
               "DocumentMoniker": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\DiagnPcb.csproj",
               "RelativeDocumentMoniker": "DiagnPcb\\DiagnPcb.csproj",
               "ToolTip": "G:\\programs\\LABVIEW\\MES (RUNCARD)\\A. Production Apps\\DIAGN PCB\\DiagnPcb\\DiagnPcb\\DiagnPcb.csproj",
               "RelativeToolTip": "DiagnPcb\\DiagnPcb.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-21T16:34:56.722Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T16:34:56.722Z"
             }
           ]
         }

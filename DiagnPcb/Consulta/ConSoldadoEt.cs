@@ -9,25 +9,29 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DiagnPcb.RegistroSoldadoEtiquetado;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace DiagnPcb.Consulta_Soldado
 
-{ 
+{
     public partial class ConSoldadoEt : Form
     {
         string connect = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
         DBConnection dB = new DBConnection();
         DataTable dtResultCable = new DataTable();
         DataTable dtResultNumPart = new DataTable();
+        DataTable dtResultDefecto = new DataTable();
         DataTable dtResultConsulta = new DataTable();
         int idWire = 0;
         string wire = string.Empty;
+        int idFailure = 0;
+        string failure = string.Empty;
         public ConSoldadoEt()
         {
             InitializeComponent();
+            dataGridView1.DataError += dataGridView1_DataError;
 
-            
         }
 
         private void Form1_SizeChanged(object sender, EventArgs e)
@@ -35,7 +39,7 @@ namespace DiagnPcb.Consulta_Soldado
             // Verificar si el formulario está maximizado
             if (this.WindowState == FormWindowState.Maximized)
             {
-                
+
             }
             // Calcular la posición del centro para el panel
             int panelX = (this.ClientSize.Width - flowLayoutPanel1.Width) / 2;
@@ -53,6 +57,8 @@ namespace DiagnPcb.Consulta_Soldado
             int Y = 400;
 
             panelConsult.Location = new System.Drawing.Point(X, Y);
+
+            label5.Location = new System.Drawing.Point(this.ClientSize.Width - label5.Width - 10, this.ClientSize.Height - label5.Height - 10);
         }
 
         private void ConSoldadoEt_Load(object sender, EventArgs e)
@@ -72,7 +78,8 @@ namespace DiagnPcb.Consulta_Soldado
             tableLayoutPanelBotones.Visible = true;
             btnExportar.Enabled = true;
 
-            switch (cbMenuConsulta.Text) {
+            switch (cbMenuConsulta.Text)
+            {
                 case "Fecha":
                     datetimeDe.Visible = true;
                     dateTimePicker2.Visible = true;
@@ -82,7 +89,7 @@ namespace DiagnPcb.Consulta_Soldado
                     lblNumPart.Visible = false;
                     cbDefecto.Visible = false;
                     lblDefecto.Visible = false;
-                    lblCable.Visible = false; 
+                    lblCable.Visible = false;
                     cbCable.Visible = false;
                     break;
                 case "Número de Parte":
@@ -100,6 +107,8 @@ namespace DiagnPcb.Consulta_Soldado
                     cbCable.Visible = false;
                     break;
                 case "Defecto":
+                    dtResultDefecto.Clear();
+                    ObtenerDefecto();
                     datetimeDe.Visible = false;
                     dateTimePicker2.Visible = false;
                     lblDe.Visible = false;
@@ -125,6 +134,29 @@ namespace DiagnPcb.Consulta_Soldado
                     lblCable.Visible = true;
                     cbCable.Visible = true;
                     break;
+                case "Gráfica":
+                    Limpiar();
+                    dtResultConsulta.Clear();
+                    if (dataGridView1.Rows.Count != 0)
+                    {
+                        dataGridView1.Controls.Clear();
+                        dataGridView1.Columns.Clear();
+                    }
+                    dataGridView1.DataSource = null;
+                    dataGridView1.Visible = false;
+                    flowLayoutPanel1.Visible = false;
+                    flowLayoutPanel2.Visible = true;
+                    btnExportar.Enabled = false;
+
+                    string estacion = "soldado";
+                    Grafica1 Grafica = new Grafica1(estacion);
+
+                    Grafica.Show();
+
+                    // Cerrar Form1
+                    this.Close();
+
+                    break;
             }
         }
 
@@ -138,7 +170,7 @@ namespace DiagnPcb.Consulta_Soldado
                 dataGridView1.Columns.Clear();
             }
             dataGridView1.DataSource = null;
-            
+
             flowLayoutPanel2.Visible = false;
             flowLayoutPanel1.Visible = true;
             panelConsult.Visible = true;
@@ -147,7 +179,8 @@ namespace DiagnPcb.Consulta_Soldado
             btnExportar.Enabled = false;
         }
 
-        private void Limpiar() {
+        private void Limpiar()
+        {
             cbMenuConsulta.SelectedIndex = -1;
             cbMenuConsulta.Text = "Seleccionar opcion...";
             cbNumPart.Items.Clear();
@@ -166,6 +199,73 @@ namespace DiagnPcb.Consulta_Soldado
         {
             consultar();
         }
+
+        #region OBTENER Defecto
+        public class ComboBoxItemDefecto
+        {
+            public int idFaile { get; set; }
+            public string failure { get; set; }
+
+            public override string ToString()
+            {
+                return failure;
+            }
+        }
+
+        private void ObtenerDefecto()
+        {
+            try
+            {
+                string dBMsg = string.Empty;
+                int dbError = 0;
+
+                DBConnection dB = new DBConnection();
+                dB.dataBase = connect;
+                dB.query = "select idFaile, failure from diagn_pcb.DiagnFailure where config = 'SOLDADO'";
+
+                var dbResult2 = dB.getData(out dBMsg, out dbError);
+
+                if (dbError != 0)
+                {
+                    //Control Adjunt
+                    cbDefecto.Enabled = true;
+
+                    //FeedBack
+                    Message message = new Message(dBMsg);
+                    message.ShowDialog();
+                    return;
+                }
+
+                //Fill Data Table
+
+                dbResult2.Fill(dtResultDefecto);
+
+                foreach (DataRow row in dtResultDefecto.Rows)
+                {
+                    if (!cbDefecto.Items.Contains(row[0].ToString()))
+                    {
+                        int id = Convert.ToInt32(row[0].ToString());
+                        string failure = row.ItemArray[1].ToString();
+
+                        // Agregar el nuevo objeto ComboBoxItem al ComboBox
+                        cbDefecto.Items.Add(new ComboBoxItemDefecto { idFaile = id, failure = failure });
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                //Control Adjust
+                cbDefecto.Enabled = false;
+
+                Message message = new Message("Error al obtener las fallas");
+                message.ShowDialog();
+
+                //Log
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al obtener los defectos: " + ex.Message + "\n");
+            }
+        }
+        #endregion
 
         #region OBTENER CABLES
         public class ComboBoxItemCable
@@ -186,7 +286,7 @@ namespace DiagnPcb.Consulta_Soldado
                 string dBMsg = string.Empty;
                 int dbError = 0;
 
-                dB.query = connect;
+                dB.dataBase = connect;
                 dB.query = "select * from diagn_pcb.DiagnWire;";
 
                 var dbResult1 = dB.getData(out dBMsg, out dbError);
@@ -298,7 +398,8 @@ namespace DiagnPcb.Consulta_Soldado
                 string opcionFiltro = cbMenuConsulta.Text;
                 string condicionquery = "";
 
-                switch (opcionFiltro) {
+                switch (opcionFiltro)
+                {
                     case "Fecha":
                         DateTime fecha_A = Convert.ToDateTime(dateTimePicker2.Text);
                         DateTime fecha_DE = Convert.ToDateTime(datetimeDe.Text);
@@ -306,28 +407,38 @@ namespace DiagnPcb.Consulta_Soldado
                         string fechaA = fecha_A.ToString("yyyy-MM-dd");
                         string fechaB = fecha_DE.ToString("yyyy-MM-dd");
 
-                        condicionquery = " WHERE SE.dayregister between '" + fechaB + "' and '" + fechaA + "';";
+                        //condicionquery = " WHERE SE.dayregister between '" + fechaB + "' and '" + fechaA + "';";
+                        condicionquery = " WHERE `Dia de Registro` between '" + fechaB + "' and '" + fechaA + "';";
                         break;
                     case "Número de Parte":
-                        condicionquery = " WHERE SE.part_num = '" + cbNumPart.Text + "';";
+                        //condicionquery = " WHERE SE.part_num = '" + cbNumPart.Text + "';";
+                        condicionquery = " WHERE `Número de Parte` = '" + cbNumPart.Text + "';";
                         break;
                     case "Defecto":
-                        condicionquery = " WHERE SE.defect = '" + cbDefecto.Text + "';";
+                        //condicionquery = " WHERE SE.defect = '" + cbDefecto.Text + "';";
+                        condicionquery = " WHERE `Defecto` = '" + cbDefecto.Text + "';";
                         break;
                     case "Cable":
-                        condicionquery = " WHERE Wire.Wire = '" + cbCable.Text + "';";
+                        //condicionquery = " WHERE Wire.Wire = '" + cbCable.Text + "';";
+                        condicionquery = " WHERE `Cable` = '" + cbCable.Text + "';";
                         break;
+
                 }
 
-                BD.query = "select SE.serie_num AS 'Número Serie', SE.part_num AS 'Número de Parte',  Wire.Wire AS 'Cable', " 
-                            + "SE.defect AS 'Defecto', SE.dayregister AS 'Dia de Registro' " 
-                            + "FROM diagn_pcb.DiagnSolEt SE " 
-                            + "INNER JOIN diagn_pcb.DiagnWire Wire on SE.idWire =  Wire.idWire "
+                //BD.query = "select SE.idRgSolEt, SE.serie_num AS 'Número Serie', SE.part_num AS 'Número de Parte',  Wire.Wire AS 'Cable', "
+                //            + "SE.defect AS 'Defecto', SE.dayregister AS 'Dia de Registro', SE.line AS 'line', Ow.owner_tech  AS 'Owner', Du.Ubication AS 'Ubicacion' "
+                //            + "FROM diagn_pcb.DiagnSolEt SE " 
+                //            + "INNER JOIN diagn_pcb.DiagnWire Wire on SE.idWire =  Wire.idWire "
+                //            + "INNER JOIN diagn_pcb.DiagnOwner Ow on SE.idOwner = Ow.idOwner "
+                //            + "INNER JOIN diagn_pcb.diagnubicacion Du on SE.idDiagnUbic = Du.idDiagnUbic"
+                //            + condicionquery;
+                BD.query = "select * from Vista_Soldado "
                             + condicionquery;
                 Console.WriteLine(BD.query.ToString());
                 var dbResultCont = BD.getData(out dBMsg, out dbError);
 
-                if (dbError != 0) {
+                if (dbError != 0)
+                {
                     Message message = new Message(dBMsg);
                     message.ShowDialog();
                     return;
@@ -337,6 +448,16 @@ namespace DiagnPcb.Consulta_Soldado
                 dbResultCont.Fill(dtResultConsulta);
 
                 dataGridView1.DataSource = dtResultConsulta;
+
+                DataGridViewButtonColumn colBoton = new DataGridViewButtonColumn();
+                colBoton.HeaderText = "Acción";
+                colBoton.Name = "Imagen";
+                colBoton.Text = "Ver Imagen";
+                colBoton.UseColumnTextForButtonValue = true;
+                dataGridView1.Columns.Add(colBoton);
+                dataGridView1.Columns["idRgSolEt"].Visible = false;
+
+
                 dataGridView1.Font = new System.Drawing.Font("Ebrima", 4F, System.Drawing.GraphicsUnit.Millimeter);
                 dataGridView1.ForeColor = System.Drawing.Color.Black;
                 //Ajustar Tamaño de las columnas para que se adapten al contenido
@@ -346,7 +467,8 @@ namespace DiagnPcb.Consulta_Soldado
                 dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
                 dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 //Feedback
                 Message message = new Message("Error al obtener la información");
                 message.ShowDialog();
@@ -444,5 +566,40 @@ namespace DiagnPcb.Consulta_Soldado
 
             panelConsult.Location = new System.Drawing.Point(X, Y);
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["Imagen"].Index && e.RowIndex >= 0)
+            {
+                if (e.RowIndex >= 0)
+                {
+                    //Obtener el valor de la primera columna (idFailure) de la fila seleccionada
+                    string idFailure1 = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    string estatus = "regSolEt";
+                    FrmImagen frmImage = new FrmImagen(idFailure1, estatus);
+
+                    frmImage.Show();
+                }
+
+            }
+        }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            Console.WriteLine(e.RowIndex + "," + e.ColumnIndex);
+            e.Cancel = true;
+        }
+
+        private void cbDefecto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbDefecto.SelectedItem != null)
+            {
+                ComboBoxItemDefecto selectedItem = (ComboBoxItemDefecto)cbDefecto.SelectedItem;
+
+                idFailure = selectedItem.idFaile;
+                failure = selectedItem.failure;
+            }
+        }
     }
 }
+
