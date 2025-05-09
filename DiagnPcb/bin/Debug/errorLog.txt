@@ -3,3 +3,10 @@
 12-04-2025 13:52:25,Error al conectar a la Base de Datos:Unable to connect to any of the specified MySQL hosts.
 12-04-2025 13:55:53,Error al obtener la información:Unknown column 'dse.defect' in 'field list'
 14-04-2025 09:44:44,Error al obtener la información:Unknown column 'dpt.line' in 'where clause'
+18-04-2025 09:23:02,Error al obtener los técnicos:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '!> 10' at line 1
+02-05-2025 20:24:43,Error al insertar los datos:La cadena de entrada no tiene el formato correcto.
+02-05-2025 20:26:18,Error al insertar los datos:La cadena de entrada no tiene el formato correcto.
+02-05-2025 20:28:06,Error al insertar los datos:La cadena de entrada no tiene el formato correcto.
+08-05-2025 12:43:44,Error getting information:Incorrect DATETIME value: '06/05/2025 12:00:00 a. m.'
+08-05-2025 12:49:39,Error getting information:Incorrect DATETIME value: '06/05/2025 12:00:00 a. m.'
+08-05-2025 12:52:29,Error getting information:Incorrect DATETIME value: '06/05/2025 12:00:00 a. m.'

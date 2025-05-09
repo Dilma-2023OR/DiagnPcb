@@ -577,7 +577,7 @@ namespace DiagnPcb
                 DBConnection dB = new DBConnection();
                 DataTable dtResult = new DataTable();
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
-                dB.query = "select idOwner, owner_tech from diagn_pcb.diagnowner where idOwner < 10";
+                dB.query = "select idOwner, owner_tech from diagn_pcb.diagnowner where idOwner != 10";
 
                 var dbResult = dB.getData(out dBMsg, out dbError);
 

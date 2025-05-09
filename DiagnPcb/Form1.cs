@@ -37,7 +37,7 @@ namespace DiagnPcb
                 {
                     button1.Visible = true;
                     button2.Visible = true;
-                    button3.Visible = true;
+                    button3.Visible = false;
                 }
                 else {
                     button1.Visible = false;

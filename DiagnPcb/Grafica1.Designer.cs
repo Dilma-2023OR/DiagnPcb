@@ -89,12 +89,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("72 Black", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(670, 0);
+            this.label1.Location = new System.Drawing.Point(665, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(584, 151);
+            this.label1.Size = new System.Drawing.Size(594, 151);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Gráfica";
+            this.label1.Text = "GRAPH";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flowLayoutPanel1
@@ -128,9 +128,9 @@
             this.label3.Location = new System.Drawing.Point(5, -2);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 45);
+            this.label3.Size = new System.Drawing.Size(93, 45);
             this.label3.TabIndex = 26;
-            this.label3.Text = "Linea:";
+            this.label3.Text = "Line:";
             // 
             // checkedListBox1
             // 
@@ -151,7 +151,7 @@
             this.tbLinea.Name = "tbLinea";
             this.tbLinea.Size = new System.Drawing.Size(239, 28);
             this.tbLinea.TabIndex = 27;
-            this.tbLinea.Text = "Seleccionar opciones..";
+            this.tbLinea.Text = "Select Options...";
             this.tbLinea.Click += new System.EventHandler(this.tbLinea_Click);
             // 
             // tableLayoutPanel1
@@ -183,9 +183,9 @@
             this.lblDe.Location = new System.Drawing.Point(0, 3);
             this.lblDe.Margin = new System.Windows.Forms.Padding(0);
             this.lblDe.Name = "lblDe";
-            this.lblDe.Size = new System.Drawing.Size(54, 35);
+            this.lblDe.Size = new System.Drawing.Size(51, 35);
             this.lblDe.TabIndex = 30;
-            this.lblDe.Text = "De:";
+            this.lblDe.Text = "Of:";
             // 
             // dateTimePickerDe
             // 
@@ -206,9 +206,9 @@
             this.lblA.Location = new System.Drawing.Point(0, 115);
             this.lblA.Margin = new System.Windows.Forms.Padding(0);
             this.lblA.Name = "lblA";
-            this.lblA.Size = new System.Drawing.Size(40, 35);
+            this.lblA.Size = new System.Drawing.Size(52, 35);
             this.lblA.TabIndex = 32;
-            this.lblA.Text = "A:";
+            this.lblA.Text = "To:";
             // 
             // dateTimePickerA
             // 
@@ -251,7 +251,7 @@
             this.button1.Size = new System.Drawing.Size(173, 41);
             this.button1.TabIndex = 32;
             this.button1.TabStop = false;
-            this.button1.Text = "Otra Consulta";
+            this.button1.Text = "Another Query";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -269,7 +269,7 @@
             this.btnExportar.Size = new System.Drawing.Size(171, 38);
             this.btnExportar.TabIndex = 31;
             this.btnExportar.TabStop = false;
-            this.btnExportar.Text = "Exportar";
+            this.btnExportar.Text = "EXPORT";
             this.btnExportar.UseVisualStyleBackColor = false;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
@@ -287,7 +287,7 @@
             this.btnConsultar.Size = new System.Drawing.Size(143, 38);
             this.btnConsultar.TabIndex = 7;
             this.btnConsultar.TabStop = false;
-            this.btnConsultar.Text = "CONSULTAR";
+            this.btnConsultar.Text = "CONSULT";
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
@@ -316,7 +316,7 @@
             this.gBoxValidation.Size = new System.Drawing.Size(1900, 666);
             this.gBoxValidation.TabIndex = 18;
             this.gBoxValidation.TabStop = false;
-            this.gBoxValidation.Text = "Diagnostico";
+            this.gBoxValidation.Text = "Diagnostic";
             // 
             // flowLayoutPanel3
             // 
@@ -378,7 +378,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(71, 25);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "2.0.0.9";
+            this.lblVersion.Text = "3.0.1.2";
             // 
             // Grafica1
             // 
@@ -394,7 +394,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Grafica1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gráfica por Fecha y Línea";
+            this.Text = "Graph by date and line";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Grafica1_Load);
             this.SizeChanged += new System.EventHandler(this.Grafica1_SizeChanged);

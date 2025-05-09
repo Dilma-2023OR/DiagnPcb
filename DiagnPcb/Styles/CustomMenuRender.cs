@@ -15,10 +15,10 @@ namespace DiagnPcb.Styles
 
     public class CustomColorTable : ProfessionalColorTable
     {
-        public override Color MenuItemSelected => Color.MediumPurple;
+        public override Color MenuItemSelected => Color.MediumAquamarine;
         public override Color MenuItemBorder => Color.DarkSlateBlue;
-        public override Color MenuItemSelectedGradientBegin => Color.MediumPurple;
-        public override Color MenuItemSelectedGradientEnd => Color.MediumPurple;
+        public override Color MenuItemSelectedGradientBegin => Color.MediumAquamarine;
+        public override Color MenuItemSelectedGradientEnd => Color.MediumAquamarine;
         public override Color MenuItemPressedGradientBegin => Color.Indigo;
         public override Color MenuItemPressedGradientEnd => Color.Indigo;
     }

@@ -76,7 +76,7 @@
             this.tableLayoutPanel3.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -107,7 +107,7 @@
             this.btnReset.Font = new System.Drawing.Font("Ebrima", 5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter);
             this.btnReset.ForeColor = System.Drawing.Color.Black;
             this.btnReset.Location = new System.Drawing.Point(1137, 59);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(169, 46);
             this.btnReset.TabIndex = 6;
@@ -212,11 +212,11 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Ebrima", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(191, 2);
+            this.groupBox1.Location = new System.Drawing.Point(188, 2);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1317, 763);
+            this.groupBox1.Size = new System.Drawing.Size(1322, 763);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingreso de Defecto:";
@@ -227,7 +227,7 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.57159F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.42841F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 336F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 341F));
             this.tableLayoutPanel4.Controls.Add(this.label7, 0, 7);
             this.tableLayoutPanel4.Controls.Add(this.tbComentarios, 0, 8);
             this.tableLayoutPanel4.Controls.Add(this.cbTipoDefecto, 1, 2);
@@ -260,7 +260,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 406F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1311, 710);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1316, 710);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // label7
@@ -463,7 +463,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Ebrima", 5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter);
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrar.Location = new System.Drawing.Point(988, 485);
+            this.btnRegistrar.Location = new System.Drawing.Point(990, 485);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(309, 43);
@@ -478,7 +478,7 @@
             this.btnCargarImagen.BackColor = System.Drawing.Color.SkyBlue;
             this.btnCargarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargarImagen.Font = new System.Drawing.Font("Ebrima", 5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter);
-            this.btnCargarImagen.Location = new System.Drawing.Point(988, 255);
+            this.btnCargarImagen.Location = new System.Drawing.Point(990, 255);
             this.btnCargarImagen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCargarImagen.Name = "btnCargarImagen";
             this.btnCargarImagen.Size = new System.Drawing.Size(309, 43);
@@ -498,7 +498,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(71, 25);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "2.0.0.9";
+            this.lblVersion.Text = "3.0.1.0";
             // 
             // RegistroSoldadoEtiquetado
             // 

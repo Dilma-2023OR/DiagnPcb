@@ -82,7 +82,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tableLayoutPanelConsult);
-            this.groupBox1.Font = new System.Drawing.Font("Ebrima", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter);
+            this.groupBox1.Font = new System.Drawing.Font("Elephant", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(3, 2);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -453,7 +453,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 25);
             this.label5.TabIndex = 35;
-            this.label5.Text = "2.0.0.9";
+            this.label5.Text = "3.0.1.0";
             // 
             // ConSoldadoEt
             // 

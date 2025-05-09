@@ -95,7 +95,7 @@ namespace DiagnPcb
                 tableLayoutPanel4.Location = new System.Drawing.Point(X, Y);
 
                 int PanY = (this.ClientSize.Height - tableLayoutPanel4.Height) / 2;
-                tableLayoutPanel4.Location = new System.Drawing.Point(X, Y+20);
+                tableLayoutPanel4.Location = new System.Drawing.Point(X, Y+40);
 
                 lblVersion.Location = new System.Drawing.Point(this.ClientSize.Width - lblVersion.Width - 10, this.ClientSize.Height - lblVersion.Height - 10);
             }
@@ -241,11 +241,11 @@ namespace DiagnPcb
         public class ComboBoxItemUbicaciones
         {
             public int idDiagnUbic { get; set; }
-            public string Ubication { get; set; }
+            public string UbicationEnglish { get; set; }
 
             public override string ToString()
             {
-                return Ubication;
+                return UbicationEnglish;
             }
         }
 
@@ -257,7 +257,7 @@ namespace DiagnPcb
                 int dbError = 0;
 
                 dB.dataBase = connect;
-                dB.query = "select idDiagnUbic, Ubication from diagn_pcb.DiagnUbicacion";
+                dB.query = "select idDiagnUbic, UbicationEnglish from diagn_pcb.DiagnUbicacion";
 
                 var dbResult = dB.getData(out dBMsg, out dbError);
 
@@ -278,10 +278,10 @@ namespace DiagnPcb
                     if (!cbUbicaciones.Items.Contains(row[0].ToString()))
                     {
                         int id = Convert.ToInt32(row[0].ToString());
-                        string ubication = row.ItemArray[1].ToString();
+                        string UbicationEnglish = row.ItemArray[1].ToString();
 
                         // Agregar el nuevo objeto ComboBoxItem al ComboBox
-                        cbUbicaciones.Items.Add(new ComboBoxItemUbicaciones { idDiagnUbic = id, Ubication = ubication });
+                        cbUbicaciones.Items.Add(new ComboBoxItemUbicaciones { idDiagnUbic = id, UbicationEnglish = UbicationEnglish });
                     }
                 }
             }
@@ -303,11 +303,11 @@ namespace DiagnPcb
         public class ComboBoxItemCable
         {
             public int idWire { get; set; }
-            public string Wire { get; set; }
+            public string WireEnglish { get; set; }
 
             public override string ToString()
             {
-                return Wire;  // Se mostrará solo el wire en el ComboBox
+                return WireEnglish;  // Se mostrará solo el wire en el ComboBox
             }
         }
 
@@ -340,10 +340,10 @@ namespace DiagnPcb
                     if (!cbCables.Items.Contains(row[0].ToString()))
                     {
                         int id = Convert.ToInt32(row[0].ToString());
-                        string wire = row.ItemArray[1].ToString();
+                        string WireEnglish = row.ItemArray[2].ToString();
 
                         // Agregar el nuevo objeto ComboBoxItem al ComboBox
-                        cbCables.Items.Add(new ComboBoxItemCable { idWire = id, Wire = wire });
+                        cbCables.Items.Add(new ComboBoxItemCable { idWire = id, WireEnglish = WireEnglish });
                     }
                 }
             }
@@ -421,11 +421,11 @@ namespace DiagnPcb
         public class ComboBoxItemFallas
         {
             public int idFaile { get; set; }
-            public string failure { get; set; }
+            public string failureEnglish { get; set; }
 
             public override string ToString()
             {
-                return failure;
+                return failureEnglish;
             }
         }
 
@@ -437,7 +437,7 @@ namespace DiagnPcb
                 int dbError = 0;
 
                 dB.dataBase = connect;
-                dB.query = "select idFaile, failure from diagn_pcb.DiagnFailure";
+                dB.query = "select idFaile, failureEnglish from diagn_pcb.DiagnFailure";
 
                 var dbResult = dB.getData(out dBMsg, out dbError);
 
@@ -458,20 +458,20 @@ namespace DiagnPcb
                     if (!cbFallas.Items.Contains(row[0].ToString()))
                     {
                         int id = Convert.ToInt32(row[0].ToString());
-                        string failure = row.ItemArray[1].ToString();
+                        string failureEnglish = row.ItemArray[1].ToString();
 
                         // Agregar el nuevo objeto ComboBoxItem al ComboBox
-                        cbFallas.Items.Add(new ComboBoxItemFallas { idFaile = id, failure = failure });
+                        cbFallas.Items.Add(new ComboBoxItemFallas { idFaile = id, failureEnglish = failureEnglish });
                     }
                 }
             }
             catch (Exception ex)
             {
-                Message message = new Message("Error al obtener las fallas");
+                Message message = new Message("Error getting faults");
                 message.ShowDialog();
 
                 //Log
-                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al obtener las fallas:" + ex.Message + "\n");
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error getting faults:" + ex.Message + "\n");
             }
         }
 
@@ -482,11 +482,11 @@ namespace DiagnPcb
         public class ComboBoxItemDiagn
         {
             public int idDiagn { get; set; }
-            public string DiagnPcb { get; set; }
+            public string DiagnPcbEnglish { get; set; }
 
             public override string ToString()
             {
-                return DiagnPcb;
+                return DiagnPcbEnglish;
             }
         }
 
@@ -519,10 +519,10 @@ namespace DiagnPcb
                     if (!cbDiagnostico.Items.Contains(row[0].ToString()))
                     {
                         int id = Convert.ToInt32(row[0].ToString());
-                        string Diagn = row.ItemArray[1].ToString();
+                        string DiagnPcbEnglish = row.ItemArray[2].ToString();
 
                         // Agregar el nuevo objeto ComboBoxItem al ComboBox
-                        cbDiagnostico.Items.Add(new ComboBoxItemDiagn { idDiagn = id, DiagnPcb = Diagn });
+                        cbDiagnostico.Items.Add(new ComboBoxItemDiagn { idDiagn = id, DiagnPcbEnglish = DiagnPcbEnglish });
                     }
                 }
             }
@@ -547,7 +547,7 @@ namespace DiagnPcb
 
                 //Obtener el ID y el cable
                 idWire = selectedItem.idWire;
-                wire = selectedItem.Wire;
+                wire = selectedItem.WireEnglish;
             }
         }
 
@@ -558,7 +558,7 @@ namespace DiagnPcb
                 ComboBoxItemDiagn selectedItem = (ComboBoxItemDiagn)cbDiagnostico.SelectedItem;
 
                 idDiagn = selectedItem.idDiagn;
-                DiagnPcb = selectedItem.DiagnPcb;
+                DiagnPcb = selectedItem.DiagnPcbEnglish;
 
             }
         }
@@ -570,7 +570,7 @@ namespace DiagnPcb
                 ComboBoxItemFallas selectedItem = (ComboBoxItemFallas)cbFallas.SelectedItem;
 
                 idFaile = selectedItem.idFaile;
-                failure = selectedItem.failure;
+                failure = selectedItem.failureEnglish;
             }
         }
 
@@ -581,7 +581,7 @@ namespace DiagnPcb
                 ComboBoxItemUbicaciones selectedItem = (ComboBoxItemUbicaciones)cbUbicaciones.SelectedItem;
 
                 idDiagnUbic = selectedItem.idDiagnUbic;
-                Ubication = selectedItem.Ubication;
+                Ubication = selectedItem.UbicationEnglish;
             }
         }
 
@@ -611,28 +611,36 @@ namespace DiagnPcb
 
             string lin = cbMenuConsulta.Text;
             switch (lin) {
-                case "Fecha":
+                case "Date":
                     dateTimePickerDe.Value = DateTime.Now;
                     dateTimePickerA.Value = DateTime.Now;
                     break;
-                case "Linea":
-                    tbLinea.Text = "Seleccionar opcion...";
+                case "Date and Hour":
+                    dateTimePickerDe.Value = DateTime.Now;
+                    dateTimePickerA.Value= DateTime.Now;
+                    CbHoraA.SelectedIndex = -1;
+                    cbHoraDe.SelectedIndex = -1;
+                    CbHoraA.Enabled = false;
+                    cbHoraDe.Enabled = false;
+                    break;
+                case "Line":
+                    tbLinea.Text = "Select options...";
                     checkedListBox1.Visible = false;
                     tbLinea.Enabled = false;
                     break;
-                case "Cable":
+                case "Wire":
                     cbCables.SelectedIndex = -1;
                     cbCables.Enabled = false;
                     break;
-                case "Diagnostico":
+                case "Diagnostic":
                     cbDiagnostico.SelectedIndex = -1;
                     cbDiagnostico.Enabled = false;
                     break;
-                case "Falla":
+                case "Failure":
                     cbFallas.SelectedIndex = -1;
                     cbFallas.Enabled = false;
                     break;
-                case "Número de Parte":
+                case "Part Number":
                     cbNumPart.SelectedIndex = -1;
                     cbNumPart.Enabled = false;
                     break;
@@ -640,15 +648,15 @@ namespace DiagnPcb
                     cbOwner.SelectedIndex = -1;
                     cbOwner.Enabled = false;
                     break;
-                case "Semana":
+                case "Week":
                     cbSemana.SelectedIndex = -1;
                     cbSemana.Enabled = false;
                     break;
-                case "Ubicación":
+                case "Ubication":
                     cbUbicaciones.SelectedIndex = -1;
                     cbUbicaciones.Enabled = false;
                     break;
-                case "Grafica fecha y línea":
+                case "Graph date and line":
                     tbLinea.Enabled = true;
                     tbLinea.Visible = true;
                     dateTimePickerDe.Value = DateTime.Now;
@@ -680,17 +688,32 @@ namespace DiagnPcb
 
                 switch (opcionLinea)
                 {
-                    case "Fecha":
+                    case "Date":
                         DateTime fecha_A = Convert.ToDateTime(dateTimePickerA.Text);
                         DateTime fecha_De = Convert.ToDateTime(dateTimePickerDe.Text);
 
                         string fechaA = fecha_De.ToString("yyyy-MM-dd");
                         string fechaB = fecha_A.ToString("yyyy-MM-dd");
 
-                        condicion = " WHERE `Turno` between '" + fechaA + "' and '" + fechaB +"';";
+                        condicion = " WHERE `Shift` between '" + fechaA + "' and '" + fechaB +"';";
                         
                         break;
-                    case "Linea":
+                    case "Date and Hour":
+                        DateTime fecha_AA = Convert.ToDateTime(dateTimePickerA.Text);
+                        DateTime fechaDee = Convert.ToDateTime(dateTimePickerDe.Text);
+                        
+                        string horaDe = cbHoraDe.Text;
+                        string horaA = CbHoraA.Text;
+                        //Combinar fecha y hora 
+                        DateTime fechaHoraDe = DateTime.Parse($"{fechaDee.ToShortDateString()} {horaDe}");
+                        DateTime fechaHoraA = DateTime.Parse($"{fecha_AA.ToShortDateString()} {horaA}");
+
+                        string fechaAA = fechaHoraA.ToString("yyyy-MM-dd HH:mm");
+                        string fecha_Dee = fechaHoraDe.ToString("yyyy-MM-dd HH:mm");
+
+                        condicion = " WHERE `Shift` >= '" + fecha_Dee + "' and `Shift` <= '" + fechaAA + "';";
+                        break;
+                    case "Line":
                         // Separar las lineas seleccionadas y que se encuentran en el textbox de línea
                         string[] partesLineas = tbLinea.Text.Split(',');
                         
@@ -701,55 +724,58 @@ namespace DiagnPcb
                         switch (cantidad)
                         {
                             case 1:
-                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + partesLineas[0].Trim() + "')";
                                 break;
                             case 2:
-                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "')";
                                 break;
                             case 3:
-                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "')";
                                 break;
                             case 4:
-                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "')";
                                 break;
                             case 5:
-                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "')";
                                 break;
                             case 6:
-                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "')";
                                 break;
                             case 7:
-                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "', '" + partesLineas[6].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "', '" + partesLineas[6].Trim() + "')";
                                 break;
                             case 8:
-                                condicion = " WHERE `Linea` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "', '" + partesLineas[6].Trim() + "', '" + partesLineas[7].Trim() +"')";
+                                condicion = " WHERE `Line` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "', '" + partesLineas[6].Trim() + "', '" + partesLineas[7].Trim() +"')";
                                 break;
                         }
 
                         break;
 
-                    case "Cable":
-                        condicion = " WHERE `Cable` = '" + cbCables.Text + "';";
+                    case "Wire":
+                        condicion = " WHERE `Wire` = '" + cbCables.Text + "';";
                         break;
-                    case "Diagnostico":
-                        condicion = " WHERE `Diagnostico` = '" + cbDiagnostico.Text + "';";
+                    case "Diagnostic":
+                        condicion = " WHERE `Diagnostics` = '" + cbDiagnostico.Text + "';";
                         break;
-                    case "Falla":
-                        condicion = " WHERE `Falla` = '" + cbFallas.Text + "';";
+                    case "Failure":
+                        condicion = " WHERE `Failure` = '" + cbFallas.Text + "';";
                         break;
-                    case "Número de Parte":
-                        condicion = " WHERE `Numero de Parte` = '" + cbNumPart.Text + "';";
+                    case "Part Number":
+                        condicion = " WHERE `Part Number` = '" + cbNumPart.Text + "';";
                         break;
                     case "Owner":
                         condicion = " WHERE `Owner` = '" + cbOwner.Text + "';";
                         break;
-                    case "Semana":
-                        condicion = " WHERE `Semana` = '" + cbSemana.Text + "';";
+                    case "Week":
+                        condicion = " WHERE `Week` = '" + cbSemana.Text + "';";
                         break;
-                    case "Ubicación":
-                        condicion = " WHERE `Ubicacion` = '" + cbUbicaciones.Text + "';";
+                    case "Ubication":
+                        condicion = " WHERE `Ubication` = '" + cbUbicaciones.Text + "';";
                         break;
-                    case "Grafica fecha y línea":
+                    case "Operation":
+                        condicion = " WHERE `Operation` IN ('" + cbOperacion.Text + "');";
+                            break;
+                    case "Graph date and line":
                         // Separar las lineas seleccionadas y que se encuentran en el textbox de línea
                         string[] parts = tbLinea.Text.Split(',');
 
@@ -761,29 +787,29 @@ namespace DiagnPcb
                         {
                             case 1:
                                 //condicion = " WHERE dpt.line IN ('" + parts[0].Trim() + "') ";
-                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + parts[0].Trim() + "')";
                                 break;
                             case 2:
                                 //condicion = " WHERE dpt.line IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "')";
-                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "')";
                                 break;
                             case 3:
-                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "')";
                                 break;
                             case 4:
-                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "')";
                                 break;
                             case 5:
-                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "')";
                                 break;
                             case 6:
-                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "', '" + parts[5].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "', '" + parts[5].Trim() + "')";
                                 break;
                             case 7:
-                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "', '" + parts[5].Trim() + "', '" + parts[6].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "', '" + parts[5].Trim() + "', '" + parts[6].Trim() + "')";
                                 break;
                             case 8:
-                                condicion = " WHERE `Linea` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "', '" + parts[5].Trim() + "', '" + parts[6].Trim() + "', '" + parts[7].Trim() + "')";
+                                condicion = " WHERE `Line` IN ('" + parts[0].Trim() + "', '" + parts[1].Trim() + "', '" + parts[2].Trim() + "', '" + parts[3].Trim() + "', '" + parts[4].Trim() + "', '" + parts[5].Trim() + "', '" + parts[6].Trim() + "', '" + parts[7].Trim() + "')";
                                 break;
                         }
                         break;
@@ -815,9 +841,9 @@ namespace DiagnPcb
                 dataGridView1.DataSource = dtResultConGraf;
 
                 DataGridViewButtonColumn colBoton = new DataGridViewButtonColumn();
-                colBoton.HeaderText = "Acción";
-                colBoton.Name = "Imagen";
-                colBoton.Text = "Ver Imagen";
+                colBoton.HeaderText = "Action";
+                colBoton.Name = "Image";
+                colBoton.Text = "See Image";
                 colBoton.UseColumnTextForButtonValue = true;
                 dataGridView1.Columns.Add(colBoton);
 
@@ -837,11 +863,11 @@ namespace DiagnPcb
             catch (Exception ex)
             {
                 //Feedback
-                Message message = new Message("Error al obtener la información");
+                Message message = new Message("Error getting information");
                 message.ShowDialog();
 
                 //Log
-                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al obtener la información:" + ex.Message + "\n");
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error getting information:" + ex.Message + "\n");
             }
         }
 
@@ -864,15 +890,15 @@ namespace DiagnPcb
         private void btnExportar_Click(object sender, EventArgs e)
         {
             ExportarAExcel();
-            MessageBox.Show("DATOS EXPORTADOS CORRECTAMENTE");
+            MessageBox.Show("DATA EXPORTED CORRECTLY");
         }
 
 
         private void limpiar() {
             
-            tbLinea.Text = "Seleccionar opcion...";
+            tbLinea.Text = "Selection option...";
             cbMenuConsulta.SelectedIndex = -1;
-            cbMenuConsulta.Text = "Seleccionar opcion...";
+            cbMenuConsulta.Text = "Selection option...";
             cbNumPart.Items.Clear();
             cbNumPart.SelectedIndex = -1;
             cbSemana.SelectedIndex = -1;
@@ -884,6 +910,9 @@ namespace DiagnPcb
             cbFallas.SelectedIndex = -1;
             dateTimePickerA.Value = DateTime.Now;
             dateTimePickerDe.Value = DateTime.Now;
+            cbHoraDe.SelectedIndex = -1;
+            CbHoraA.SelectedIndex = -1;
+            cbOperacion.SelectedIndex = -1;
             // Recorrer todos los ítems y desmarcarlos
             for (int i = 0; i < checkedListBox1.Items.Count; i++)
             {
@@ -906,11 +935,15 @@ namespace DiagnPcb
 
             switch (cbMenuConsulta.Text)
             {
-                case "Fecha":
+                case "Date":
                     lblA.Visible = true;
                     dateTimePickerA.Visible = true;
                     lblDe.Visible = true;
                     dateTimePickerDe.Visible = true;
+                    lblHoraA.Visible = false;
+                    lblHoraDe.Visible = false;
+                    CbHoraA.Visible = false;
+                    cbHoraDe.Visible = false;
                     panel2.Visible = false;
                     lblNumPart.Visible = false;
                     cbNumPart.Visible = false;
@@ -926,15 +959,19 @@ namespace DiagnPcb
                     cbCables.Visible = false;
                     lblFalla.Visible = false;
                     cbFallas.Visible = false;
-
+                    lblOperacion.Visible = false;
+                    cbOperacion.Visible = false;
                     break;
-
-                case "Linea":
-                    lblA.Visible = false;
-                    dateTimePickerA.Visible = false;
-                    lblDe.Visible = false;
-                    dateTimePickerDe.Visible = false;
-                    panel2.Visible = true;
+                case "Date and Hour":
+                    lblA.Visible = true;
+                    dateTimePickerA.Visible = true;
+                    lblDe.Visible = true;
+                    dateTimePickerDe.Visible = true;
+                    lblHoraA.Visible = true;
+                    lblHoraDe.Visible = true;
+                    CbHoraA.Visible = true;
+                    cbHoraDe.Visible = true;
+                    panel2.Visible = false;
                     lblNumPart.Visible = false;
                     cbNumPart.Visible = false;
                     lblOwner.Visible = false;
@@ -949,12 +986,45 @@ namespace DiagnPcb
                     cbCables.Visible = false;
                     lblFalla.Visible = false;
                     cbFallas.Visible = false;
+                    lblOperacion.Visible = false;
+                    cbOperacion.Visible = false;
                     break;
-                case "Semana":
+                case "Line":
                     lblA.Visible = false;
                     dateTimePickerA.Visible = false;
                     lblDe.Visible = false;
                     dateTimePickerDe.Visible = false;
+                    lblHoraA.Visible = false;
+                    lblHoraDe.Visible = false;
+                    CbHoraA.Visible = false;
+                    cbHoraDe.Visible = false;
+                    panel2.Visible = false;
+                    lblNumPart.Visible = false;
+                    cbNumPart.Visible = false;
+                    lblOwner.Visible = false;
+                    cbOwner.Visible = false;
+                    lblDiagnostico.Visible = false;
+                    cbDiagnostico.Visible = false;
+                    lblSemana.Visible = false;
+                    cbSemana.Visible = false;
+                    lblUbicacion.Visible = false;
+                    cbUbicaciones.Visible = false;
+                    lblCable.Visible = false;
+                    cbCables.Visible = false;
+                    lblFalla.Visible = false;
+                    cbFallas.Visible = false;
+                    lblOperacion.Visible = false;
+                    cbOperacion.Visible = false;
+                    break;
+                case "Week":
+                    lblA.Visible = false;
+                    dateTimePickerA.Visible = false;
+                    lblDe.Visible = false;
+                    dateTimePickerDe.Visible = false;
+                    lblHoraA.Visible = false;
+                    lblHoraDe.Visible = false;
+                    CbHoraA.Visible = false;
+                    cbHoraDe.Visible = false;
                     panel2.Visible = false;
                     lblNumPart.Visible = false;
                     cbNumPart.Visible = false;
@@ -970,6 +1040,8 @@ namespace DiagnPcb
                     cbCables.Visible = false;
                     lblFalla.Visible = false;
                     cbFallas.Visible = false;
+                    lblOperacion.Visible = false;
+                    cbOperacion.Visible = false;
                     break;
                 case "Owner":
                     dtResultOwner.Clear();
@@ -978,6 +1050,10 @@ namespace DiagnPcb
                     dateTimePickerA.Visible = false;
                     lblDe.Visible = false;
                     dateTimePickerDe.Visible = false;
+                    lblHoraA.Visible = false;
+                    lblHoraDe.Visible = false;
+                    CbHoraA.Visible = false;
+                    cbHoraDe.Visible = false;
                     panel2.Visible = false;
                     lblNumPart.Visible = false;
                     cbNumPart.Visible = false;
@@ -993,14 +1069,20 @@ namespace DiagnPcb
                     cbCables.Visible = false;
                     lblFalla.Visible = false;
                     cbFallas.Visible = false;
+                    lblOperacion.Visible = false;
+                    cbOperacion.Visible = false;
                     break;
-                case "Diagnostico":
+                case "Diagnostic":
                     dtResultDiagnostico.Clear();
                     ObtenerDiagnostico();
                     lblA.Visible = false;
                     dateTimePickerA.Visible = false;
                     lblDe.Visible = false;
                     dateTimePickerDe.Visible = false;
+                    lblHoraA.Visible = false;
+                    lblHoraDe.Visible = false;
+                    CbHoraA.Visible = false;
+                    cbHoraDe.Visible = false;
                     panel2.Visible = false;
                     lblNumPart.Visible = false;
                     cbNumPart.Visible = false;
@@ -1016,14 +1098,20 @@ namespace DiagnPcb
                     cbCables.Visible = false;
                     lblFalla.Visible = false;
                     cbFallas.Visible = false;
+                    lblOperacion.Visible = false;
+                    cbOperacion.Visible = false;
                     break;
-                case "Falla":
+                case "Failure":
                     dtResultFalla.Clear();
                     ObtenerFallas();
                     lblA.Visible = false;
                     dateTimePickerA.Visible = false;
                     lblDe.Visible = false;
                     dateTimePickerDe.Visible = false;
+                    lblHoraA.Visible = false;
+                    lblHoraDe.Visible = false;
+                    CbHoraA.Visible = false;
+                    cbHoraDe.Visible = false;
                     panel2.Visible = false;
                     lblNumPart.Visible = false;
                     cbNumPart.Visible = false;
@@ -1039,14 +1127,20 @@ namespace DiagnPcb
                     cbCables.Visible = false;
                     lblFalla.Visible = true;
                     cbFallas.Visible = true;
+                    lblOperacion.Visible = false;
+                    cbOperacion.Visible = false;
                     break;
-                case "Cable":
+                case "Wire":
                     dtResultCable.Clear();
                     ObtenerCable();
                     lblA.Visible = false;
                     dateTimePickerA.Visible = false;
                     lblDe.Visible = false;
                     dateTimePickerDe.Visible = false;
+                    lblHoraA.Visible = false;
+                    lblHoraDe.Visible = false;
+                    CbHoraA.Visible = false;
+                    cbHoraDe.Visible = false;
                     panel2.Visible = false;
                     lblNumPart.Visible = false;
                     cbNumPart.Visible = false;
@@ -1062,14 +1156,20 @@ namespace DiagnPcb
                     cbCables.Visible = true;
                     lblFalla.Visible = false;
                     cbFallas.Visible = false;
+                    lblOperacion.Visible = false;
+                    cbOperacion.Visible = false;
                     break;
-                case "Número de Parte":
+                case "Part Number":
                     dtResult.Clear();
                     obtenerNumParte();
                     lblA.Visible = false;
                     dateTimePickerA.Visible = false;
                     lblDe.Visible = false;
                     dateTimePickerDe.Visible = false;
+                    lblHoraA.Visible = false;
+                    lblHoraDe.Visible = false;
+                    CbHoraA.Visible = false;
+                    cbHoraDe.Visible = false;
                     panel2.Visible = false;
                     lblNumPart.Visible = true;
                     cbNumPart.Visible = true;
@@ -1085,14 +1185,20 @@ namespace DiagnPcb
                     cbCables.Visible = false;
                     lblFalla.Visible = false;
                     cbFallas.Visible = false;
+                    lblOperacion.Visible = false;
+                    cbOperacion.Visible = false;
                     break;
-                case "Ubicación":
+                case "Ubication":
                     dtResultUbicaciones.Clear();
                     ObtenerUbicaciones();
                     lblA.Visible = false;
                     dateTimePickerA.Visible = false;
                     lblDe.Visible = false;
                     dateTimePickerDe.Visible = false;
+                    lblHoraA.Visible = false;
+                    lblHoraDe.Visible = false;
+                    CbHoraA.Visible = false;
+                    cbHoraDe.Visible = false;
                     panel2.Visible = false;
                     lblNumPart.Visible = false;
                     cbNumPart.Visible = false;
@@ -1108,8 +1214,37 @@ namespace DiagnPcb
                     cbCables.Visible = false;
                     lblFalla.Visible = false;
                     cbFallas.Visible = false;
+                    lblOperacion.Visible = false;
+                    cbOperacion.Visible = false;
                     break;
-                case "Grafica fecha y línea":
+                case "Operation":
+                    lblA.Visible = false;
+                    dateTimePickerA.Visible = false;
+                    lblDe.Visible = false;
+                    dateTimePickerDe.Visible = false;
+                    lblHoraA.Visible = false;
+                    lblHoraDe.Visible = false;
+                    CbHoraA.Visible = false;
+                    cbHoraDe.Visible = false;
+                    panel2.Visible = false;
+                    lblNumPart.Visible = false;
+                    cbNumPart.Visible = false;
+                    lblOwner.Visible = false;
+                    cbOwner.Visible = false;
+                    lblDiagnostico.Visible = false;
+                    cbDiagnostico.Visible = false;
+                    lblSemana.Visible = false;
+                    cbSemana.Visible = false;
+                    lblUbicacion.Visible = false;
+                    cbUbicaciones.Visible = false;
+                    lblCable.Visible = false;
+                    cbCables.Visible = false;
+                    lblFalla.Visible = false;
+                    cbFallas.Visible = false;
+                    lblOperacion.Visible = true;
+                        cbOperacion.Visible = true;
+                    break;
+                case "Graph date and line":
                     limpiar();
                     dtResultCon.Clear();
                     dtResultConGraf.Clear();
@@ -1132,7 +1267,7 @@ namespace DiagnPcb
                     this.Close();
                     
                     break;
-                case "Soldado y Atornillado":
+                case "Welded and Bolted":
                     ConSoldadoEt conSoldadoEt = new ConSoldadoEt();
                     conSoldadoEt.Show();
 
@@ -1166,7 +1301,7 @@ namespace DiagnPcb
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridView1.Columns["Imagen"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dataGridView1.Columns["Image"].Index && e.RowIndex >= 0)
             {
                 if (e.RowIndex >= 0)
                 { 

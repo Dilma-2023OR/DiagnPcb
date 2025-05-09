@@ -42,7 +42,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.94092F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.05908F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtIdFailure, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblVersion, 2, 1);
@@ -58,17 +58,17 @@
             // pictureBox1
             // 
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(102, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(101, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 574);
+            this.pictureBox1.Size = new System.Drawing.Size(795, 574);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // txtIdFailure
             // 
             this.txtIdFailure.BackColor = System.Drawing.SystemColors.Control;
-            this.txtIdFailure.Location = new System.Drawing.Point(102, 584);
+            this.txtIdFailure.Location = new System.Drawing.Point(101, 584);
             this.txtIdFailure.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdFailure.Name = "txtIdFailure";
             this.txtIdFailure.Size = new System.Drawing.Size(100, 22);
@@ -87,7 +87,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(71, 25);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "2.0.0.9";
+            this.lblVersion.Text = "3.0.1.2";
             // 
             // FrmImagen
             // 
@@ -100,7 +100,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FrmImagen";
-            this.Text = "Imagen";
+            this.Text = "Image";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

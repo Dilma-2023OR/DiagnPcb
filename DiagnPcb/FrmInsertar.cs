@@ -27,6 +27,8 @@ using AForge.Video.DirectShow;
 using System.Diagnostics.Eventing.Reader;
 using static DiagnPcb.RegistroSoldadoEtiquetado;
 using DiagnPcb.Styles;
+using DiagnPcb.Registros;
+using static DiagnPcb.FrmConsultar;
 
 namespace DiagnPcb
 {
@@ -55,6 +57,8 @@ namespace DiagnPcb
             cbFalla.Enabled = false;
             cbDiagnostico.Enabled = false;
             cbOwner.Enabled = false;
+            cbOperacion.Enabled = false;
+            cbMaquina.Enabled = false;
             tbComentarios.Enabled = false;
             btnGuardar.Enabled = false;
             btnCargarImagen.Enabled = false;
@@ -62,11 +66,8 @@ namespace DiagnPcb
 
             ObtenerLinea();
             ObtenerCable();
-            ObtenerFallas();
-            ObtenerDiagnostico();
-            ObtenerUbicaciones();
             ObtenerOwner();
-
+            ObtenerDiagnostico();
         }
 
         //Config Connection
@@ -78,7 +79,7 @@ namespace DiagnPcb
         // Obtener la fecha y hora actuales
         DateTime turno = DateTime.Now;
 
-        
+
 
         //Config Data
         string warehouseBin = string.Empty;
@@ -95,9 +96,9 @@ namespace DiagnPcb
         int id_owner = 0;
         string owner_tech = string.Empty;
         int idWire = 0;
-        string wire = string.Empty;
+        string WireEnglish = string.Empty;
         int idDiagn = 0;
-        string DiagnPcb = string.Empty;
+        string DiagnPcbEnglish = string.Empty;
         int idFaile = 0;
         string failure = string.Empty;
         int idDiagnUbic = 0;
@@ -115,8 +116,9 @@ namespace DiagnPcb
                 videoSource.NewFrame += new NewFrameEventHandler(videoSource_NewFrame);
                 videoSource.Start();
             }
-            else {
-                Message message = new Message("No se encontró ninguna cámara.");
+            else
+            {
+                Message message = new Message("No camera found.");
                 message.ShowDialog();
             }
         }
@@ -181,27 +183,28 @@ namespace DiagnPcb
 
                 InitializeCamera();
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
 
                 //Control Adjust
                 tbNumParte.Enabled = false;
 
-                Message message = new Message("Error al obtener el numero de parte");
+                Message message = new Message("\r\nError getting part number");
                 message.ShowDialog();
 
                 //Log
-                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al obtener la configuración:" + ex.Message + "\n");
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",\r\nError getting part number:" + ex.Message + "\n");
             }
         }
 
         public class ComboBoxItemUbicaciones
         {
             public int idDiagnUbic { get; set; }
-            public string Ubication { get; set; }
+            public string UbicationEnglish { get; set; }
 
             public override string ToString()
             {
-                return Ubication;
+                return UbicationEnglish;
             }
         }
 
@@ -213,9 +216,14 @@ namespace DiagnPcb
                 int dbError = 0;
 
                 DBConnection dB = new DBConnection();
-                DataTable dtResult = new DataTable();
+                DataTable dtResult = new DataTable(); 
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
-                dB.query = "select idDiagnUbic, Ubication from diagn_pcb.DiagnUbicacion";
+
+                string consultUbic = string.Empty;
+                    consultUbic = "select idDiagnUbic, UbicationEnglish from diagn_pcb.DiagnUbicacion where config = 'GENERAL'";
+
+                //dB.query = "select idDiagnUbic, Ubication from diagn_pcb.DiagnUbicacion";
+                dB.query = consultUbic;
 
                 var dbResult = dB.getData(out dBMsg, out dbError);
 
@@ -239,10 +247,10 @@ namespace DiagnPcb
                     if (!cbUbicacion.Items.Contains(row[0].ToString()))
                     {
                         int id = Convert.ToInt32(row[0].ToString());
-                        string ubication = row.ItemArray[1].ToString();
+                        string UbicationEnglish = row.ItemArray[1].ToString();
 
                         // Agregar el nuevo objeto ComboBoxItem al ComboBox
-                        cbUbicacion.Items.Add(new ComboBoxItemUbicaciones { idDiagnUbic = id, Ubication = ubication });
+                        cbUbicacion.Items.Add(new ComboBoxItemUbicaciones { idDiagnUbic = id, UbicationEnglish = UbicationEnglish });
                     }
                 }
             }
@@ -252,22 +260,22 @@ namespace DiagnPcb
                 //Control Adjust
                 tbNumParte.Enabled = false;
 
-                Message message = new Message("Error al obtener las ubicaciones");
+                Message message = new Message("\r\nError getting locations");
                 message.ShowDialog();
 
                 //Log
-                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al obtener las ubicaciones:" + ex.Message + "\n");
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error getting locations:" + ex.Message + "\n");
             }
         }
 
         public class ComboBoxItemFallas
         {
             public int idFaile { get; set; }
-            public string failure { get; set; }
+            public string failureEnglish { get; set; }
 
             public override string ToString()
             {
-                return failure;
+                return failureEnglish;
             }
         }
 
@@ -281,8 +289,15 @@ namespace DiagnPcb
                 DBConnection dB = new DBConnection();
                 DataTable dtResult = new DataTable();
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
-                dB.query = "select idFaile, failure from diagn_pcb.DiagnFailure where config = 'GENERAL'";
+                string consulta = string.Empty;
+                if (cbOperacion.Text.Equals("OP 30 - Soldier") || cbOperacion.Text.Equals("OP 40 - Screwed"))
+                    consulta = "select idFaile, failureEnglish from diagn_pcb.DiagnFailure where config = 'SOLDADO'";
+                else
+                    consulta = "select idFaile, failureEnglish from diagn_pcb.DiagnFailure where config = 'GENERAL'";
 
+                //dB.query = "select idFaile, failure from diagn_pcb.DiagnFailure where config = 'GENERAL'";
+
+                dB.query = consulta;
                 var dbResult = dB.getData(out dBMsg, out dbError);
 
                 if (dbError != 0)
@@ -305,10 +320,10 @@ namespace DiagnPcb
                     if (!cbFalla.Items.Contains(row[0].ToString()))
                     {
                         int id = Convert.ToInt32(row[0].ToString());
-                        string failure = row.ItemArray[1].ToString();
+                        string failureEnglish = row.ItemArray[1].ToString();
 
                         // Agregar el nuevo objeto ComboBoxItem al ComboBox
-                        cbFalla.Items.Add(new ComboBoxItemFallas { idFaile = id, failure = failure });
+                        cbFalla.Items.Add(new ComboBoxItemFallas { idFaile = id, failureEnglish = failureEnglish });
                     }
                 }
             }
@@ -318,22 +333,22 @@ namespace DiagnPcb
                 //Control Adjust
                 tbNumParte.Enabled = false;
 
-                Message message = new Message("Error al obtener las fallas");
+                Message message = new Message("Error getting faults");
                 message.ShowDialog();
 
                 //Log
-                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al obtener las fallas:" + ex.Message + "\n");
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error getting faults:" + ex.Message + "\n");
             }
         }
 
         public class ComboBoxItemDiagn
         {
             public int idDiagn { get; set; }
-            public string DiagnPcb { get; set; }
+            public string DiagnPcbEnglish { get; set; }
 
             public override string ToString()
             {
-                return DiagnPcb; 
+                return DiagnPcbEnglish;
             }
         }
 
@@ -347,7 +362,7 @@ namespace DiagnPcb
                 DBConnection dB = new DBConnection();
                 DataTable dtResult = new DataTable();
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
-                dB.query = "select idDiagn, DiagnPcb from diagn_pcb.DiagnPcb";
+                dB.query = "select idDiagn, DiagnPcbEnglish from diagn_pcb.DiagnPcb where idDiagn != 19";
 
                 var dbResult = dB.getData(out dBMsg, out dbError);
 
@@ -371,10 +386,10 @@ namespace DiagnPcb
                     if (!cbDiagnostico.Items.Contains(row[0].ToString()))
                     {
                         int id = Convert.ToInt32(row[0].ToString());
-                        string Diagn = row.ItemArray[1].ToString();
+                        string DiagnPcbEnglish = row.ItemArray[1].ToString();
 
                         // Agregar el nuevo objeto ComboBoxItem al ComboBox
-                        cbDiagnostico.Items.Add(new ComboBoxItemDiagn { idDiagn = id, DiagnPcb = Diagn });
+                        cbDiagnostico.Items.Add(new ComboBoxItemDiagn { idDiagn = id, DiagnPcbEnglish = DiagnPcbEnglish });
                     }
                 }
             }
@@ -384,22 +399,22 @@ namespace DiagnPcb
                 //Control Adjust
                 tbNumParte.Enabled = false;
 
-                Message message = new Message("Error al obtener los diagnosticos");
+                Message message = new Message("Error getting diagnostics");
                 message.ShowDialog();
 
                 //Log
-                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al obtener los diagnosticos:" + ex.Message + "\n");
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error getting diagnostics:" + ex.Message + "\n");
             }
         }
 
         public class ComboBoxItemCable
         {
             public int idWire { get; set; }
-            public string wire { get; set; }
+            public string WireEnglish { get; set; }
 
             public override string ToString()
             {
-                return wire;  // Se mostrará solo el owner_tech en el ComboBox
+                return WireEnglish;  // Se mostrará solo el owner_tech en el ComboBox
             }
         }
 
@@ -413,7 +428,7 @@ namespace DiagnPcb
                 DBConnection dB = new DBConnection();
                 DataTable dtResult = new DataTable();
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
-                dB.query = "select idWire, Wire from diagn_pcb.DiagnWire";
+                dB.query = "select idWire, WireEnglish from diagn_pcb.DiagnWire";
 
                 var dbResult = dB.getData(out dBMsg, out dbError);
 
@@ -437,10 +452,10 @@ namespace DiagnPcb
                     if (!cbCables.Items.Contains(row[0].ToString()))
                     {
                         int id = Convert.ToInt32(row[0].ToString());
-                        string wire = row.ItemArray[1].ToString();
+                        string WireEnglish = row.ItemArray[1].ToString();
 
                         // Agregar el nuevo objeto ComboBoxItem al ComboBox
-                        cbCables.Items.Add(new ComboBoxItemCable { idWire = id, wire = wire });
+                        cbCables.Items.Add(new ComboBoxItemCable { idWire = id, WireEnglish = WireEnglish });
                     }
                 }
             }
@@ -450,11 +465,11 @@ namespace DiagnPcb
                 //Control Adjust
                 tbNumParte.Enabled = false;
 
-                Message message = new Message("Error al obtener los cables");
+                Message message = new Message("Error getting cables");
                 message.ShowDialog();
 
                 //Log
-                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al obtener los cables:" + ex.Message + "\n");
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error getting cables:" + ex.Message + "\n");
             }
         }
 
@@ -468,7 +483,7 @@ namespace DiagnPcb
                 DBConnection dB = new DBConnection();
                 DataTable dtResult = new DataTable();
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
-                dB.query = "select idOwner, owner_tech from diagn_pcb.diagnowner where idOwner < 10";
+                dB.query = "select idOwner, owner_tech from diagn_pcb.diagnowner where idOwner != 10";
 
                 var dbResult = dB.getData(out dBMsg, out dbError);
 
@@ -504,11 +519,11 @@ namespace DiagnPcb
                 //Control Adjust
                 tbNumParte.Enabled = false;
 
-                Message message = new Message("Error al obtener los tecnicos");
+                Message message = new Message("Error getting the technicians");
                 message.ShowDialog();
 
                 //Log
-                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al obtener los técnicos:" + ex.Message + "\n");
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error getting the technicians:" + ex.Message + "\n");
             }
         }
 
@@ -541,7 +556,7 @@ namespace DiagnPcb
                     {
                         Directory.CreateDirectory(destinationDirectory);
                     }
-                    while(File.Exists(destinationFilePath))
+                    while (File.Exists(destinationFilePath))
                     {
                         string extension = Path.GetExtension(rutaBase);
                         string NombreArchivo = Path.GetFileNameWithoutExtension(rutaBase);
@@ -551,10 +566,10 @@ namespace DiagnPcb
 
                     currentFrame.Save(destinationFilePath, System.Drawing.Imaging.ImageFormat.Jpeg);
                     //pictureBox1.Image.Save(destinationFilePath, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    
+
                     link = destinationFilePath;
 
-                    Message message = new Message("Foto tomada con éxito");
+                    Message message = new Message("\r\nPhoto taken successfully");
                     message.ShowDialog();
 
                     //detener la cámara web
@@ -569,11 +584,11 @@ namespace DiagnPcb
                 }
                 catch (Exception ex)
                 {
-                    Message message = new Message("Error al cargar la imagen");
+                    Message message = new Message("Error loading image");
                     message.ShowDialog();
 
                     //Log
-                    File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al cargar la imagen:" + ex.Message + "\n");
+                    File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error loading image:" + ex.Message + "\n");
                 }
             }
         }
@@ -599,24 +614,26 @@ namespace DiagnPcb
 
         private void cbCables_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbCables.SelectedItem != null) { 
+            if (cbCables.SelectedItem != null)
+            {
                 //Obtener el objeto seleccionado
                 ComboBoxItemCable selectedItem = (ComboBoxItemCable)cbCables.SelectedItem;
 
                 //Obtener el ID y el cable
                 idWire = selectedItem.idWire;
-                wire = selectedItem.wire;
+                WireEnglish = selectedItem.WireEnglish;
             }
         }
 
         private void cbDiagnostico_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbDiagnostico.SelectedItem != null) {
+            if (cbDiagnostico.SelectedItem != null)
+            {
 
                 string diagnostic = cbDiagnostico.Text;
-                
-                if (diagnostic.Equals("Corto de soldadura") || diagnostic.Equals("Corto interno") || diagnostic.Equals("Insuficiencia de soldadura")
-                    || diagnostic.Equals("Core no soldado") || diagnostic.Equals("Malla no soldada correctamente"))
+
+                if (diagnostic.Equals("welding short") || diagnostic.Equals("internal short") || diagnostic.Equals("Welding deficiency")
+                    || diagnostic.Equals("Non-welded core") || diagnostic.Equals("Mesh not welded correctly"))
                 {
 
                     cbCables.Enabled = true;
@@ -624,29 +641,31 @@ namespace DiagnPcb
                     ComboBoxItemDiagn selectedItem = (ComboBoxItemDiagn)cbDiagnostico.SelectedItem;
 
                     idDiagn = selectedItem.idDiagn;
-                    DiagnPcb = selectedItem.DiagnPcb;
+                    DiagnPcbEnglish = selectedItem.DiagnPcbEnglish;
                 }
-                else {
+                else
+                {
                     cbCables.Enabled = false;
                     cbCables.Text = "N/A";
                     idWire = 6;
-                    wire = "N/A";
+                    WireEnglish = "N/A";
 
                     ComboBoxItemDiagn selectedItem = (ComboBoxItemDiagn)cbDiagnostico.SelectedItem;
 
                     idDiagn = selectedItem.idDiagn;
-                    DiagnPcb = selectedItem.DiagnPcb;
+                    DiagnPcbEnglish = selectedItem.DiagnPcbEnglish;
                 }
             }
         }
 
         private void cbFalla_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbFalla.SelectedItem != null) {
+            if (cbFalla.SelectedItem != null)
+            {
                 ComboBoxItemFallas selectedItem = (ComboBoxItemFallas)cbFalla.SelectedItem;
 
                 idFaile = selectedItem.idFaile;
-                failure = selectedItem.failure;
+                failure = selectedItem.failureEnglish;
             }
         }
 
@@ -656,76 +675,79 @@ namespace DiagnPcb
             {
                 string ubicacion = cbUbicacion.Text;
 
-                if (ubicacion.Equals("CABLE AMARILLO PAD DE TIERRA \"MALLA\"") || ubicacion.Equals("CABLE AMARILLO PAD DE SEÑAL"))
+                if (ubicacion.Equals("YELLOW CABLE GROUND PAD \"MESH\"") || ubicacion.Equals("YELLOW CABLE SIGNAL PAD"))
                 {
                     cbCables.Enabled = false;
-                    cbCables.Text = "AMARILLO";
+                    cbCables.Text = "YELLOW";
                     idWire = 1;
-                    wire = "AMARILLO";
+                    WireEnglish = "YELLOW";
 
                     ComboBoxItemUbicaciones selectedItem = (ComboBoxItemUbicaciones)cbUbicacion.SelectedItem;
 
                     idDiagnUbic = selectedItem.idDiagnUbic;
-                    Ubication = selectedItem.Ubication;
+                    Ubication = selectedItem.UbicationEnglish;
 
-                } else if (ubicacion.Equals("CABLE AZUL PAD DE TIERRA \"MALLA\"") || ubicacion.Equals("CABLE AZUL PAD DE SEÑAL"))
+                }
+                else if (ubicacion.Equals("CABLE AZUL PAD DE TIERRA \"MALLA\"") || ubicacion.Equals("BLUE CABLE SIGNAL PAD"))
                 {
                     cbCables.Enabled = false;
-                    cbCables.Text = "AZUL";
+                    cbCables.Text = "BLUE";
                     idWire = 2;
-                    wire = "AZUL";
+                    WireEnglish = "BLUE";
 
                     ComboBoxItemUbicaciones selectedItem = (ComboBoxItemUbicaciones)cbUbicacion.SelectedItem;
 
                     idDiagnUbic = selectedItem.idDiagnUbic;
-                    Ubication = selectedItem.Ubication;
+                    Ubication = selectedItem.UbicationEnglish;
                 }
-                else if (ubicacion.Equals("CABLE NEGRO PAD DE TIERRA \"MALLA\"") || ubicacion.Equals("CABLE NEGRO PAD DE SEÑAL"))
+                else if (ubicacion.Equals("BLACK CABLE GROUND PAD MESH") || ubicacion.Equals("BLACK CABLE SIGNAL PAD"))
                 {
                     cbCables.Enabled = false;
-                    cbCables.Text = "NEGRO";
+                    cbCables.Text = "BLACK";
                     idWire = 5;
-                    wire = "NEGRO";
+                    WireEnglish = "BLACK";
 
                     ComboBoxItemUbicaciones selectedItem = (ComboBoxItemUbicaciones)cbUbicacion.SelectedItem;
 
                     idDiagnUbic = selectedItem.idDiagnUbic;
-                    Ubication = selectedItem.Ubication;
+                    Ubication = selectedItem.UbicationEnglish;
                 }
-                else if (ubicacion.Equals("CABLE VERDE PAD DE TIERRA \"MALLA\"") || ubicacion.Equals("CABLE VERDE PAD DE SEÑAL"))
+                else if (ubicacion.Equals("GREEN CABLE GROUND PAD MESH") || ubicacion.Equals("GREEN WIRE SIGNAL PAD"))
                 {
                     cbCables.Enabled = false;
-                    cbCables.Text = "VERDE";
+                    cbCables.Text = "GREEN";
                     idWire = 3;
-                    wire = "VERDE";
+                    WireEnglish = "GREEN";
 
                     ComboBoxItemUbicaciones selectedItem = (ComboBoxItemUbicaciones)cbUbicacion.SelectedItem;
 
                     idDiagnUbic = selectedItem.idDiagnUbic;
-                    Ubication = selectedItem.Ubication;
+                    Ubication = selectedItem.UbicationEnglish;
                 }
-                else if (ubicacion.Equals("CABLE BLANCO PAD DE TIERRA \"MALLA\"") || ubicacion.Equals("CABLE BLANCO PAD DE SEÑAL"))
+                else if (ubicacion.Equals("WHITE CABLE GROUND PAD MESH") || ubicacion.Equals("WHITE CABLE SIGNAL PAD"))
                 {
                     cbCables.Enabled = false;
-                    cbCables.Text = "BLANCO";
+                    cbCables.Text = "WHITE";
                     idWire = 4;
-                    wire = "BLANCO";
+                    WireEnglish = "WHITE";
 
                     ComboBoxItemUbicaciones selectedItem = (ComboBoxItemUbicaciones)cbUbicacion.SelectedItem;
 
                     idDiagnUbic = selectedItem.idDiagnUbic;
-                    Ubication = selectedItem.Ubication;
+                    Ubication = selectedItem.UbicationEnglish;
                 }
-                else {
+                else
+                {
                     ComboBoxItemUbicaciones selectedItem = (ComboBoxItemUbicaciones)cbUbicacion.SelectedItem;
 
                     idDiagnUbic = selectedItem.idDiagnUbic;
-                    Ubication = selectedItem.Ubication;
+                    Ubication = selectedItem.UbicationEnglish;
                 }
             }
         }
 
-        private void insertarDatos() {
+        private void insertarDatos()
+        {
             try
             {
 
@@ -739,6 +761,9 @@ namespace DiagnPcb
                 int semana = Convert.ToInt32(tbSemana.Text);
                 byte[] imageBytes = null;
 
+                string diagnostic = string.Empty;
+                diagnostic = cbDiagnostico.Text;
+
                 if (link == string.Empty)
                 {
                     imageBytes = null;
@@ -748,13 +773,20 @@ namespace DiagnPcb
                     imageBytes = File.ReadAllBytes(link);
                 }
 
+                int robot = 0;
+                if (cbMaquina.Text != string.Empty)
+                {
+                     robot = Convert.ToInt32(cbMaquina.Text);
+                }
+                
+
                 DBConnection dB = new DBConnection();
                 DataTable dtResult = new DataTable();
 
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
-                dB.query = "Insert into diagn_pcb.diagnpcbtech(qty, faile_date, serie_num, part_number, productWeek, line, idFaile, idDiagn, idWire, idDiagnUbic, coment, image, shift, idOwner)"
+                dB.query = "Insert into diagn_pcb.diagnpcbtech(qty, faile_date, serie_num, part_number, productWeek, line, idFaile, idDiagn, idWire, idDiagnUbic, coment, image, shift, idOwner, opcode, robot)"
                                             + "VALUES(1, '" + fecha_Falla + "', '" + tbNumSerie.Text + "', '" + tbNumParte.Text + "', " + semana + ", '" + cblinea.Text + "', " + idFaile + ", " + idDiagn + ", " + idWire + ", " + idDiagnUbic + ", "
-                                            + "'" + tbComentarios.Text + "', @Imagen, '" + fecha_turno + "', " + id_owner + ");";
+                                            + "'" + tbComentarios.Text + "', @Imagen, '" + fecha_turno + "', " + id_owner + ", '" + cbOperacion.Text + "', " + robot + ");";
                 dB.link = link;
 
                 var dbResult = dB.InsertDataDiagn(out dBMsg, out dbError);
@@ -771,16 +803,23 @@ namespace DiagnPcb
 
                 string log = Directory.GetCurrentDirectory() + @"\Log.txt";
 
-                File.AppendAllText(log, DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Defecto registrado para el serial: " + tbNumSerie.Text + " Por el técnico: " + owner_tech + "\n");
+                File.AppendAllText(log, DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Defect recorded for serial: " + tbNumSerie.Text + " By the technician: " + owner_tech + "\n");
 
-                MostrarMensajeFlotante("Registro Exitoso");
+                MostrarMensajeFlotante("Successful Registration");
+
+                //Detener cámara web
+                if (videoSource != null && videoSource.IsRunning)
+                {
+                    videoSource.SignalToStop();
+                    videoSource.WaitForStop();
+                }
             }
             catch (Exception ex)
             {
-                MostrarMensajeFlotanteNoPass("Error al insertar los datos");
+                MostrarMensajeFlotanteNoPass("Error inserting data");
 
                 //Log
-                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al insertar los datos:" + ex.Message + "\n");
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error inserting data:" + ex.Message + "\n");
             }
         }
 
@@ -790,7 +829,8 @@ namespace DiagnPcb
             Limpiar();
         }
 
-        public void Limpiar() {
+        public void Limpiar()
+        {
             tbNumSerie.Clear();
             tbNumParte.Clear();
             dateTimePicker1.Value = DateTime.Now;
@@ -803,6 +843,8 @@ namespace DiagnPcb
             cbOwner.SelectedIndex = -1;
             tbComentarios.Clear();
             pictureBox1.Image = null;
+            cbOperacion.SelectedIndex = -1;
+            cbMaquina.SelectedIndex = -1;
 
             tbNumSerie.Enabled = true;
             tbNumParte.Enabled = false;
@@ -820,6 +862,8 @@ namespace DiagnPcb
             btnCargarImagen.Enabled = false;
             btnReset.Enabled = false;
             tbNumSerie.Focus();
+            cbOperacion.Enabled = false;
+            cbMaquina.Enabled = false;
         }
 
         private void MostrarMensajeFlotanteNoPass(string mensaje)
@@ -919,7 +963,8 @@ namespace DiagnPcb
 
         private void tbNumSerie_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 if (tbNumSerie.Text != string.Empty)
                 {
                     string ultimos17 = string.Empty;
@@ -947,19 +992,8 @@ namespace DiagnPcb
 
                     tbNumSerie.Enabled = false;
                     tbNumParte.Enabled = false;
-                    btnGuardar.Enabled = true;
-                    dateTimePicker1.Enabled = false;
-                    tbSemana.Enabled = false;
-                    cbCables.Enabled = true;
-                    cbUbicacion.Enabled = true;
-                    cblinea.Enabled = true;
-                    cbFalla.Enabled = true;
-                    cbDiagnostico.Enabled = true;
-                    cbOwner.Enabled = true;
-                    tbComentarios.Enabled = true;
-                    btnGuardar.Enabled = true;
-                    btnCargarImagen.Enabled = true;
-                    btnReset.Enabled = true;
+                    cbOperacion.Enabled = true;
+
                 }
             }
         }
@@ -1000,7 +1034,7 @@ namespace DiagnPcb
                     cbCables.Enabled = false;
                     cbCables.Text = "N/A";
                     idWire = 6;
-                    wire = "N/A";
+                    WireEnglish = "N/A";
 
                     ComboBoxItemLine selectedItem = (ComboBoxItemLine)cblinea.SelectedItem;
 
@@ -1041,11 +1075,11 @@ namespace DiagnPcb
                 //Control Adjust
                 tbNumParte.Enabled = false;
 
-                Message message = new Message("Error al obtener los cables");
+                Message message = new Message("Error getting cables");
                 message.ShowDialog();
 
                 //Log
-                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al obtener los cables:" + ex.Message + "\n");
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error getting cables:" + ex.Message + "\n");
             }
         }
 
@@ -1054,24 +1088,25 @@ namespace DiagnPcb
             MenuStrip menuStrip = new MenuStrip();
 
             //Crear Menú Principal
-            ToolStripMenuItem menuNuevoRegistro = new ToolStripMenuItem("Nuevos Registros");
+            ToolStripMenuItem menuNuevoRegistro = new ToolStripMenuItem("New Registrations");
 
             //crear submenús
             ToolStripMenuItem itemFallas = new ToolStripMenuItem("Fallas");
-            ToolStripMenuItem itemUbicacion = new ToolStripMenuItem("Ubicacion");
-            ToolStripMenuItem itemDiagnostico = new ToolStripMenuItem("Diagnostico");
-            ToolStripMenuItem itemTecnico = new ToolStripMenuItem("Técnico");
+            //ToolStripMenuItem itemUbicacion = new ToolStripMenuItem("Ubicacion");
+            //ToolStripMenuItem itemDiagnostico = new ToolStripMenuItem("Diagnostico");
+            //ToolStripMenuItem itemTecnico = new ToolStripMenuItem("Técnico");
 
+            FrmRegistroFallas regFallas = new FrmRegistroFallas();
 
             //Agregar eventos a los submenús 
-            itemFallas.Click += (s, e) => MessageBox.Show("Formulario Fallas");
+            itemFallas.Click += (s, e) => regFallas.Show();
 
             //Agregar submenu al menu principal
 
             menuNuevoRegistro.DropDownItems.Add(itemFallas);
-            menuNuevoRegistro.DropDownItems.Add(itemUbicacion);
-            menuNuevoRegistro.DropDownItems.Add(itemDiagnostico);
-            menuNuevoRegistro.DropDownItems.Add(itemTecnico);
+            //menuNuevoRegistro.DropDownItems.Add(itemUbicacion);
+            //menuNuevoRegistro.DropDownItems.Add(itemDiagnostico);
+            //menuNuevoRegistro.DropDownItems.Add(itemTecnico);
 
             //Estilo general del menú
             menuStrip.BackColor = Color.DarkSlateBlue;
@@ -1093,6 +1128,82 @@ namespace DiagnPcb
             //Agregar el MenuStrip al Formulario
             this.MainMenuStrip = menuStrip;
             this.Controls.Add(menuStrip);
+        }
+
+        private void cbOperacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbOperacion.SelectedItem != null)
+            {
+                cbFalla.Items.Clear();
+                cbFalla.SelectedIndex = -1;
+                cbUbicacion.Items.Clear();
+                cbUbicacion.SelectedIndex = -1;
+                ObtenerFallas();
+                ObtenerUbicaciones();
+
+                string operacion = cbOperacion.Text;
+                if (operacion.Equals("OP 30 - Soldier") || operacion.Equals("OP 40 - Screwed"))
+                {
+                    cbDiagnostico.Enabled = false;
+                    cbDiagnostico.Text = "N/A";
+                    idDiagn = 19;
+                    DiagnPcbEnglish = "N/A";
+                }
+                else
+                {
+                    cbDiagnostico.Enabled = true;
+                }
+
+                if (operacion.Equals("OP 10 - Chasis") || operacion.Equals("OP 20 - PCBA Tester") || operacion.Equals("OP 40 - Screwed") || operacion.Equals("OP 50 - Leak tester radome"))
+                {
+                    cbCables.Enabled = false;
+                    cbCables.Text = "N/A";
+                    idWire = 6;
+                    WireEnglish = "N/A";
+                    if (operacion.Equals("40"))
+                    {
+                        cbDiagnostico.Enabled = false;
+
+                        string diagnostic = cbDiagnostico.Text;
+                        if (diagnostic == string.Empty)
+                        {
+                            cbDiagnostico.Enabled = false;
+                            cbDiagnostico.Text = "N/A";
+                            idDiagn = 19;
+                            DiagnPcbEnglish = "N/A";
+                        }
+
+                        cbMaquina.Enabled = true;
+                    }
+                    else if (operacion.Equals("OP 30 - Soldier") || operacion.Equals("OP 50 - Leak tester radome"))
+                    {
+                        cbMaquina.Enabled = true;
+                    }
+                    else
+                        cbMaquina.Enabled = false;
+                }
+
+                tbNumSerie.Enabled = false;
+                tbNumParte.Enabled = false;
+                cbOperacion.Enabled = true;
+
+
+                btnGuardar.Enabled = true;
+                dateTimePicker1.Enabled = false;
+                tbSemana.Enabled = false;
+                //cbCables.Enabled = true;
+                cbUbicacion.Enabled = true;
+                cblinea.Enabled = true;
+                cbFalla.Enabled = true;
+                //cbDiagnostico.Enabled = true;
+                cbOwner.Enabled = true;
+                tbComentarios.Enabled = true;
+                btnGuardar.Enabled = true;
+                btnCargarImagen.Enabled = true;
+                btnReset.Enabled = true;
+                cbOperacion.Enabled = true;
+                //cbMaquina.Enabled = false;
+            }
         }
     }
 }
