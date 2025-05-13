@@ -56,12 +56,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.CbHoraA = new System.Windows.Forms.ComboBox();
+            this.cbHoraDe = new System.Windows.Forms.ComboBox();
+            this.lblHoraDe = new System.Windows.Forms.Label();
             this.cbOperacion = new System.Windows.Forms.ComboBox();
             this.lblOperacion = new System.Windows.Forms.Label();
             this.dateTimePickerA = new System.Windows.Forms.DateTimePicker();
             this.lblA = new System.Windows.Forms.Label();
             this.dateTimePickerDe = new System.Windows.Forms.DateTimePicker();
             this.lblDe = new System.Windows.Forms.Label();
+            this.lblHoraA = new System.Windows.Forms.Label();
             this.tableLayoutPanelFechas = new System.Windows.Forms.TableLayoutPanel();
             this.btnExportar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -71,10 +75,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbMenuConsulta = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblHoraA = new System.Windows.Forms.Label();
-            this.lblHoraDe = new System.Windows.Forms.Label();
-            this.cbHoraDe = new System.Windows.Forms.ComboBox();
-            this.CbHoraA = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.gBoxValidation.SuspendLayout();
@@ -484,6 +484,93 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1635, 278);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
+            // CbHoraA
+            // 
+            this.CbHoraA.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CbHoraA.BackColor = System.Drawing.SystemColors.Control;
+            this.CbHoraA.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.CbHoraA.FormattingEnabled = true;
+            this.CbHoraA.Items.AddRange(new object[] {
+            "01:00",
+            "02:00",
+            "03:00",
+            "04:00",
+            "05:00",
+            "06:00",
+            "07:00",
+            "08:00",
+            "09:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            "23:00",
+            "24:00"});
+            this.CbHoraA.Location = new System.Drawing.Point(298, 138);
+            this.CbHoraA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CbHoraA.Name = "CbHoraA";
+            this.CbHoraA.Size = new System.Drawing.Size(167, 29);
+            this.CbHoraA.TabIndex = 38;
+            // 
+            // cbHoraDe
+            // 
+            this.cbHoraDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbHoraDe.BackColor = System.Drawing.SystemColors.Control;
+            this.cbHoraDe.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cbHoraDe.FormattingEnabled = true;
+            this.cbHoraDe.Items.AddRange(new object[] {
+            "01:00",
+            "02:00",
+            "03:00",
+            "04:00",
+            "05:00",
+            "06:00",
+            "07:00",
+            "08:00",
+            "09:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            "23:00",
+            "24:00"});
+            this.cbHoraDe.Location = new System.Drawing.Point(298, 43);
+            this.cbHoraDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbHoraDe.Name = "cbHoraDe";
+            this.cbHoraDe.Size = new System.Drawing.Size(167, 29);
+            this.cbHoraDe.TabIndex = 37;
+            // 
+            // lblHoraDe
+            // 
+            this.lblHoraDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblHoraDe.AutoSize = true;
+            this.lblHoraDe.Font = new System.Drawing.Font("Ebrima", 15F, System.Drawing.FontStyle.Bold);
+            this.lblHoraDe.ForeColor = System.Drawing.Color.Black;
+            this.lblHoraDe.Location = new System.Drawing.Point(295, 0);
+            this.lblHoraDe.Margin = new System.Windows.Forms.Padding(0);
+            this.lblHoraDe.Name = "lblHoraDe";
+            this.lblHoraDe.Size = new System.Drawing.Size(117, 32);
+            this.lblHoraDe.TabIndex = 36;
+            this.lblHoraDe.Text = "Hour Of:";
+            // 
             // cbOperacion
             // 
             this.cbOperacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -564,6 +651,19 @@
             this.lblDe.Size = new System.Drawing.Size(113, 32);
             this.lblDe.TabIndex = 29;
             this.lblDe.Text = "Date Of:";
+            // 
+            // lblHoraA
+            // 
+            this.lblHoraA.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblHoraA.AutoSize = true;
+            this.lblHoraA.Font = new System.Drawing.Font("Ebrima", 15F, System.Drawing.FontStyle.Bold);
+            this.lblHoraA.ForeColor = System.Drawing.Color.Black;
+            this.lblHoraA.Location = new System.Drawing.Point(295, 88);
+            this.lblHoraA.Margin = new System.Windows.Forms.Padding(0);
+            this.lblHoraA.Name = "lblHoraA";
+            this.lblHoraA.Size = new System.Drawing.Size(118, 35);
+            this.lblHoraA.TabIndex = 35;
+            this.lblHoraA.Text = "Hour To:";
             // 
             // tableLayoutPanelFechas
             // 
@@ -695,106 +795,6 @@
             this.label7.Size = new System.Drawing.Size(225, 45);
             this.label7.TabIndex = 26;
             this.label7.Text = "Select Query:";
-            // 
-            // lblHoraA
-            // 
-            this.lblHoraA.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblHoraA.AutoSize = true;
-            this.lblHoraA.Font = new System.Drawing.Font("Ebrima", 15F, System.Drawing.FontStyle.Bold);
-            this.lblHoraA.ForeColor = System.Drawing.Color.Black;
-            this.lblHoraA.Location = new System.Drawing.Point(295, 88);
-            this.lblHoraA.Margin = new System.Windows.Forms.Padding(0);
-            this.lblHoraA.Name = "lblHoraA";
-            this.lblHoraA.Size = new System.Drawing.Size(118, 35);
-            this.lblHoraA.TabIndex = 35;
-            this.lblHoraA.Text = "Hour To:";
-            // 
-            // lblHoraDe
-            // 
-            this.lblHoraDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblHoraDe.AutoSize = true;
-            this.lblHoraDe.Font = new System.Drawing.Font("Ebrima", 15F, System.Drawing.FontStyle.Bold);
-            this.lblHoraDe.ForeColor = System.Drawing.Color.Black;
-            this.lblHoraDe.Location = new System.Drawing.Point(295, 0);
-            this.lblHoraDe.Margin = new System.Windows.Forms.Padding(0);
-            this.lblHoraDe.Name = "lblHoraDe";
-            this.lblHoraDe.Size = new System.Drawing.Size(117, 32);
-            this.lblHoraDe.TabIndex = 36;
-            this.lblHoraDe.Text = "Hour Of:";
-            // 
-            // cbHoraDe
-            // 
-            this.cbHoraDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbHoraDe.BackColor = System.Drawing.SystemColors.Control;
-            this.cbHoraDe.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.cbHoraDe.FormattingEnabled = true;
-            this.cbHoraDe.Items.AddRange(new object[] {
-            "01:00",
-            "02:00",
-            "03:00",
-            "04:00",
-            "05:00",
-            "06:00",
-            "07:00",
-            "08:00",
-            "09:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00",
-            "22:00",
-            "23:00",
-            "24:00"});
-            this.cbHoraDe.Location = new System.Drawing.Point(298, 43);
-            this.cbHoraDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbHoraDe.Name = "cbHoraDe";
-            this.cbHoraDe.Size = new System.Drawing.Size(167, 29);
-            this.cbHoraDe.TabIndex = 37;
-            // 
-            // CbHoraA
-            // 
-            this.CbHoraA.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CbHoraA.BackColor = System.Drawing.SystemColors.Control;
-            this.CbHoraA.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.CbHoraA.FormattingEnabled = true;
-            this.CbHoraA.Items.AddRange(new object[] {
-            "01:00",
-            "02:00",
-            "03:00",
-            "04:00",
-            "05:00",
-            "06:00",
-            "07:00",
-            "08:00",
-            "09:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00",
-            "22:00",
-            "23:00",
-            "24:00"});
-            this.CbHoraA.Location = new System.Drawing.Point(298, 138);
-            this.CbHoraA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CbHoraA.Name = "CbHoraA";
-            this.CbHoraA.Size = new System.Drawing.Size(167, 29);
-            this.CbHoraA.TabIndex = 38;
             // 
             // FrmConsultar
             // 

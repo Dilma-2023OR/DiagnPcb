@@ -16,7 +16,7 @@ using System.Windows.Media;
 
 namespace DiagnPcb
 {
-    public partial class Grafica1  : Form
+    public partial class Grafica1 : Form
     {
         string connect = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
         DBConnection dB = new DBConnection();
@@ -926,10 +926,19 @@ namespace DiagnPcb
                 // Establecer la posición del panel
                 flowLayoutPanel1.Location = new System.Drawing.Point(panelX, panelY);
 
-                int X = (this.ClientSize.Width - panel1.Width) / 2;
-                int Y = 380;
+            }
+        }
 
-                panel1.Location = new System.Drawing.Point(X, Y);
+        private void Grafica1_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                chart1.Width = this.ClientSize.Width;
+                chart1.Height = this.ClientSize.Height / 2;
+
+                dataGridView1.Top = chart1.Bottom;
+                dataGridView1.Width = this.ClientSize.Width;
+                dataGridView1.Height = this.ClientSize.Height - chart1.Height;
             }
         }
     }

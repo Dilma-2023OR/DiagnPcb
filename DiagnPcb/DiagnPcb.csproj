@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>3.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -184,6 +184,54 @@
     <Compile Include="Consulta\Consulta.Designer.cs">
       <DependentUpon>Consulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\FrmConsultDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultDate.Designer.cs">
+      <DependentUpon>FrmConsultDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultDiag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultDiag.Designer.cs">
+      <DependentUpon>FrmConsultDiag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultFalla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultFalla.Designer.cs">
+      <DependentUpon>FrmConsultFalla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultLine.Designer.cs">
+      <DependentUpon>FrmConsultLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultOwner.Designer.cs">
+      <DependentUpon>FrmConsultOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultPartNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultPartNumber.Designer.cs">
+      <DependentUpon>FrmConsultPartNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultWire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultWire.Designer.cs">
+      <DependentUpon>FrmConsultWire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmDateHour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmDateHour.Designer.cs">
+      <DependentUpon>FrmDateHour.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBConnection.cs" />
     <Compile Include="ExportChartAndDataGridViewToExcel.cs" />
     <Compile Include="Form1.cs">
@@ -209,6 +257,18 @@
     </Compile>
     <Compile Include="Grafica1.Designer.cs">
       <DependentUpon>Grafica1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\LogInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\LogInicio.Designer.cs">
+      <DependentUpon>LogInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="INIFile.cs" />
     <Compile Include="Message.cs">
@@ -237,11 +297,47 @@
       <DependentUpon>FrmRegistroFallas.cs</DependentUpon>
     </Compile>
     <Compile Include="Styles\CustomMenuRender.cs" />
+    <Compile Include="Styles\DOButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Styles\DOComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Styles\DOTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Styles\DOTextBox.Designer.cs">
+      <DependentUpon>DOTextBox.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Consulta\ConSoldadoEt.resx">
       <DependentUpon>ConSoldadoEt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Consulta.resx">
       <DependentUpon>Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConsultDate.resx">
+      <DependentUpon>FrmConsultDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConsultDiag.resx">
+      <DependentUpon>FrmConsultDiag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConsultFalla.resx">
+      <DependentUpon>FrmConsultFalla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConsultLine.resx">
+      <DependentUpon>FrmConsultLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConsultOwner.resx">
+      <DependentUpon>FrmConsultOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConsultPartNumber.resx">
+      <DependentUpon>FrmConsultPartNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConsultWire.resx">
+      <DependentUpon>FrmConsultWire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmDateHour.resx">
+      <DependentUpon>FrmDateHour.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -258,6 +354,12 @@
     <EmbeddedResource Include="Grafica1.resx">
       <DependentUpon>Grafica1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\LogInicio.resx">
+      <DependentUpon>LogInicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Message.resx">
       <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\FrmRegistroFallas.resx">
       <DependentUpon>FrmRegistroFallas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Styles\DOTextBox.resx">
+      <DependentUpon>DOTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="config.ini" />
     <None Include="Connected Services\RuncarServices\DiagnPcb.RuncarServices.assignUnitToCarrierResponse.datasource">
@@ -429,6 +534,7 @@
     <None Include="Connected Services\RuncarServices\soap1.wsdl" />
     <None Include="Connected Services\RuncarServices\soap11.wsdl" />
     <None Include="DiagnPcb_TemporaryKey.pfx" />
+    <None Include="guardar.webp" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -470,9 +576,25 @@
     <WCFMetadataStorage Include="Connected Services\RuncarServices\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="humn.png" />
+    <None Include="Image\reiniciar.png" />
+    <None Include="Image\reportes.png" />
+    <None Include="Image\registrar.png" />
+    <None Include="Image\restaurar.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Image\humn.png" />
+    <None Include="Image\cerrar.png" />
+    <None Include="Image\empleados.png" />
+    <None Include="Image\diagnostico.png" />
+    <None Include="Image\camara.png" />
+    <None Include="Image\guardar.png" />
+    <None Include="Image\buscar.png" />
+    <None Include="Image\exportar.png" />
     <Content Include="icons8-doble-flecha-96.ico" />
-    <None Include="pcb.png" />
+    <None Include="Image\pcb.png" />
+    <None Include="Image\minimizar.png" />
+    <None Include="Image\maximizar.png" />
+    <None Include="Image\Molex-Logo.svg.png" />
+    <None Include="Image\producto2.png" />
     <Content Include="Properties\null.jpg" />
     <None Include="Resources\pcb.png" />
   </ItemGroup>

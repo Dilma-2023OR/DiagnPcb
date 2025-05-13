@@ -7,3 +7,8 @@
 03-05-2025 12:50:56,Defecto registrado para el serial: T3N251153M0000015 Por el técnico: Guillermo
 07-05-2025 12:58:56,Defecto registrado para el serial: T3N251153M0000015 Por el técnico: Alex
 08-05-2025 13:57:18,Defect recorded for serial: T3N251153M0000015 By the technician: Charro
+10-05-2025 08:28:54,Defect recorded for serial: T3N251153M0000015 By the technician: Charro
+10-05-2025 14:33:44,Defect recorded for serial: T3N251153M0000015 By the technician: Alex
+10-05-2025 14:45:47,Defect recorded for serial: T3N251153M0000015 By the technician: Adrian
+10-05-2025 15:21:33,Defect recorded for serial: T3N251153M0000015 By the technician: Alex
+13-05-2025 10:00:41,Defect recorded for serial: T3N251153M0000015 By the technician: Alex

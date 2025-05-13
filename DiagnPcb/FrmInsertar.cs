@@ -45,7 +45,6 @@ namespace DiagnPcb
         public FrmInsertar()
         {
             InitializeComponent();
-            MenuRegistros();
             tbNumSerie.Enabled = true;
             tbNumParte.Enabled = false;
             btnGuardar.Enabled = false;
@@ -53,7 +52,7 @@ namespace DiagnPcb
             tbSemana.Enabled = false;
             cbCables.Enabled = false;
             cbUbicacion.Enabled = false;
-            cblinea.Enabled = false;
+            docbLinea.Enabled = false;
             cbFalla.Enabled = false;
             cbDiagnostico.Enabled = false;
             cbOwner.Enabled = false;
@@ -178,7 +177,7 @@ namespace DiagnPcb
                 int numeroSemana = calendario.GetWeekOfYear(fechaSeleccionada, CalendarWeekRule.FirstDay, DayOfWeek.Monday);
 
                 // Mostrar el número de semana en el label
-                tbSemana.Text = numeroSemana.ToString();
+                tbSemana.Texts = numeroSemana.ToString();
                 tbSemana.Enabled = false;
 
                 InitializeCamera();
@@ -544,7 +543,7 @@ namespace DiagnPcb
             if (currentFrame != null)
             {
                 string destinationDirectory = Directory.GetCurrentDirectory() + @"\ImagenesDiagnostico"; //Especifica la nueva ubicación
-                string fileName = tbNumSerie.Text + ".jpeg"; //Obten el nombre del archivo
+                string fileName = tbNumSerie.Texts + ".jpeg"; //Obten el nombre del archivo
                 string rutaBase = Path.Combine(destinationDirectory, fileName);
                 string destinationFilePath = rutaBase;
                 int contador = 1;
@@ -758,11 +757,11 @@ namespace DiagnPcb
 
                 string fecha_Falla = fecha_F.ToString("yyyy-MM-dd hh:mm:ss");
                 string fecha_turno = turno.ToString("yyyy-MM-dd hh:mm:ss");
-                int semana = Convert.ToInt32(tbSemana.Text);
+                int semana = Convert.ToInt32(tbSemana.Texts);
                 byte[] imageBytes = null;
 
                 string diagnostic = string.Empty;
-                diagnostic = cbDiagnostico.Text;
+                diagnostic = cbDiagnostico.Texts;
 
                 if (link == string.Empty)
                 {
@@ -774,9 +773,9 @@ namespace DiagnPcb
                 }
 
                 int robot = 0;
-                if (cbMaquina.Text != string.Empty)
+                if (cbMaquina.Texts != string.Empty)
                 {
-                     robot = Convert.ToInt32(cbMaquina.Text);
+                     robot = Convert.ToInt32(cbMaquina.Texts);
                 }
                 
 
@@ -785,8 +784,8 @@ namespace DiagnPcb
 
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
                 dB.query = "Insert into diagn_pcb.diagnpcbtech(qty, faile_date, serie_num, part_number, productWeek, line, idFaile, idDiagn, idWire, idDiagnUbic, coment, image, shift, idOwner, opcode, robot)"
-                                            + "VALUES(1, '" + fecha_Falla + "', '" + tbNumSerie.Text + "', '" + tbNumParte.Text + "', " + semana + ", '" + cblinea.Text + "', " + idFaile + ", " + idDiagn + ", " + idWire + ", " + idDiagnUbic + ", "
-                                            + "'" + tbComentarios.Text + "', @Imagen, '" + fecha_turno + "', " + id_owner + ", '" + cbOperacion.Text + "', " + robot + ");";
+                                            + "VALUES(1, '" + fecha_Falla + "', '" + tbNumSerie.Texts + "', '" + tbNumParte.Texts + "', " + semana + ", '" + docbLinea.Texts + "', " + idFaile + ", " + idDiagn + ", " + idWire + ", " + idDiagnUbic + ", "
+                                            + "'" + tbComentarios.Texts + "', @Imagen, '" + fecha_turno + "', " + id_owner + ", '" + cbOperacion.Texts + "', " + robot + ");";
                 dB.link = link;
 
                 var dbResult = dB.InsertDataDiagn(out dBMsg, out dbError);
@@ -803,7 +802,7 @@ namespace DiagnPcb
 
                 string log = Directory.GetCurrentDirectory() + @"\Log.txt";
 
-                File.AppendAllText(log, DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Defect recorded for serial: " + tbNumSerie.Text + " By the technician: " + owner_tech + "\n");
+                File.AppendAllText(log, DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Defect recorded for serial: " + tbNumSerie.Texts + " By the technician: " + owner_tech + "\n");
 
                 MostrarMensajeFlotante("Successful Registration");
 
@@ -831,17 +830,17 @@ namespace DiagnPcb
 
         public void Limpiar()
         {
-            tbNumSerie.Clear();
-            tbNumParte.Clear();
+            tbNumSerie.ClearText();
+            tbNumParte.ClearText();
             dateTimePicker1.Value = DateTime.Now;
-            tbSemana.Clear();
+            tbSemana.ClearText();
             cbCables.SelectedIndex = -1;
             cbUbicacion.SelectedIndex = -1;
-            cblinea.SelectedIndex = -1;
+            docbLinea.SelectedIndex = -1;
             cbFalla.SelectedIndex = -1;
             cbDiagnostico.SelectedIndex = -1;
             cbOwner.SelectedIndex = -1;
-            tbComentarios.Clear();
+            tbComentarios.ClearText();
             pictureBox1.Image = null;
             cbOperacion.SelectedIndex = -1;
             cbMaquina.SelectedIndex = -1;
@@ -853,7 +852,7 @@ namespace DiagnPcb
             tbSemana.Enabled = false;
             cbCables.Enabled = false;
             cbUbicacion.Enabled = false;
-            cblinea.Enabled = false;
+            docbLinea.Enabled = false;
             cbFalla.Enabled = false;
             cbDiagnostico.Enabled = false;
             cbOwner.Enabled = false;
@@ -947,17 +946,12 @@ namespace DiagnPcb
         // Evento que se dispara cuando el tamaño del formulario cambia
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
-            // Verificar si el formulario está maximizado
             if (this.WindowState == FormWindowState.Maximized)
             {
-                // Calcular la posición del centro para el panel
-                int panelX = (this.ClientSize.Width - tableLayoutPanel1.Width) / 2;
-                int panelY = 270;//(this.ClientSize.Height - flowLayoutPanel1.Height) / 2;
+                int panelX = (this.ClientSize.Width - gbDiagnostico.Width / 2);
+                int panelY = (this.ClientSize.Height - gbDiagnostico.Height / 2);
 
-                // Establecer la posición del panel
-                tableLayoutPanel1.Location = new System.Drawing.Point(panelX, panelY);
-
-                tableLayoutPanel1.Visible = true;
+                gbDiagnostico.Location = new System.Drawing.Point(panelX, panelY);
             }
         }
 
@@ -965,14 +959,14 @@ namespace DiagnPcb
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (tbNumSerie.Text != string.Empty)
+                if (tbNumSerie.Texts != string.Empty)
                 {
                     string ultimos17 = string.Empty;
                     string ultimos10 = string.Empty;
                     string cadena = string.Empty;
 
                     string serial = "";
-                    foreach (var charScan in tbNumSerie.Text.ToUpper())
+                    foreach (var charScan in tbNumSerie.Texts.ToUpper())
                     {
                         //Convert to Char
                         char c = Convert.ToChar(Convert.ToInt32(charScan));
@@ -985,8 +979,8 @@ namespace DiagnPcb
 
                     string mySerial = UnitStatus.serial;
                     string part = UnitStatus.partnum;
-                    tbNumParte.Text = part;
-                    tbNumSerie.Text = mySerial;
+                    tbNumParte.Texts = part;
+                    tbNumSerie.Texts = mySerial;
 
                     ObtenerParNum(mySerial);
 
@@ -1023,10 +1017,10 @@ namespace DiagnPcb
 
         private void cblinea_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cblinea.SelectedItem != null)
+            if (docbLinea.SelectedItem != null)
             {
 
-                string linea = cblinea.Text;
+                string linea = docbLinea.Text;
 
                 if (linea.Equals("FILTROS") || linea.Equals("AMPLIFICADORES"))
                 {
@@ -1036,7 +1030,7 @@ namespace DiagnPcb
                     idWire = 6;
                     WireEnglish = "N/A";
 
-                    ComboBoxItemLine selectedItem = (ComboBoxItemLine)cblinea.SelectedItem;
+                    ComboBoxItemLine selectedItem = (ComboBoxItemLine)docbLinea.SelectedItem;
 
                     linea = selectedItem.Line;
                 }
@@ -1044,7 +1038,7 @@ namespace DiagnPcb
                 {
                     cbCables.Enabled = true;
 
-                    ComboBoxItemLine selectedItem = (ComboBoxItemLine)cblinea.SelectedItem;
+                    ComboBoxItemLine selectedItem = (ComboBoxItemLine)docbLinea.SelectedItem;
 
                     linea = selectedItem.Line;
                 }
@@ -1061,11 +1055,11 @@ namespace DiagnPcb
 
                 foreach (var item in opciones)
                 {
-                    if (!cblinea.Items.Contains(item.ToString()))
+                    if (!docbLinea.Items.Contains(item.ToString()))
                     {
                         string linea = item.ToString();
 
-                        cblinea.Items.Add(new ComboBoxItemLine { Line = linea });
+                        docbLinea.Items.Add(new ComboBoxItemLine { Line = linea });
                     }
                 }
             }
@@ -1083,52 +1077,6 @@ namespace DiagnPcb
             }
         }
 
-        private void MenuRegistros()
-        {
-            MenuStrip menuStrip = new MenuStrip();
-
-            //Crear Menú Principal
-            ToolStripMenuItem menuNuevoRegistro = new ToolStripMenuItem("New Registrations");
-
-            //crear submenús
-            ToolStripMenuItem itemFallas = new ToolStripMenuItem("Fallas");
-            //ToolStripMenuItem itemUbicacion = new ToolStripMenuItem("Ubicacion");
-            //ToolStripMenuItem itemDiagnostico = new ToolStripMenuItem("Diagnostico");
-            //ToolStripMenuItem itemTecnico = new ToolStripMenuItem("Técnico");
-
-            FrmRegistroFallas regFallas = new FrmRegistroFallas();
-
-            //Agregar eventos a los submenús 
-            itemFallas.Click += (s, e) => regFallas.Show();
-
-            //Agregar submenu al menu principal
-
-            menuNuevoRegistro.DropDownItems.Add(itemFallas);
-            //menuNuevoRegistro.DropDownItems.Add(itemUbicacion);
-            //menuNuevoRegistro.DropDownItems.Add(itemDiagnostico);
-            //menuNuevoRegistro.DropDownItems.Add(itemTecnico);
-
-            //Estilo general del menú
-            menuStrip.BackColor = Color.DarkSlateBlue;
-            menuStrip.ForeColor = Color.White;
-            menuStrip.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            menuStrip.Renderer = new CustomMenuRender();
-
-            //Estilo para los items
-            foreach (ToolStripMenuItem item in menuNuevoRegistro.DropDownItems)
-            {
-                item.BackColor = Color.WhiteSmoke;
-                item.ForeColor = Color.DarkSlateBlue;
-                item.Font = new Font("Segoe UI", 9);
-            }
-
-            //Agregar el Menú principal al MenuStrip
-            menuStrip.Items.Add(menuNuevoRegistro);
-
-            //Agregar el MenuStrip al Formulario
-            this.MainMenuStrip = menuStrip;
-            this.Controls.Add(menuStrip);
-        }
 
         private void cbOperacion_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1191,18 +1139,15 @@ namespace DiagnPcb
                 btnGuardar.Enabled = true;
                 dateTimePicker1.Enabled = false;
                 tbSemana.Enabled = false;
-                //cbCables.Enabled = true;
                 cbUbicacion.Enabled = true;
-                cblinea.Enabled = true;
+                docbLinea.Enabled = true;
                 cbFalla.Enabled = true;
-                //cbDiagnostico.Enabled = true;
                 cbOwner.Enabled = true;
                 tbComentarios.Enabled = true;
                 btnGuardar.Enabled = true;
                 btnCargarImagen.Enabled = true;
                 btnReset.Enabled = true;
                 cbOperacion.Enabled = true;
-                //cbMaquina.Enabled = false;
             }
         }
     }
