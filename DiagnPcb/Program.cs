@@ -17,7 +17,7 @@ namespace DiagnPcb
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inicio.Inicio());
+            Application.Run(new Loggin.LoginInicio());
         }
     }
 }

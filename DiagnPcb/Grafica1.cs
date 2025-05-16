@@ -134,15 +134,22 @@ namespace DiagnPcb
                 int cantidad = partesLineas.Length;
                 lineapartes = string.Empty;
                 string bdatos = string.Empty;
+                DateTime fecha_A = Convert.ToDateTime(dateTimePickerA.Text);
+                DateTime fecha_De = Convert.ToDateTime(dateTimePickerDe.Text);
 
-                if (estacionRecibida == "General")
-                {
-                    bdatos = "dpt.";
-                }
-                else
+                string fechaA = fecha_De.ToString("yyyy-MM-dd");
+                string fechaB = fecha_A.ToString("yyyy-MM-dd");
+
+                DateTime fechaDee = Convert.ToDateTime("02-05-2025");
+
+                if (estacionRecibida == "OP 30 - Soldier" & fecha_De < fechaDee)
                 {
                     bdatos = "dse.";
 
+                }
+                else
+                {
+                    bdatos = "dpt.";
                 }
 
                 switch (cantidad)
@@ -173,13 +180,6 @@ namespace DiagnPcb
                         break;
                 }
 
-
-                DateTime fecha_A = Convert.ToDateTime(dateTimePickerA.Text);
-                DateTime fecha_De = Convert.ToDateTime(dateTimePickerDe.Text);
-
-                string fechaA = fecha_De.ToString("yyyy-MM-dd");
-                string fechaB = fecha_A.ToString("yyyy-MM-dd");
-
                 if (estacionRecibida == "General")
                 {
                     BD.query = "Select dp.DiagnPcb As 'Diagnostico', dpt.line AS 'linea' " +
@@ -188,12 +188,33 @@ namespace DiagnPcb
                                 condicion + " and dpt.shift between '" + fechaA + "' and '" + fechaB + "'" +
                                 " order by dp.DiagnPcb;";
                 }
-                else {
+                else if (estacionRecibida == "OP 30 - Soldier" & fecha_De < fechaDee)
+                {
                     BD.query = "select dF.failure as 'Diagnostico', dse.line as 'linea' " +
                                 " from diagn_pcb.DiagnSolEt dse " +
-                                " INNER JOIN diagn_pcb.diagnfailure Df on Df.idFaile = dse.idFaile " + condicion + " and dse.dayregister between '" + fechaA + "' and '" + fechaB + "'" +
+                                " INNER JOIN diagn_pcb.diagnfailure Df on Df.idFaile = dse.idFaile " +
+                                condicion + " and dse.dayregister between '" + fechaA + "' and '" + fechaB + "'" +
                                 " order by dF.failure;";
                 }
+                else if (estacionRecibida == "OP 30 - Soldier" & fecha_De >= fechaDee)
+                {
+                    BD.query = "Select dp.DiagnPcb As 'Diagnostico', dpt.line AS 'linea' " +
+                                "from diagn_pcb.diagnpcbtech dpt " +
+                                "inner join diagn_pcb.DiagnPcb dp on dp.idDiagn = dpt.idDiagn " +
+                                condicion + " and dpt.shift between '" + fechaA + "' and '" + fechaB + "'" +
+                                " and dpt.opcode IN ('OP 30 - Soldier', '30') " +
+                                " order by dp.DiagnPcb;";
+                }
+                else if (estacionRecibida == "OP 60 - EOL")
+                { 
+                    BD.query = "Select dp.DiagnPcb As 'Diagnostico', dpt.line AS 'linea' " +
+                                "from diagn_pcb.diagnpcbtech dpt " +
+                                "inner join diagn_pcb.DiagnPcb dp on dp.idDiagn = dpt.idDiagn " +
+                                condicion + " and dpt.shift between '" + fechaA + "' and '" + fechaB + "'" +
+                                " and dpt.opcode IN ('OP 60 - EOL', '60') " +
+                                " order by dp.DiagnPcb;";
+                }
+
 
                 var dbResultCon1 = BD.getData(out dBMsg, out dbError);
                 if (dbError != 0)

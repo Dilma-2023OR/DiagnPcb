@@ -19,3 +19,4 @@
 13-05-2025 14:26:49,Error al conectar a la Base de Datos:Unable to connect to any of the specified MySQL hosts.
 13-05-2025 14:29:35,Error al conectar a la Base de Datos:Unable to connect to any of the specified MySQL hosts.
 13-05-2025 14:31:29,Error al conectar a la Base de Datos:Unable to connect to any of the specified MySQL hosts.
+16-05-2025 11:59:34,Error al obtener la información:Unknown column 'dse.line' in 'where clause'

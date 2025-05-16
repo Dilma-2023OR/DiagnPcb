@@ -208,6 +208,12 @@
     <Compile Include="Consulta\FrmConsultLine.Designer.cs">
       <DependentUpon>FrmConsultLine.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\FrmConsultOperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultOperacion.Designer.cs">
+      <DependentUpon>FrmConsultOperacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consulta\FrmConsultOwner.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,18 @@
     </Compile>
     <Compile Include="Consulta\FrmConsultPartNumber.Designer.cs">
       <DependentUpon>FrmConsultPartNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultUbication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultUbication.Designer.cs">
+      <DependentUpon>FrmConsultUbication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultWeek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\FrmConsultWeek.Designer.cs">
+      <DependentUpon>FrmConsultWeek.cs</DependentUpon>
     </Compile>
     <Compile Include="Consulta\FrmConsultWire.cs">
       <SubType>Form</SubType>
@@ -271,6 +289,10 @@
       <DependentUpon>LogInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="INIFile.cs" />
+    <Compile Include="Loggin\LoginInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loggin\LoginInicio.Designer.cs" />
     <Compile Include="Message.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -327,11 +349,20 @@
     <EmbeddedResource Include="Consulta\FrmConsultLine.resx">
       <DependentUpon>FrmConsultLine.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConsultOperacion.resx">
+      <DependentUpon>FrmConsultOperacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta\FrmConsultOwner.resx">
       <DependentUpon>FrmConsultOwner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\FrmConsultPartNumber.resx">
       <DependentUpon>FrmConsultPartNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConsultUbication.resx">
+      <DependentUpon>FrmConsultUbication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\FrmConsultWeek.resx">
+      <DependentUpon>FrmConsultWeek.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\FrmConsultWire.resx">
       <DependentUpon>FrmConsultWire.cs</DependentUpon>
@@ -360,6 +391,7 @@
     <EmbeddedResource Include="Inicio\LogInicio.resx">
       <DependentUpon>LogInicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Loggin\LoginInicio.resx" />
     <EmbeddedResource Include="Message.resx">
       <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>
@@ -595,6 +627,7 @@
     <None Include="Image\maximizar.png" />
     <None Include="Image\Molex-Logo.svg.png" />
     <None Include="Image\producto2.png" />
+    <None Include="Image\465226.png" />
     <Content Include="Properties\null.jpg" />
     <None Include="Resources\pcb.png" />
   </ItemGroup>

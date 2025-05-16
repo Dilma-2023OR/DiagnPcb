@@ -121,16 +121,19 @@ namespace DiagnPcb.Inicio
         private void btnConsultSemana_Click(object sender, EventArgs e)
         {
             SubMenuConsult.Visible = false;
+            AbrirFormHoja(new FrmConsultWeek());
         }
 
         private void btnConsultUbic_Click(object sender, EventArgs e)
         {
             SubMenuConsult.Visible = false;
+            AbrirFormHoja(new FrmConsultUbication());
         }
 
         private void btnConsultOperation_Click(object sender, EventArgs e)
         {
             SubMenuConsult.Visible = false;
+            AbrirFormHoja(new FrmConsultOperacion());
         }
 
 
@@ -187,14 +190,42 @@ namespace DiagnPcb.Inicio
         {
             panelSubmenuGraphics.Visible = false;
             btnConsultar.Visible = true;
-            AbrirFormHoja(new Grafica1("General"));
+            int x = panelSubmenuGraphics.Location.X;
+            int y = panelSubmenuGraphics.Location.Y;
+            btnConsultar.Location = panelSubmenuGraphics.Location;
+            panel3.Location = new Point(4, y);
+            SubMenuConsult.Location = new Point(x + 40, y + 30);
+
+            AbrirFormHoja(new Grafica1(btnGeneral.Text));
         }
 
         private void btnSoldado_Click(object sender, EventArgs e)
         {
             panelSubmenuGraphics.Visible = false;
             btnConsultar.Visible = true;
-            AbrirFormHoja(new Grafica1("Soldado"));
+
+            int x = panelSubmenuGraphics.Location.X;
+            int y = panelSubmenuGraphics.Location.Y;
+            btnConsultar.Location = panelSubmenuGraphics.Location;
+            panel3.Location = new Point(4, y);
+            SubMenuConsult.Location = new Point(x + 40, y + 30);
+
+            AbrirFormHoja(new Grafica1(btnSoldado.Text));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panelSubmenuGraphics.Visible = false;
+            btnConsultar.Visible = true;
+
+            int x = panelSubmenuGraphics.Location.X;
+            int y = panelSubmenuGraphics.Location.Y;
+            btnConsultar.Location = panelSubmenuGraphics.Location;
+            panel3.Location = new Point(4, y);
+            SubMenuConsult.Location = new Point(x + 40, y + 30);
+
+            AbrirFormHoja(new Grafica1(btnEOL.Text));
+
         }
     }
 }
