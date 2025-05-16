@@ -292,7 +292,9 @@
     <Compile Include="Loggin\LoginInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loggin\LoginInicio.Designer.cs" />
+    <Compile Include="Loggin\LoginInicio.Designer.cs">
+      <DependentUpon>LoginInicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Message.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -391,7 +393,9 @@
     <EmbeddedResource Include="Inicio\LogInicio.resx">
       <DependentUpon>LogInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loggin\LoginInicio.resx" />
+    <EmbeddedResource Include="Loggin\LoginInicio.resx">
+      <DependentUpon>LoginInicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Message.resx">
       <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>
