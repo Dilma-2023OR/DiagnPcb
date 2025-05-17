@@ -18,6 +18,7 @@ using MySqlConnector;
 using static System.Windows.Forms.LinkLabel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static DiagnPcb.FrmConsultar;
+using PCBDomain;
 
 namespace DiagnPcb
 {

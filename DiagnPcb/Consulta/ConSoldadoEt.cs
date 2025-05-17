@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DiagnPcb.RegistroSoldadoEtiquetado;
 using Excel = Microsoft.Office.Interop.Excel;
+using PCBDomain;
 
 namespace DiagnPcb.Consulta_Soldado
 

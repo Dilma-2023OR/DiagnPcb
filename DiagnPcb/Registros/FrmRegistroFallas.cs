@@ -28,7 +28,7 @@ namespace DiagnPcb.Registros
                 int dbError = 0;
 
 
-                DBConnection dB = new DBConnection();
+                PCBDomain.DBConnection dB = new PCBDomain.DBConnection();
                 DataTable dtResult = new DataTable();
 
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";

@@ -13,6 +13,7 @@ using static DiagnPcb.FrmConsultar;
 using static DiagnPcb.ExportChartAndDataGridViewToExcel;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Windows.Media;
+using PCBDomain;
 
 namespace DiagnPcb
 {

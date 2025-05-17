@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
+using PCBDomain;
 
 namespace DiagnPcb.Consulta
 {
@@ -100,8 +101,8 @@ namespace DiagnPcb.Consulta
                 DateTime fecha_AA = Convert.ToDateTime(dateTimePickerA.Text);
                 DateTime fechaDee = Convert.ToDateTime(dateTimePickerDe.Text);
 
-                string horaDe = cbHoraDe.Text;
-                string horaA = CbHoraA.Text;
+                string horaDe = cbHoraDe.Texts;
+                string horaA = CbHoraA.Texts;
                 //Combinar fecha y hora 
                 DateTime fechaHoraDe = DateTime.Parse($"{fechaDee.ToShortDateString()} {horaDe}");
                 DateTime fechaHoraA = DateTime.Parse($"{fecha_AA.ToShortDateString()} {horaA}");

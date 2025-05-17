@@ -30,22 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultFalla));
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button1 = new DiagnPcb.Styles.DOButton();
-            this.btnExportar = new DiagnPcb.Styles.DOButton();
-            this.btnConsultar = new DiagnPcb.Styles.DOButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cbFallas = new DiagnPcb.Styles.DOComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.button1 = new DiagnPcb.Styles.DOButton();
+            this.btnExportar = new DiagnPcb.Styles.DOButton();
+            this.btnConsultar = new DiagnPcb.Styles.DOButton();
             this.panelVersion = new System.Windows.Forms.Panel();
             this.lblVersion = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.gBoxValidation = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panelVersion.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panelVersion.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.gBoxValidation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,6 +60,62 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1462, 178);
             this.panel5.TabIndex = 6;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.cbFallas);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Location = new System.Drawing.Point(12, 28);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(577, 126);
+            this.panel4.TabIndex = 3;
+            // 
+            // cbFallas
+            // 
+            this.cbFallas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbFallas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbFallas.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.cbFallas.BackColor = System.Drawing.Color.SteelBlue;
+            this.cbFallas.BorderColor = System.Drawing.Color.SteelBlue;
+            this.cbFallas.BorderSize = 3;
+            this.cbFallas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbFallas.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cbFallas.ForeColor = System.Drawing.Color.AliceBlue;
+            this.cbFallas.IconColor = System.Drawing.Color.OrangeRed;
+            this.cbFallas.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbFallas.ListTextColor = System.Drawing.Color.SteelBlue;
+            this.cbFallas.Location = new System.Drawing.Point(3, 54);
+            this.cbFallas.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbFallas.Name = "cbFallas";
+            this.cbFallas.Padding = new System.Windows.Forms.Padding(3);
+            this.cbFallas.Size = new System.Drawing.Size(559, 37);
+            this.cbFallas.TabIndex = 45;
+            this.cbFallas.Texts = "Selected Failure...";
+            this.cbFallas.OnSelectedIndexChanged += new System.EventHandler(this.cbFallas_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(5, 16);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 34);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Failure:";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.button1);
+            this.panel8.Controls.Add(this.btnExportar);
+            this.panel8.Controls.Add(this.btnConsultar);
+            this.panel8.Location = new System.Drawing.Point(595, 28);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(730, 126);
+            this.panel8.TabIndex = 2;
             // 
             // button1
             // 
@@ -130,52 +186,6 @@
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.cbFallas);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(12, 28);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(577, 126);
-            this.panel4.TabIndex = 3;
-            // 
-            // cbFallas
-            // 
-            this.cbFallas.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbFallas.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbFallas.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.cbFallas.BackColor = System.Drawing.Color.SteelBlue;
-            this.cbFallas.BorderColor = System.Drawing.Color.SteelBlue;
-            this.cbFallas.BorderSize = 3;
-            this.cbFallas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbFallas.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.cbFallas.ForeColor = System.Drawing.Color.AliceBlue;
-            this.cbFallas.IconColor = System.Drawing.Color.OrangeRed;
-            this.cbFallas.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbFallas.ListTextColor = System.Drawing.Color.SteelBlue;
-            this.cbFallas.Location = new System.Drawing.Point(3, 54);
-            this.cbFallas.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cbFallas.Name = "cbFallas";
-            this.cbFallas.Padding = new System.Windows.Forms.Padding(3);
-            this.cbFallas.Size = new System.Drawing.Size(559, 37);
-            this.cbFallas.TabIndex = 45;
-            this.cbFallas.Texts = "Selected Failure...";
-            this.cbFallas.OnSelectedIndexChanged += new System.EventHandler(this.cbFallas_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(5, 16);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 34);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Failure:";
-            // 
             // panelVersion
             // 
             this.panelVersion.Controls.Add(this.lblVersion);
@@ -196,17 +206,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(72, 23);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "3.0.1.3";
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.button1);
-            this.panel8.Controls.Add(this.btnExportar);
-            this.panel8.Controls.Add(this.btnConsultar);
-            this.panel8.Location = new System.Drawing.Point(595, 28);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(730, 126);
-            this.panel8.TabIndex = 2;
+            this.lblVersion.Text = "4.0.0.1";
             // 
             // panelContenedor
             // 
@@ -269,9 +269,9 @@
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel8.ResumeLayout(false);
             this.panelVersion.ResumeLayout(false);
             this.panelVersion.PerformLayout();
-            this.panel8.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.gBoxValidation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

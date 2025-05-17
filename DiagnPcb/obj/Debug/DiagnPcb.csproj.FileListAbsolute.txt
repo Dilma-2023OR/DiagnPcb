@@ -272,7 +272,6 @@ C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.Consulta.FrmConsultPartNumber.resources
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.Consulta.FrmConsultWire.resources
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.Consulta.FrmDateHour.resources
-C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.Form1.resources
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.FrmImagen.resources
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.FrmInsertar.resources
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.Grafica1.resources
@@ -296,3 +295,18 @@ C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.Consulta.FrmConsultWeek.resources
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.Consulta.FrmConsultOperacion.resources
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.Consulta.FrmConsultUbication.resources
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.csproj.SuggestedBindingRedirects.cache
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.exe.config
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\Microsoft.Bcl.Cryptography.dll
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\System.Formats.Asn1.dll
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\System.Security.Cryptography.Xml.dll
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\System.ValueTuple.dll
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\Microsoft.Bcl.Cryptography.xml
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\System.Formats.Asn1.xml
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\PCBDomain.dll
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\PCBDomain.pdb
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\Common.dll
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\DataAccessPCB.dll
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\Common.pdb
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\DataAccessPCB.pdb

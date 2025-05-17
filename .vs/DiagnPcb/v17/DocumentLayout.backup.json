@@ -3,27 +3,74 @@
   "WorkspaceRootPath": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\loggin\\logininicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\loggin\\logininicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|DiagnPcb||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\diagnpcb\\consulta\\frmconsultoperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\frmconsultoperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\diagnpcb\\inicio\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\inicio\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\frmimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\frmimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\diagnpcb\\consulta\\frmconsultoperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\consulta\\frmconsultpartnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\frmconsultpartnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\frmimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\frmimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\grafica1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\grafica1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\frminsertar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\frminsertar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\consulta\\frmdatehour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\frmdatehour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\consulta\\frmconsultwire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\frmconsultwire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\consulta\\frmconsultweek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\frmconsultweek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\consulta\\frmconsultubication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\frmconsultubication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\consulta\\frmconsultowner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\frmconsultowner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\consulta\\frmconsultoperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\frmconsultoperacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\diagnpcb\\inicio\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\inicio\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\consulta\\frmconsultline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\frmconsultline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|DiagnPcb||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\consulta\\frmconsultfalla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\frmconsultfalla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\consulta\\frmconsultdiag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\frmconsultdiag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\consulta\\frmconsultdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|solutionrelative:diagnpcb\\consulta\\frmconsultdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E4A1B-3248-4FD6-A9AC-9258362AC8E6}|DiagnPcb\\DiagnPcb.csproj|c:\\users\\dilao\\onedrive - kochind.com\\documents\\diagn pcb\\diagnpcb1\\diagnpcb\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|cc4014f5-b18d-439c-9352-f99d984cca85"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,73 +97,207 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginInicio.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Loggin\\LoginInicio.cs",
-              "RelativeDocumentMoniker": "DiagnPcb\\Loggin\\LoginInicio.cs",
-              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Loggin\\LoginInicio.cs [Design]",
-              "RelativeToolTip": "DiagnPcb\\Loggin\\LoginInicio.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T18:19:46.735Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmConsultOperacion.cs",
-              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultOperacion.cs",
-              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\FrmConsultOperacion.cs",
-              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultOperacion.cs",
-              "RelativeToolTip": "DiagnPcb\\Consulta\\FrmConsultOperacion.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAuwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T17:20:03.747Z",
+              "Title": "DiagnPcb",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\DiagnPcb.csproj",
+              "RelativeDocumentMoniker": "DiagnPcb\\DiagnPcb.csproj",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\DiagnPcb.csproj*",
+              "RelativeToolTip": "DiagnPcb\\DiagnPcb.csproj*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-17T18:24:25.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Message.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Message.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Message.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Message.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Message.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T18:22:38.866Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Grafica1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Grafica1.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Grafica1.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Grafica1.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Grafica1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T18:22:25.972Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmImagen.cs",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\FrmImagen.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\FrmImagen.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\FrmImagen.cs",
+              "RelativeToolTip": "DiagnPcb\\FrmImagen.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAvwFYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T18:21:01.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmImagen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\FrmImagen.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\FrmImagen.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\FrmImagen.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\FrmImagen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T18:19:26.023Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrmDateHour.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmDateHour.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\FrmDateHour.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmDateHour.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\FrmDateHour.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T18:19:13.511Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FrmConsultWire.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultWire.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\FrmConsultWire.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultWire.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\FrmConsultWire.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T18:18:54.901Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FrmConsultWeek.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultWeek.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\FrmConsultWeek.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultWeek.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\FrmConsultWeek.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T18:18:02.237Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FrmConsultUbication.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultUbication.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\FrmConsultUbication.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultUbication.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\FrmConsultUbication.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T18:17:51.039Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "FrmConsultPartNumber.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultPartNumber.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\FrmConsultPartNumber.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultPartNumber.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\FrmConsultPartNumber.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T18:17:41.891Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FrmConsultOwner.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultOwner.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\FrmConsultOwner.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultOwner.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\FrmConsultOwner.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T18:17:33.424Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "FrmConsultOperacion.cs [Design]",
               "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultOperacion.cs",
               "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\FrmConsultOperacion.cs",
               "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultOperacion.cs [Design]",
               "RelativeToolTip": "DiagnPcb\\Consulta\\FrmConsultOperacion.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T17:17:52.822Z",
+              "WhenOpened": "2025-05-17T18:17:23.108Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Inicio.cs",
-              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Inicio\\Inicio.cs",
-              "RelativeDocumentMoniker": "DiagnPcb\\Inicio\\Inicio.cs",
-              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Inicio\\Inicio.cs",
-              "RelativeToolTip": "DiagnPcb\\Inicio\\Inicio.cs",
-              "ViewState": "AgIAANMAAAAAAAAAAAAwwOQAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "FrmConsultLine.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultLine.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\FrmConsultLine.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultLine.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\FrmConsultLine.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T17:29:07.97Z"
+              "WhenOpened": "2025-05-17T18:17:12.353Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Inicio.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Inicio\\Inicio.cs",
-              "RelativeDocumentMoniker": "DiagnPcb\\Inicio\\Inicio.cs",
-              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Inicio\\Inicio.cs [Design]",
-              "RelativeToolTip": "DiagnPcb\\Inicio\\Inicio.cs [Design]",
+              "DocumentIndex": 14,
+              "Title": "FrmConsultFalla.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultFalla.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\FrmConsultFalla.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultFalla.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\FrmConsultFalla.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T17:08:54.908Z"
+              "WhenOpened": "2025-05-17T18:17:03.44Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DiagnPcb",
-              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\DiagnPcb.csproj",
-              "RelativeDocumentMoniker": "DiagnPcb\\DiagnPcb.csproj",
-              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\DiagnPcb.csproj",
-              "RelativeToolTip": "DiagnPcb\\DiagnPcb.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-08T20:45:29.036Z"
+              "DocumentIndex": 15,
+              "Title": "FrmConsultDiag.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultDiag.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\FrmConsultDiag.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultDiag.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\FrmConsultDiag.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T18:16:52.103Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmInsertar.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\FrmInsertar.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\FrmInsertar.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\FrmInsertar.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\FrmInsertar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T17:44:06.145Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FrmConsultDate.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultDate.cs",
+              "RelativeDocumentMoniker": "DiagnPcb\\Consulta\\FrmConsultDate.cs",
+              "ToolTip": "C:\\Users\\dilao\\OneDrive - kochind.com\\Documents\\DIAGN PCB\\DiagnPcb1\\DiagnPcb\\Consulta\\FrmConsultDate.cs [Design]",
+              "RelativeToolTip": "DiagnPcb\\Consulta\\FrmConsultDate.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T16:26:45.707Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -29,6 +29,8 @@ using static DiagnPcb.RegistroSoldadoEtiquetado;
 using DiagnPcb.Styles;
 using DiagnPcb.Registros;
 using static DiagnPcb.FrmConsultar;
+using PCBDomain;
+using System.Data.Common;
 
 namespace DiagnPcb
 {
@@ -137,8 +139,8 @@ namespace DiagnPcb
             {
                 string dBMsg = string.Empty;
                 int dbError = 0;
-
-                DBConnection dB = new DBConnection();
+                
+                PCBDomain.DBConnection dB = new PCBDomain.DBConnection();
                 DataTable dtResult = new DataTable();
                 dB.dataBase = "datasource=MLXGUMVLRCDB02.molex.com;port=3306;username=diaguser;password=diaguser123;database=runcard;";
                 dB.query = "SELECT moddate FROM runcard.inventory_master"

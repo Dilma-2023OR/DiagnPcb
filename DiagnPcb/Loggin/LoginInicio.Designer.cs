@@ -38,6 +38,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.lblErrorMessage = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -116,7 +117,7 @@
             this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(460, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 40);
+            this.label1.Size = new System.Drawing.Size(122, 40);
             this.label1.TabIndex = 5;
             this.label1.Text = "LOGIN";
             // 
@@ -162,12 +163,25 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // lblErrorMessage
+            // 
+            this.lblErrorMessage.AutoSize = true;
+            this.lblErrorMessage.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorMessage.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorMessage.Location = new System.Drawing.Point(265, 282);
+            this.lblErrorMessage.Name = "lblErrorMessage";
+            this.lblErrorMessage.Size = new System.Drawing.Size(45, 21);
+            this.lblErrorMessage.TabIndex = 9;
+            this.lblErrorMessage.Text = "Error";
+            this.lblErrorMessage.Visible = false;
+            // 
             // LoginInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.lblErrorMessage);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnLogin);
@@ -204,5 +218,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.Label lblErrorMessage;
     }
 }

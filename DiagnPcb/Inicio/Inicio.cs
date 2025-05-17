@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using DiagnPcb.Consulta;
+using Common.Cache;
 namespace DiagnPcb.Inicio
 {
     public partial class Inicio : Form
@@ -20,7 +21,11 @@ namespace DiagnPcb.Inicio
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Are you sure to log out?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
+                Application.Exit();
+            }
+            
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
@@ -44,7 +49,14 @@ namespace DiagnPcb.Inicio
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            LoadUserData();
             btnInicio_Click(null, e);
+        }
+
+        private void LoadUserData()
+        {
+            lblUserName.Text = UserCache.LoginName;
+            lblPosition.Text = UserCache.Position;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

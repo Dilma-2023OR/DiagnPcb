@@ -4,11 +4,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
-using System.Runtime.InteropServices;
+using Common.Cache;
+using Microsoft.Office.Interop.Excel;
+using PCBDomain;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DiagnPcb.Loggin
 {
@@ -33,9 +37,9 @@ namespace DiagnPcb.Loggin
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            Point p1 = new Point(0, 0);
+            System.Drawing.Point p1 = new System.Drawing.Point(0, 0);
 
-            Point p2 = new Point();
+            System.Drawing.Point p2 = new   System.Drawing.Point();
             p2.X = 408;
             p2.Y = 0;
 
@@ -46,9 +50,9 @@ namespace DiagnPcb.Loggin
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            Point p1 = new Point(0, 0);
+            System.Drawing.Point p1 = new System.Drawing.Point(0, 0);
 
-            Point p2 = new Point();
+            System.Drawing.Point p2 = new System.Drawing.Point();
             p2.X = 408;
             p2.Y = 0;
 
@@ -97,7 +101,7 @@ namespace DiagnPcb.Loggin
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -107,11 +111,48 @@ namespace DiagnPcb.Loggin
 
         private void btnLogin_Click(object sender, EventArgs e) {
 
-            Inicio.Inicio Inicio = new Inicio.Inicio();
-
-            // Mostrar el segundo formulario
-            Inicio.Show();
+            if (txtuser.Text != "USER" && txtuser.TextLength > 2)
+            {
+                if (txtPass.Text != "PASSWORD")
+                {
+                    UserModel user = new UserModel();
+                    var validLogin = user.LoginUser(txtuser.Text, txtPass.Text);
+                    if (validLogin == true)
+                    {
+                        Message message = new Message("Bienvenido " + UserCache.FirstName + ", " + UserCache.LastName);
+                        message.Show();
+                        Inicio.Inicio Inicio = new Inicio.Inicio();
+                        // Mostrar el segundo formulario
+                        Inicio.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        msgError("Incorrect username or password entered. \n Please try again.");
+                        txtPass.Text = "Password";
+                        txtPass.UseSystemPasswordChar = false;
+                        txtuser.Focus();
+                    }
+                }
+                else
+                    msgError("Please enter password.");
+            }
+            else
+                msgError("Please enter username.");
         }
 
+        public void msgError(string msg) { 
+            lblErrorMessage.Text = "    " + msg;
+            lblErrorMessage.Visible = true;
+        }
+
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            txtPass.Text = "Password";
+            txtPass.UseSystemPasswordChar = false;
+            txtuser.Text = "Username";
+            lblErrorMessage.Visible = false;
+            this.Show();
+        }
     }
 }

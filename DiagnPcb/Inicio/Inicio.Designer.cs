@@ -36,6 +36,8 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.panelSubmenuGraphics = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnEOL = new System.Windows.Forms.Button();
             this.btnSoldado = new System.Windows.Forms.Button();
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
@@ -71,8 +73,8 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.btnEOL = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblPosition = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -87,6 +89,8 @@
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.BarraTitulo.Controls.Add(this.lblPosition);
+            this.BarraTitulo.Controls.Add(this.lblUserName);
             this.BarraTitulo.Controls.Add(this.btnRestaurar);
             this.BarraTitulo.Controls.Add(this.btnMinimizar);
             this.BarraTitulo.Controls.Add(this.btnMaximizar);
@@ -182,6 +186,32 @@
             this.panelSubmenuGraphics.Size = new System.Drawing.Size(205, 111);
             this.panelSubmenuGraphics.TabIndex = 4;
             this.panelSubmenuGraphics.Visible = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel4.Location = new System.Drawing.Point(55, 73);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(5, 28);
+            this.panel4.TabIndex = 7;
+            // 
+            // btnEOL
+            // 
+            this.btnEOL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnEOL.FlatAppearance.BorderSize = 0;
+            this.btnEOL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnEOL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEOL.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEOL.ForeColor = System.Drawing.Color.White;
+            this.btnEOL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEOL.Location = new System.Drawing.Point(61, 73);
+            this.btnEOL.Name = "btnEOL";
+            this.btnEOL.Size = new System.Drawing.Size(144, 28);
+            this.btnEOL.TabIndex = 6;
+            this.btnEOL.Text = "OP 60 - EOL";
+            this.btnEOL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEOL.UseVisualStyleBackColor = false;
+            this.btnEOL.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSoldado
             // 
@@ -650,31 +680,27 @@
             this.panelContenedor.Size = new System.Drawing.Size(1480, 1012);
             this.panelContenedor.TabIndex = 5;
             // 
-            // btnEOL
+            // lblUserName
             // 
-            this.btnEOL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnEOL.FlatAppearance.BorderSize = 0;
-            this.btnEOL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnEOL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEOL.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEOL.ForeColor = System.Drawing.Color.White;
-            this.btnEOL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEOL.Location = new System.Drawing.Point(61, 73);
-            this.btnEOL.Name = "btnEOL";
-            this.btnEOL.Size = new System.Drawing.Size(144, 28);
-            this.btnEOL.TabIndex = 6;
-            this.btnEOL.Text = "OP 60 - EOL";
-            this.btnEOL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEOL.UseVisualStyleBackColor = false;
-            this.btnEOL.Click += new System.EventHandler(this.button1_Click);
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(12, 5);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(65, 27);
+            this.lblUserName.TabIndex = 4;
+            this.lblUserName.Text = "User:";
             // 
-            // panel4
+            // lblPosition
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel4.Location = new System.Drawing.Point(55, 73);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 28);
-            this.panel4.TabIndex = 7;
+            this.lblPosition.AutoSize = true;
+            this.lblPosition.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosition.ForeColor = System.Drawing.Color.White;
+            this.lblPosition.Location = new System.Drawing.Point(192, 5);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(99, 27);
+            this.lblPosition.TabIndex = 5;
+            this.lblPosition.Text = "Position";
             // 
             // Inicio
             // 
@@ -689,6 +715,7 @@
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.BarraTitulo.ResumeLayout(false);
+            this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
@@ -747,5 +774,7 @@
         private System.Windows.Forms.Button btnGeneral;
         private System.Windows.Forms.Button btnEOL;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lblPosition;
+        private System.Windows.Forms.Label lblUserName;
     }
 }

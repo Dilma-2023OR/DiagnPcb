@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DiagnPcb.FrmConsultar;
 using Excel = Microsoft.Office.Interop.Excel;
+using PCBDomain;
 
 namespace DiagnPcb.Consulta
 {

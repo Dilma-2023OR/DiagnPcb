@@ -205,7 +205,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(72, 23);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "3.0.1.3";
+            this.lblVersion.Text = "4.0.0.1";
             // 
             // panelContenedor
             // 

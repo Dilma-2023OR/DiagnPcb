@@ -47,36 +47,38 @@
             // 
             // tLayoutHeader
             // 
+            this.tLayoutHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.tLayoutHeader.ColumnCount = 1;
             this.tLayoutHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tLayoutHeader.Controls.Add(this.tableLayoutPanel1, 0, 1);
             this.tLayoutHeader.Controls.Add(this.btnClose, 0, 0);
             this.tLayoutHeader.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tLayoutHeader.Location = new System.Drawing.Point(0, 0);
+            this.tLayoutHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tLayoutHeader.Name = "tLayoutHeader";
             this.tLayoutHeader.RowCount = 2;
             this.tLayoutHeader.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tLayoutHeader.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tLayoutHeader.Size = new System.Drawing.Size(380, 138);
+            this.tLayoutHeader.Size = new System.Drawing.Size(507, 170);
             this.tLayoutHeader.TabIndex = 7;
             this.tLayoutHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tLayoutHeader_MouseDown);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.pBoxImage, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblMessage, 0, 0);
-            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 34);
+            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 41);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(373, 100);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(507, 129);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
             // pBoxImage
@@ -84,10 +86,10 @@
             this.pBoxImage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pBoxImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pBoxImage.BackgroundImage")));
             this.pBoxImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBoxImage.Location = new System.Drawing.Point(293, 10);
+            this.pBoxImage.Location = new System.Drawing.Point(400, 15);
             this.pBoxImage.Margin = new System.Windows.Forms.Padding(0);
             this.pBoxImage.Name = "pBoxImage";
-            this.pBoxImage.Size = new System.Drawing.Size(80, 80);
+            this.pBoxImage.Size = new System.Drawing.Size(107, 98);
             this.pBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBoxImage.TabIndex = 1;
             this.pBoxImage.TabStop = false;
@@ -98,9 +100,10 @@
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Century Gothic", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
             this.lblMessage.ForeColor = System.Drawing.Color.White;
-            this.lblMessage.Location = new System.Drawing.Point(108, 39);
+            this.lblMessage.Location = new System.Drawing.Point(150, 49);
+            this.lblMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(77, 22);
+            this.lblMessage.Size = new System.Drawing.Size(100, 30);
             this.lblMessage.TabIndex = 2;
             this.lblMessage.Text = "Default";
             // 
@@ -108,14 +111,14 @@
             // 
             this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImage = global::DiagnPcb.Properties.Resources.cerrar;
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(348, 2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(464, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(30, 30);
+            this.btnClose.Size = new System.Drawing.Size(40, 37);
             this.btnClose.TabIndex = 6;
             this.btnClose.TabStop = false;
             this.btnClose.UseVisualStyleBackColor = false;
@@ -123,12 +126,13 @@
             // 
             // Message
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(380, 138);
+            this.ClientSize = new System.Drawing.Size(507, 170);
             this.Controls.Add(this.tLayoutHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Message";

@@ -32,29 +32,29 @@
             this.PanelQuery = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dateTimePickerA = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerDe = new System.Windows.Forms.DateTimePicker();
-            this.lblDe = new System.Windows.Forms.Label();
             this.lblA = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblDe = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePickerDe = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelVersion = new System.Windows.Forms.Panel();
             this.lblVersion = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.gBoxValidation = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnConsultar = new DiagnPcb.Styles.DOButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnExportar = new DiagnPcb.Styles.DOButton();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.doButton1 = new DiagnPcb.Styles.DOButton();
+            this.btnConsultar = new DiagnPcb.Styles.DOButton();
+            this.btnExportar = new DiagnPcb.Styles.DOButton();
             this.PanelQuery.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panelVersion.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.gBoxValidation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelQuery
@@ -104,16 +104,27 @@
             this.dateTimePickerA.Size = new System.Drawing.Size(246, 28);
             this.dateTimePickerA.TabIndex = 33;
             // 
-            // dateTimePickerDe
+            // lblA
             // 
-            this.dateTimePickerDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePickerDe.CalendarMonthBackground = System.Drawing.SystemColors.Control;
-            this.dateTimePickerDe.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerDe.Location = new System.Drawing.Point(367, 60);
-            this.dateTimePickerDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePickerDe.Name = "dateTimePickerDe";
-            this.dateTimePickerDe.Size = new System.Drawing.Size(217, 26);
-            this.dateTimePickerDe.TabIndex = 31;
+            this.lblA.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblA.AutoSize = true;
+            this.lblA.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblA.ForeColor = System.Drawing.Color.White;
+            this.lblA.Location = new System.Drawing.Point(846, 30);
+            this.lblA.Margin = new System.Windows.Forms.Padding(0);
+            this.lblA.Name = "lblA";
+            this.lblA.Size = new System.Drawing.Size(102, 27);
+            this.lblA.TabIndex = 32;
+            this.lblA.Text = "Date To:";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.doButton1);
+            this.panel3.Location = new System.Drawing.Point(590, 92);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(253, 63);
+            this.panel3.TabIndex = 37;
             // 
             // lblDe
             // 
@@ -128,18 +139,33 @@
             this.lblDe.TabIndex = 30;
             this.lblDe.Text = "Date Of:";
             // 
-            // lblA
+            // panel1
             // 
-            this.lblA.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblA.AutoSize = true;
-            this.lblA.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblA.ForeColor = System.Drawing.Color.White;
-            this.lblA.Location = new System.Drawing.Point(846, 30);
-            this.lblA.Margin = new System.Windows.Forms.Padding(0);
-            this.lblA.Name = "lblA";
-            this.lblA.Size = new System.Drawing.Size(102, 27);
-            this.lblA.TabIndex = 32;
-            this.lblA.Text = "Date To:";
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btnConsultar);
+            this.panel1.Location = new System.Drawing.Point(367, 92);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(217, 63);
+            this.panel1.TabIndex = 35;
+            // 
+            // dateTimePickerDe
+            // 
+            this.dateTimePickerDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dateTimePickerDe.CalendarMonthBackground = System.Drawing.SystemColors.Control;
+            this.dateTimePickerDe.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerDe.Location = new System.Drawing.Point(367, 60);
+            this.dateTimePickerDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePickerDe.Name = "dateTimePickerDe";
+            this.dateTimePickerDe.Size = new System.Drawing.Size(217, 26);
+            this.dateTimePickerDe.TabIndex = 31;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnExportar);
+            this.panel2.Location = new System.Drawing.Point(849, 92);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(244, 63);
+            this.panel2.TabIndex = 36;
             // 
             // panelVersion
             // 
@@ -161,7 +187,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(72, 23);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "3.0.1.3";
+            this.lblVersion.Text = "4.0.0.1";
             // 
             // panelContenedor
             // 
@@ -209,6 +235,28 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
+            // doButton1
+            // 
+            this.doButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.doButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.doButton1.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.doButton1.BorderRadius = 24;
+            this.doButton1.BorderSize = 3;
+            this.doButton1.FlatAppearance.BorderSize = 2;
+            this.doButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.doButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doButton1.ForeColor = System.Drawing.Color.White;
+            this.doButton1.Image = global::DiagnPcb.Properties.Resources.producto2;
+            this.doButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.doButton1.Location = new System.Drawing.Point(13, 5);
+            this.doButton1.Name = "doButton1";
+            this.doButton1.Size = new System.Drawing.Size(235, 50);
+            this.doButton1.TabIndex = 2;
+            this.doButton1.Text = "Another";
+            this.doButton1.TextColor = System.Drawing.Color.White;
+            this.doButton1.UseVisualStyleBackColor = false;
+            this.doButton1.Click += new System.EventHandler(this.doButton1_Click);
+            // 
             // btnConsultar
             // 
             this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
@@ -230,23 +278,6 @@
             this.btnConsultar.TextColor = System.Drawing.Color.White;
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnConsultar);
-            this.panel1.Location = new System.Drawing.Point(367, 92);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(217, 63);
-            this.panel1.TabIndex = 35;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnExportar);
-            this.panel2.Location = new System.Drawing.Point(849, 92);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(244, 63);
-            this.panel2.TabIndex = 36;
             // 
             // btnExportar
             // 
@@ -270,37 +301,6 @@
             this.btnExportar.UseVisualStyleBackColor = false;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.doButton1);
-            this.panel3.Location = new System.Drawing.Point(590, 92);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(253, 63);
-            this.panel3.TabIndex = 37;
-            // 
-            // doButton1
-            // 
-            this.doButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.doButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.doButton1.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.doButton1.BorderRadius = 24;
-            this.doButton1.BorderSize = 3;
-            this.doButton1.FlatAppearance.BorderSize = 2;
-            this.doButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.doButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doButton1.ForeColor = System.Drawing.Color.White;
-            this.doButton1.Image = global::DiagnPcb.Properties.Resources.producto2;
-            this.doButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.doButton1.Location = new System.Drawing.Point(13, 5);
-            this.doButton1.Name = "doButton1";
-            this.doButton1.Size = new System.Drawing.Size(235, 50);
-            this.doButton1.TabIndex = 2;
-            this.doButton1.Text = "Another";
-            this.doButton1.TextColor = System.Drawing.Color.White;
-            this.doButton1.UseVisualStyleBackColor = false;
-            this.doButton1.Click += new System.EventHandler(this.doButton1_Click);
-            // 
             // FrmConsultDate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -316,14 +316,14 @@
             this.PanelQuery.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panelVersion.ResumeLayout(false);
             this.panelVersion.PerformLayout();
             this.panelContenedor.ResumeLayout(false);
             this.gBoxValidation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

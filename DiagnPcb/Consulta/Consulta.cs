@@ -21,6 +21,7 @@ using MySqlConnector;
 using static System.Net.Mime.MediaTypeNames;
 using System.Drawing.Imaging;
 using DiagnPcb.Consulta_Soldado;
+using PCBDomain;
 
 namespace DiagnPcb
 {
