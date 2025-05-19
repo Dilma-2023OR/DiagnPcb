@@ -291,7 +291,7 @@ namespace DiagnPcb
                 DataTable dtResult = new DataTable();
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
                 string consulta = string.Empty;
-                if (cbOperacion.Text.Equals("OP 30 - Soldier") || cbOperacion.Text.Equals("OP 40 - Screwed"))
+                if (cbOperacion.Texts.Equals("OP 30 - Soldier") || cbOperacion.Texts.Equals("OP 40 - Screwed"))
                     consulta = "select idFaile, failureEnglish from diagn_pcb.DiagnFailure where config = 'SOLDADO'";
                 else
                     consulta = "select idFaile, failureEnglish from diagn_pcb.DiagnFailure where config = 'GENERAL'";
@@ -631,7 +631,7 @@ namespace DiagnPcb
             if (cbDiagnostico.SelectedItem != null)
             {
 
-                string diagnostic = cbDiagnostico.Text;
+                string diagnostic = cbDiagnostico.Texts;
 
                 if (diagnostic.Equals("welding short") || diagnostic.Equals("internal short") || diagnostic.Equals("Welding deficiency")
                     || diagnostic.Equals("Non-welded core") || diagnostic.Equals("Mesh not welded correctly"))
@@ -647,7 +647,7 @@ namespace DiagnPcb
                 else
                 {
                     cbCables.Enabled = false;
-                    cbCables.Text = "N/A";
+                    cbCables.Texts = "N/A";
                     idWire = 6;
                     WireEnglish = "N/A";
 
@@ -674,12 +674,12 @@ namespace DiagnPcb
         {
             if (cbUbicacion.SelectedItem != null)
             {
-                string ubicacion = cbUbicacion.Text;
+                string ubicacion = cbUbicacion.Texts;
 
                 if (ubicacion.Equals("YELLOW CABLE GROUND PAD \"MESH\"") || ubicacion.Equals("YELLOW CABLE SIGNAL PAD"))
                 {
                     cbCables.Enabled = false;
-                    cbCables.Text = "YELLOW";
+                    cbCables.Texts = "YELLOW";
                     idWire = 1;
                     WireEnglish = "YELLOW";
 
@@ -692,7 +692,7 @@ namespace DiagnPcb
                 else if (ubicacion.Equals("CABLE AZUL PAD DE TIERRA \"MALLA\"") || ubicacion.Equals("BLUE CABLE SIGNAL PAD"))
                 {
                     cbCables.Enabled = false;
-                    cbCables.Text = "BLUE";
+                    cbCables.Texts = "BLUE";
                     idWire = 2;
                     WireEnglish = "BLUE";
 
@@ -704,7 +704,7 @@ namespace DiagnPcb
                 else if (ubicacion.Equals("BLACK CABLE GROUND PAD MESH") || ubicacion.Equals("BLACK CABLE SIGNAL PAD"))
                 {
                     cbCables.Enabled = false;
-                    cbCables.Text = "BLACK";
+                    cbCables.Texts = "BLACK";
                     idWire = 5;
                     WireEnglish = "BLACK";
 
@@ -716,7 +716,7 @@ namespace DiagnPcb
                 else if (ubicacion.Equals("GREEN CABLE GROUND PAD MESH") || ubicacion.Equals("GREEN WIRE SIGNAL PAD"))
                 {
                     cbCables.Enabled = false;
-                    cbCables.Text = "GREEN";
+                    cbCables.Texts = "GREEN";
                     idWire = 3;
                     WireEnglish = "GREEN";
 
@@ -728,7 +728,7 @@ namespace DiagnPcb
                 else if (ubicacion.Equals("WHITE CABLE GROUND PAD MESH") || ubicacion.Equals("WHITE CABLE SIGNAL PAD"))
                 {
                     cbCables.Enabled = false;
-                    cbCables.Text = "WHITE";
+                    cbCables.Texts = "WHITE";
                     idWire = 4;
                     WireEnglish = "WHITE";
 
@@ -1022,13 +1022,13 @@ namespace DiagnPcb
             if (docbLinea.SelectedItem != null)
             {
 
-                string linea = docbLinea.Text;
+                string linea = docbLinea.Texts;
 
                 if (linea.Equals("FILTROS") || linea.Equals("AMPLIFICADORES"))
                 {
 
                     cbCables.Enabled = false;
-                    cbCables.Text = "N/A";
+                    cbCables.Texts = "N/A";
                     idWire = 6;
                     WireEnglish = "N/A";
 
@@ -1091,11 +1091,11 @@ namespace DiagnPcb
                 ObtenerFallas();
                 ObtenerUbicaciones();
 
-                string operacion = cbOperacion.Text;
+                string operacion = cbOperacion.Texts;
                 if (operacion.Equals("OP 30 - Soldier") || operacion.Equals("OP 40 - Screwed"))
                 {
                     cbDiagnostico.Enabled = false;
-                    cbDiagnostico.Text = "N/A";
+                    cbDiagnostico.Texts = "N/A";
                     idDiagn = 19;
                     DiagnPcbEnglish = "N/A";
                 }
@@ -1107,18 +1107,18 @@ namespace DiagnPcb
                 if (operacion.Equals("OP 10 - Chasis") || operacion.Equals("OP 20 - PCBA Tester") || operacion.Equals("OP 40 - Screwed") || operacion.Equals("OP 50 - Leak tester radome"))
                 {
                     cbCables.Enabled = false;
-                    cbCables.Text = "N/A";
+                    cbCables.Texts = "N/A";
                     idWire = 6;
                     WireEnglish = "N/A";
                     if (operacion.Equals("40"))
                     {
                         cbDiagnostico.Enabled = false;
 
-                        string diagnostic = cbDiagnostico.Text;
+                        string diagnostic = cbDiagnostico.Texts;
                         if (diagnostic == string.Empty)
                         {
                             cbDiagnostico.Enabled = false;
-                            cbDiagnostico.Text = "N/A";
+                            cbDiagnostico.Texts = "N/A";
                             idDiagn = 19;
                             DiagnPcbEnglish = "N/A";
                         }

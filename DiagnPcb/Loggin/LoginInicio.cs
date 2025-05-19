@@ -86,6 +86,7 @@ namespace DiagnPcb.Loggin
                 txtPass.Text = "";
                 txtPass.ForeColor = System.Drawing.Color.LightGray;
                 txtPass.UseSystemPasswordChar = true;
+
             }
         }
 
@@ -111,6 +112,10 @@ namespace DiagnPcb.Loggin
 
         private void btnLogin_Click(object sender, EventArgs e) {
 
+            login();
+        }
+
+        public void login() {
             if (txtuser.Text != "USER" && txtuser.TextLength > 2)
             {
                 if (txtPass.Text != "PASSWORD")
@@ -119,7 +124,7 @@ namespace DiagnPcb.Loggin
                     var validLogin = user.LoginUser(txtuser.Text, txtPass.Text);
                     if (validLogin == true)
                     {
-                        Message message = new Message("Bienvenido " + UserCache.FirstName + ", " + UserCache.LastName);
+                        Message message = new Message("Bienvenido " + UserCache.FirstName + ", " + UserCache.LastName + ", " + UserCache.config);
                         message.Show();
                         Inicio.Inicio Inicio = new Inicio.Inicio();
                         // Mostrar el segundo formulario
@@ -153,6 +158,17 @@ namespace DiagnPcb.Loggin
             txtuser.Text = "Username";
             lblErrorMessage.Visible = false;
             this.Show();
+        }
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                login();
+
+                e.Handled = true;
+                e.SuppressKeyPress = true; // Evita el beep del sistema al presionar Enter
+            }
         }
     }
 }

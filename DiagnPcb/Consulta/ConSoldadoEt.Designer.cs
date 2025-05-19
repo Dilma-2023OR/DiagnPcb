@@ -132,9 +132,9 @@
             this.lblNumPart.AutoSize = true;
             this.lblNumPart.Font = new System.Drawing.Font("Ebrima", 15F, System.Drawing.FontStyle.Bold);
             this.lblNumPart.ForeColor = System.Drawing.Color.Black;
-            this.lblNumPart.Location = new System.Drawing.Point(134, 9);
+            this.lblNumPart.Location = new System.Drawing.Point(150, 13);
             this.lblNumPart.Name = "lblNumPart";
-            this.lblNumPart.Size = new System.Drawing.Size(224, 35);
+            this.lblNumPart.Size = new System.Drawing.Size(179, 28);
             this.lblNumPart.TabIndex = 0;
             this.lblNumPart.Text = "Número de Parte:";
             // 
@@ -144,10 +144,10 @@
             this.cbNumPart.BackColor = System.Drawing.SystemColors.Control;
             this.cbNumPart.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbNumPart.FormattingEnabled = true;
-            this.cbNumPart.Location = new System.Drawing.Point(134, 66);
+            this.cbNumPart.Location = new System.Drawing.Point(150, 67);
             this.cbNumPart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbNumPart.Name = "cbNumPart";
-            this.cbNumPart.Size = new System.Drawing.Size(192, 29);
+            this.cbNumPart.Size = new System.Drawing.Size(192, 25);
             this.cbNumPart.TabIndex = 1;
             // 
             // dateTimePicker2
@@ -156,10 +156,10 @@
             this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Century Gothic", 10F);
             this.dateTimePicker2.CalendarMonthBackground = System.Drawing.SystemColors.Control;
             this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.dateTimePicker2.Location = new System.Drawing.Point(1008, 67);
+            this.dateTimePicker2.Location = new System.Drawing.Point(992, 69);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(247, 28);
+            this.dateTimePicker2.Size = new System.Drawing.Size(247, 24);
             this.dateTimePicker2.TabIndex = 7;
             // 
             // datetimeDe
@@ -167,10 +167,10 @@
             this.datetimeDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.datetimeDe.CalendarMonthBackground = System.Drawing.SystemColors.Control;
             this.datetimeDe.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.datetimeDe.Location = new System.Drawing.Point(709, 67);
+            this.datetimeDe.Location = new System.Drawing.Point(693, 69);
             this.datetimeDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.datetimeDe.Name = "datetimeDe";
-            this.datetimeDe.Size = new System.Drawing.Size(252, 28);
+            this.datetimeDe.Size = new System.Drawing.Size(252, 24);
             this.datetimeDe.TabIndex = 5;
             // 
             // lblA
@@ -179,9 +179,9 @@
             this.lblA.AutoSize = true;
             this.lblA.Font = new System.Drawing.Font("Ebrima", 15F, System.Drawing.FontStyle.Bold);
             this.lblA.ForeColor = System.Drawing.Color.Black;
-            this.lblA.Location = new System.Drawing.Point(1008, 9);
+            this.lblA.Location = new System.Drawing.Point(992, 13);
             this.lblA.Name = "lblA";
-            this.lblA.Size = new System.Drawing.Size(40, 35);
+            this.lblA.Size = new System.Drawing.Size(31, 28);
             this.lblA.TabIndex = 6;
             this.lblA.Text = "A:";
             // 
@@ -191,10 +191,10 @@
             this.cbDefecto.BackColor = System.Drawing.SystemColors.Control;
             this.cbDefecto.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbDefecto.FormattingEnabled = true;
-            this.cbDefecto.Location = new System.Drawing.Point(405, 66);
+            this.cbDefecto.Location = new System.Drawing.Point(389, 67);
             this.cbDefecto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbDefecto.Name = "cbDefecto";
-            this.cbDefecto.Size = new System.Drawing.Size(257, 29);
+            this.cbDefecto.Size = new System.Drawing.Size(257, 25);
             this.cbDefecto.TabIndex = 3;
             this.cbDefecto.SelectedIndexChanged += new System.EventHandler(this.cbDefecto_SelectedIndexChanged);
             // 
@@ -204,9 +204,9 @@
             this.lblDefecto.AutoSize = true;
             this.lblDefecto.Font = new System.Drawing.Font("Ebrima", 15F, System.Drawing.FontStyle.Bold);
             this.lblDefecto.ForeColor = System.Drawing.Color.Black;
-            this.lblDefecto.Location = new System.Drawing.Point(405, 9);
+            this.lblDefecto.Location = new System.Drawing.Point(389, 13);
             this.lblDefecto.Name = "lblDefecto";
-            this.lblDefecto.Size = new System.Drawing.Size(115, 35);
+            this.lblDefecto.Size = new System.Drawing.Size(92, 28);
             this.lblDefecto.TabIndex = 2;
             this.lblDefecto.Text = "Defecto:";
             // 
@@ -216,9 +216,9 @@
             this.lblDe.AutoSize = true;
             this.lblDe.Font = new System.Drawing.Font("Ebrima", 15F, System.Drawing.FontStyle.Bold);
             this.lblDe.ForeColor = System.Drawing.Color.Black;
-            this.lblDe.Location = new System.Drawing.Point(709, 9);
+            this.lblDe.Location = new System.Drawing.Point(693, 13);
             this.lblDe.Name = "lblDe";
-            this.lblDe.Size = new System.Drawing.Size(54, 35);
+            this.lblDe.Size = new System.Drawing.Size(43, 28);
             this.lblDe.TabIndex = 4;
             this.lblDe.Text = "De:";
             // 
@@ -227,9 +227,9 @@
             this.lblCable.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblCable.AutoSize = true;
             this.lblCable.Font = new System.Drawing.Font("Ebrima", 15F, System.Drawing.FontStyle.Bold);
-            this.lblCable.Location = new System.Drawing.Point(1302, 9);
+            this.lblCable.Location = new System.Drawing.Point(1286, 13);
             this.lblCable.Name = "lblCable";
-            this.lblCable.Size = new System.Drawing.Size(88, 35);
+            this.lblCable.Size = new System.Drawing.Size(69, 28);
             this.lblCable.TabIndex = 8;
             this.lblCable.Text = "Cable:";
             // 
@@ -239,10 +239,10 @@
             this.cbCable.BackColor = System.Drawing.SystemColors.Control;
             this.cbCable.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbCable.FormattingEnabled = true;
-            this.cbCable.Location = new System.Drawing.Point(1302, 66);
+            this.cbCable.Location = new System.Drawing.Point(1286, 67);
             this.cbCable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCable.Name = "cbCable";
-            this.cbCable.Size = new System.Drawing.Size(212, 29);
+            this.cbCable.Size = new System.Drawing.Size(212, 25);
             this.cbCable.TabIndex = 9;
             this.cbCable.SelectedIndexChanged += new System.EventHandler(this.cbCable_SelectedIndexChanged);
             // 
@@ -348,7 +348,7 @@
             this.cbMenuConsulta.Location = new System.Drawing.Point(684, 73);
             this.cbMenuConsulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMenuConsulta.Name = "cbMenuConsulta";
-            this.cbMenuConsulta.Size = new System.Drawing.Size(349, 31);
+            this.cbMenuConsulta.Size = new System.Drawing.Size(349, 29);
             this.cbMenuConsulta.TabIndex = 28;
             this.cbMenuConsulta.Text = "Seleccionar opciones....";
             this.cbMenuConsulta.SelectedIndexChanged += new System.EventHandler(this.cbMenuConsulta_SelectedIndexChanged);
@@ -362,7 +362,7 @@
             this.label7.Location = new System.Drawing.Point(683, 16);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(350, 45);
+            this.label7.Size = new System.Drawing.Size(289, 37);
             this.label7.TabIndex = 26;
             this.label7.Text = "Seleccionar Consulta:";
             // 
@@ -389,10 +389,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("72 Black", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(515, 38);
+            this.label1.Location = new System.Drawing.Point(605, 50);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(894, 113);
+            this.label1.Size = new System.Drawing.Size(714, 89);
             this.label1.TabIndex = 0;
             this.label1.Text = "Consulta Soldado";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -451,7 +451,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(1969, 1221);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 25);
+            this.label5.Size = new System.Drawing.Size(58, 21);
             this.label5.TabIndex = 35;
             this.label5.Text = "3.0.1.0";
             // 
@@ -460,7 +460,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1924, 1175);
+            this.ClientSize = new System.Drawing.Size(1924, 1133);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panelConsult);
             this.Controls.Add(this.flowLayoutPanel1);

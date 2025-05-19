@@ -10,10 +10,12 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using DiagnPcb.Consulta;
 using Common.Cache;
+using DiagnPcb.Registros;
 namespace DiagnPcb.Inicio
 {
     public partial class Inicio : Form
     {
+        string conf = "";
         public Inicio()
         {
             InitializeComponent();
@@ -57,6 +59,32 @@ namespace DiagnPcb.Inicio
         {
             lblUserName.Text = UserCache.LoginName;
             lblPosition.Text = UserCache.Position;
+            lblConfig.Text = UserCache.config;
+
+            if (lblConfig.Text.Equals("Administrador"))
+            {
+                btnCatalogos.Visible = true;
+                panel16.Visible = true;
+
+                panelSubmenuGraphics.Visible = false;
+                int a = btnConsultar.Location.X;
+                int b = btnConsultar.Location.Y;
+                btnCatalogos.Location = new Point(a, b + 35);
+                panel16.Location = new Point(4, b + 35);
+                panelSubmenuCatalogs.Location = new Point(a + 40, b + 35);
+            }
+            else if (lblConfig.Text.Equals("Engineer"))
+            {
+                btnCatalogos.Visible = false;
+                panel16.Visible = false;
+                btnRegistrar.Visible = false;
+                panel1.Visible = false;
+            }
+            else
+            {
+                btnCatalogos.Visible = false;
+                panel16.Visible = false;
+            }
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -72,13 +100,24 @@ namespace DiagnPcb.Inicio
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+
             if (SubMenuConsult.Visible)
             {
                 SubMenuConsult.Visible = false;
+                int x = SubMenuConsult.Location.X;
+                int y = SubMenuConsult.Location.Y;
+                btnCatalogos.Location = SubMenuConsult.Location;
+                panel16.Location = new Point(4, y);
+                panelSubmenuCatalogs.Location = new Point(x + 40, y + 40);
             }
             else
             {
                 SubMenuConsult.Visible = true;
+                int newX = SubMenuConsult.Location.X;
+                int newY = SubMenuConsult.Location.Y + SubMenuConsult.Height;
+
+                btnCatalogos.Location = new Point(newX, newY);
+                panel16.Location = new Point(4, newY);
             }
         }
 
@@ -172,29 +211,82 @@ namespace DiagnPcb.Inicio
 
         private void btnGraficas_Click(object sender, EventArgs e)
         {
-            if (panelSubmenuGraphics.Visible)
+            if (SubMenuConsult.Visible)
             {
-                panelSubmenuGraphics.Visible = false;
-                int x = panelSubmenuGraphics.Location.X;
-                int y = panelSubmenuGraphics.Location.Y;
-                btnConsultar.Location = panelSubmenuGraphics.Location;
-                panel3.Location = new Point(4, y);
-                SubMenuConsult.Location = new Point(x + 40, y + 30);
+                if (panelSubmenuGraphics.Visible)
+                {
+                    panelSubmenuGraphics.Visible = false;
+                    int x = panelSubmenuGraphics.Location.X;
+                    int y = panelSubmenuGraphics.Location.Y;
+                    btnConsultar.Location = panelSubmenuGraphics.Location;
+                    panel3.Location = new Point(4, y);
+                    SubMenuConsult.Location = new Point(x, y + 40);
+
+                    int a = SubMenuConsult.Location.X;
+                    int b = SubMenuConsult.Location.Y;
+                    btnCatalogos.Location = new Point(17, 563);
+                    panel16.Location = new Point(4, 563);
+                    panelSubmenuCatalogs.Location = new Point(44, 563);
+                }
+                else
+                {
+                    panelSubmenuGraphics.Visible = true;
+                    int newX = panelSubmenuGraphics.Location.X;
+                    int newY = panelSubmenuGraphics.Location.Y + panelSubmenuGraphics.Height;
+
+                    btnConsultar.Location = new Point(newX, newY);
+                    panel3.Location = new Point(4, newY);
+
+                    int newYe = btnConsultar.Location.X;
+                    int newXe = btnConsultar.Location.Y + btnConsultar.Height;
+
+                    SubMenuConsult.Location = new Point(newYe, newXe);
+
+                    int a = SubMenuConsult.Location.X;
+                    int b = SubMenuConsult.Location.Y;
+                    btnCatalogos.Location = new Point(a, b+310);
+                    panel16.Location = new Point(4, b + 310);
+                    panelSubmenuCatalogs.Location = new Point(a + 40, b + 320);
+                }
             }
-            else
-            {
-                panelSubmenuGraphics.Visible = true;
-                int newX = panelSubmenuGraphics.Location.X;
-                int newY = panelSubmenuGraphics.Location.Y + panelSubmenuGraphics.Height;
+            else {
+                if (panelSubmenuGraphics.Visible)
+                {
+                    panelSubmenuGraphics.Visible = false;
+                    int x = panelSubmenuGraphics.Location.X;
+                    int y = panelSubmenuGraphics.Location.Y;
+                    btnConsultar.Location = panelSubmenuGraphics.Location;
+                    panel3.Location = new Point(4, y);
+                    SubMenuConsult.Location = new Point(x, y + 40);
 
-                btnConsultar.Location = new Point(newX, newY);
-                panel3.Location = new Point(4, newY);
+                    int a = btnConsultar.Location.X;
+                    int b = btnConsultar.Location.Y;
+                    btnCatalogos.Location = new Point(a, b + 40);
+                    panel16.Location = new Point(4, b + 40);
+                    panelSubmenuCatalogs.Location = new Point(a + 40, b + 40);
+                }
+                else
+                {
+                    panelSubmenuGraphics.Visible = true;
+                    int newX = panelSubmenuGraphics.Location.X;
+                    int newY = panelSubmenuGraphics.Location.Y + panelSubmenuGraphics.Height;
 
-                int newYe = btnConsultar.Location.X;
-                int newXe = btnConsultar.Location.Y + btnConsultar.Height;
+                    btnConsultar.Location = new Point(newX, newY);
+                    panel3.Location = new Point(4, newY);
 
-                SubMenuConsult.Location = new Point(newYe+40, newXe+5);
+                    int newYe = btnConsultar.Location.X;
+                    int newXe = btnConsultar.Location.Y + btnConsultar.Height;
+
+                    SubMenuConsult.Location = new Point(newYe, newXe);
+
+                    int a = btnConsultar.Location.X;
+                    int b = btnConsultar.Location.Y;
+                    btnCatalogos.Location = new Point(a, b + 40);
+                    panel16.Location = new Point(4, b + 40);
+                    panelSubmenuCatalogs.Location = new Point(a + 40, b + 40);
+                }
             }
+            
 
         }
 
@@ -238,6 +330,39 @@ namespace DiagnPcb.Inicio
 
             AbrirFormHoja(new Grafica1(btnEOL.Text));
 
+        }
+
+        private void btnRegFallas_Click(object sender, EventArgs e)
+        {
+            panelSubmenuCatalogs.Visible = false;
+            AbrirFormHoja(new FrmRegistroFallas());
+        }
+
+        private void btnCatalogos_Click(object sender, EventArgs e)
+        {
+            if (panelSubmenuCatalogs.Visible)
+            {
+                panelSubmenuCatalogs.Visible = false;
+                int x = btnConsultar.Location.X;
+                int y = btnConsultar.Location.Y;
+                btnCatalogos.Location = new Point(12, y+35);
+                panel16.Location = new Point(4, y+35);
+                panelSubmenuCatalogs.Location = new Point(x + 40, y + 70);
+            }
+            else
+            {
+                panelSubmenuCatalogs.Visible = true;
+                int newX = SubMenuConsult.Location.X;
+                int newY = SubMenuConsult.Location.Y;
+
+                btnCatalogos.Location = new Point(12,newY);
+                panel16.Location = new Point(4, 240);
+
+                int newYe = btnCatalogos.Location.X;
+                int newXe = btnCatalogos.Location.Y + btnConsultar.Height;
+
+                panelSubmenuCatalogs.Location = new Point(newYe+40, newXe);
+            }
         }
     }
 }

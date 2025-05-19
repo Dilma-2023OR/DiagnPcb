@@ -41,7 +41,7 @@ namespace DataAccessPCB
                             UserCache.LastName = reader["LastName"].ToString();
                             UserCache.Position = reader["Position"].ToString();
                             UserCache.NumberEmployee = reader["NumberEmployee"].ToString();
-                            UserCache.config = reader["Config"].ToString();
+                            UserCache.config = reader["config"].ToString();
                         }
                         return true;
                     }

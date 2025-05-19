@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grafica1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -97,7 +97,7 @@
             this.label3.Location = new System.Drawing.Point(5, -2);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 34);
+            this.label3.Size = new System.Drawing.Size(60, 26);
             this.label3.TabIndex = 26;
             this.label3.Text = "Line:";
             // 
@@ -118,7 +118,7 @@
             this.tbLinea.Location = new System.Drawing.Point(5, 44);
             this.tbLinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLinea.Name = "tbLinea";
-            this.tbLinea.Size = new System.Drawing.Size(239, 28);
+            this.tbLinea.Size = new System.Drawing.Size(239, 24);
             this.tbLinea.TabIndex = 27;
             this.tbLinea.Text = "Select Options...";
             this.tbLinea.Click += new System.EventHandler(this.tbLinea_Click);
@@ -149,10 +149,10 @@
             this.lblDe.AutoSize = true;
             this.lblDe.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDe.ForeColor = System.Drawing.Color.White;
-            this.lblDe.Location = new System.Drawing.Point(0, 7);
+            this.lblDe.Location = new System.Drawing.Point(0, 9);
             this.lblDe.Margin = new System.Windows.Forms.Padding(0);
             this.lblDe.Name = "lblDe";
-            this.lblDe.Size = new System.Drawing.Size(43, 27);
+            this.lblDe.Size = new System.Drawing.Size(36, 23);
             this.lblDe.TabIndex = 30;
             this.lblDe.Text = "Of:";
             // 
@@ -160,10 +160,10 @@
             // 
             this.dateTimePickerDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerDe.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.dateTimePickerDe.Location = new System.Drawing.Point(3, 54);
+            this.dateTimePickerDe.Location = new System.Drawing.Point(3, 56);
             this.dateTimePickerDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerDe.Name = "dateTimePickerDe";
-            this.dateTimePickerDe.Size = new System.Drawing.Size(252, 28);
+            this.dateTimePickerDe.Size = new System.Drawing.Size(252, 24);
             this.dateTimePickerDe.TabIndex = 31;
             // 
             // lblA
@@ -172,10 +172,10 @@
             this.lblA.AutoSize = true;
             this.lblA.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblA.ForeColor = System.Drawing.Color.White;
-            this.lblA.Location = new System.Drawing.Point(0, 119);
+            this.lblA.Location = new System.Drawing.Point(0, 121);
             this.lblA.Margin = new System.Windows.Forms.Padding(0);
             this.lblA.Name = "lblA";
-            this.lblA.Size = new System.Drawing.Size(43, 27);
+            this.lblA.Size = new System.Drawing.Size(35, 23);
             this.lblA.TabIndex = 32;
             this.lblA.Text = "To:";
             // 
@@ -183,10 +183,10 @@
             // 
             this.dateTimePickerA.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerA.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.dateTimePickerA.Location = new System.Drawing.Point(3, 161);
+            this.dateTimePickerA.Location = new System.Drawing.Point(3, 163);
             this.dateTimePickerA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerA.Name = "dateTimePickerA";
-            this.dateTimePickerA.Size = new System.Drawing.Size(252, 28);
+            this.dateTimePickerA.Size = new System.Drawing.Size(252, 24);
             this.dateTimePickerA.TabIndex = 33;
             // 
             // tableLayoutPanel2
@@ -305,12 +305,12 @@
             this.lblVersion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblVersion.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVersion.ForeColor = System.Drawing.Color.White;
-            this.lblVersion.Location = new System.Drawing.Point(271, 985);
+            this.lblVersion.Location = new System.Drawing.Point(271, 989);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(82, 27);
+            this.lblVersion.Size = new System.Drawing.Size(69, 23);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "4.0.0.1";
+            this.lblVersion.Text = "4.0.0.4";
             // 
             // tableLayoutPanel3
             // 
@@ -353,19 +353,19 @@
             // 
             // chart1
             // 
-            chartArea2.AxisX.Interval = 1D;
-            chartArea2.AxisX.IsLabelAutoFit = false;
-            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
+            chartArea1.AxisX.Interval = 1D;
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart1.Location = new System.Drawing.Point(161, 22);
             this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(886, 466);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";

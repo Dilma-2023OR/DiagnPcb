@@ -34,18 +34,18 @@
             this.dateTimePickerA = new System.Windows.Forms.DateTimePicker();
             this.lblA = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.doButton1 = new DiagnPcb.Styles.DOButton();
             this.lblDe = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnConsultar = new DiagnPcb.Styles.DOButton();
             this.dateTimePickerDe = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnExportar = new DiagnPcb.Styles.DOButton();
             this.panelVersion = new System.Windows.Forms.Panel();
             this.lblVersion = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.gBoxValidation = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.doButton1 = new DiagnPcb.Styles.DOButton();
-            this.btnConsultar = new DiagnPcb.Styles.DOButton();
-            this.btnExportar = new DiagnPcb.Styles.DOButton();
             this.PanelQuery.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -98,10 +98,10 @@
             this.dateTimePickerA.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerA.CalendarMonthBackground = System.Drawing.SystemColors.Control;
             this.dateTimePickerA.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.dateTimePickerA.Location = new System.Drawing.Point(849, 59);
+            this.dateTimePickerA.Location = new System.Drawing.Point(849, 55);
             this.dateTimePickerA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerA.Name = "dateTimePickerA";
-            this.dateTimePickerA.Size = new System.Drawing.Size(246, 28);
+            this.dateTimePickerA.Size = new System.Drawing.Size(246, 24);
             this.dateTimePickerA.TabIndex = 33;
             // 
             // lblA
@@ -113,7 +113,7 @@
             this.lblA.Location = new System.Drawing.Point(846, 30);
             this.lblA.Margin = new System.Windows.Forms.Padding(0);
             this.lblA.Name = "lblA";
-            this.lblA.Size = new System.Drawing.Size(102, 27);
+            this.lblA.Size = new System.Drawing.Size(84, 23);
             this.lblA.TabIndex = 32;
             this.lblA.Text = "Date To:";
             // 
@@ -121,10 +121,32 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.doButton1);
-            this.panel3.Location = new System.Drawing.Point(590, 92);
+            this.panel3.Location = new System.Drawing.Point(590, 84);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(253, 63);
             this.panel3.TabIndex = 37;
+            // 
+            // doButton1
+            // 
+            this.doButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.doButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.doButton1.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.doButton1.BorderRadius = 24;
+            this.doButton1.BorderSize = 3;
+            this.doButton1.FlatAppearance.BorderSize = 2;
+            this.doButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.doButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doButton1.ForeColor = System.Drawing.Color.White;
+            this.doButton1.Image = global::DiagnPcb.Properties.Resources.producto2;
+            this.doButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.doButton1.Location = new System.Drawing.Point(13, 5);
+            this.doButton1.Name = "doButton1";
+            this.doButton1.Size = new System.Drawing.Size(235, 50);
+            this.doButton1.TabIndex = 2;
+            this.doButton1.Text = "Another";
+            this.doButton1.TextColor = System.Drawing.Color.White;
+            this.doButton1.UseVisualStyleBackColor = false;
+            this.doButton1.Click += new System.EventHandler(this.doButton1_Click);
             // 
             // lblDe
             // 
@@ -135,7 +157,7 @@
             this.lblDe.Location = new System.Drawing.Point(364, 30);
             this.lblDe.Margin = new System.Windows.Forms.Padding(0);
             this.lblDe.Name = "lblDe";
-            this.lblDe.Size = new System.Drawing.Size(102, 27);
+            this.lblDe.Size = new System.Drawing.Size(85, 23);
             this.lblDe.TabIndex = 30;
             this.lblDe.Text = "Date Of:";
             // 
@@ -143,29 +165,73 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btnConsultar);
-            this.panel1.Location = new System.Drawing.Point(367, 92);
+            this.panel1.Location = new System.Drawing.Point(367, 84);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(217, 63);
             this.panel1.TabIndex = 35;
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.btnConsultar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.btnConsultar.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.btnConsultar.BorderRadius = 50;
+            this.btnConsultar.BorderSize = 3;
+            this.btnConsultar.FlatAppearance.BorderSize = 2;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.ForeColor = System.Drawing.Color.White;
+            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
+            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultar.Location = new System.Drawing.Point(2, 3);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(206, 54);
+            this.btnConsultar.TabIndex = 34;
+            this.btnConsultar.Text = "Consult";
+            this.btnConsultar.TextColor = System.Drawing.Color.White;
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // dateTimePickerDe
             // 
             this.dateTimePickerDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerDe.CalendarMonthBackground = System.Drawing.SystemColors.Control;
             this.dateTimePickerDe.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerDe.Location = new System.Drawing.Point(367, 60);
+            this.dateTimePickerDe.Location = new System.Drawing.Point(367, 56);
             this.dateTimePickerDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerDe.Name = "dateTimePickerDe";
-            this.dateTimePickerDe.Size = new System.Drawing.Size(217, 26);
+            this.dateTimePickerDe.Size = new System.Drawing.Size(217, 22);
             this.dateTimePickerDe.TabIndex = 31;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnExportar);
-            this.panel2.Location = new System.Drawing.Point(849, 92);
+            this.panel2.Location = new System.Drawing.Point(849, 84);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(244, 63);
             this.panel2.TabIndex = 36;
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.btnExportar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.btnExportar.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.btnExportar.BorderRadius = 50;
+            this.btnExportar.BorderSize = 3;
+            this.btnExportar.FlatAppearance.BorderSize = 2;
+            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportar.ForeColor = System.Drawing.Color.White;
+            this.btnExportar.Image = global::DiagnPcb.Properties.Resources.exportar;
+            this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportar.Location = new System.Drawing.Point(3, 5);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(235, 50);
+            this.btnExportar.TabIndex = 2;
+            this.btnExportar.Text = "Export";
+            this.btnExportar.TextColor = System.Drawing.Color.White;
+            this.btnExportar.UseVisualStyleBackColor = false;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // panelVersion
             // 
@@ -185,9 +251,9 @@
             this.lblVersion.Location = new System.Drawing.Point(9, 5);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(72, 23);
+            this.lblVersion.Size = new System.Drawing.Size(57, 19);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "4.0.0.1";
+            this.lblVersion.Text = "4.0.0.4";
             // 
             // panelContenedor
             // 
@@ -223,83 +289,17 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 37);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(1454, 721);
+            this.dataGridView1.Size = new System.Drawing.Size(1454, 729);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
-            // 
-            // doButton1
-            // 
-            this.doButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.doButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.doButton1.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.doButton1.BorderRadius = 24;
-            this.doButton1.BorderSize = 3;
-            this.doButton1.FlatAppearance.BorderSize = 2;
-            this.doButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.doButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doButton1.ForeColor = System.Drawing.Color.White;
-            this.doButton1.Image = global::DiagnPcb.Properties.Resources.producto2;
-            this.doButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.doButton1.Location = new System.Drawing.Point(13, 5);
-            this.doButton1.Name = "doButton1";
-            this.doButton1.Size = new System.Drawing.Size(235, 50);
-            this.doButton1.TabIndex = 2;
-            this.doButton1.Text = "Another";
-            this.doButton1.TextColor = System.Drawing.Color.White;
-            this.doButton1.UseVisualStyleBackColor = false;
-            this.doButton1.Click += new System.EventHandler(this.doButton1_Click);
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.btnConsultar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.btnConsultar.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.btnConsultar.BorderRadius = 50;
-            this.btnConsultar.BorderSize = 3;
-            this.btnConsultar.FlatAppearance.BorderSize = 2;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
-            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(2, 3);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(206, 54);
-            this.btnConsultar.TabIndex = 34;
-            this.btnConsultar.Text = "Consult";
-            this.btnConsultar.TextColor = System.Drawing.Color.White;
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // btnExportar
-            // 
-            this.btnExportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.btnExportar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.btnExportar.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.btnExportar.BorderRadius = 50;
-            this.btnExportar.BorderSize = 3;
-            this.btnExportar.FlatAppearance.BorderSize = 2;
-            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportar.ForeColor = System.Drawing.Color.White;
-            this.btnExportar.Image = global::DiagnPcb.Properties.Resources.exportar;
-            this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportar.Location = new System.Drawing.Point(3, 5);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(235, 50);
-            this.btnExportar.TabIndex = 2;
-            this.btnExportar.Text = "Export";
-            this.btnExportar.TextColor = System.Drawing.Color.White;
-            this.btnExportar.UseVisualStyleBackColor = false;
-            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // FrmConsultDate
             // 

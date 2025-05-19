@@ -43,7 +43,9 @@
             // 
             // timerClose
             // 
-            this.timerClose.Interval = 20000;
+            this.timerClose.Enabled = true;
+            this.timerClose.Interval = 2000;
+            this.timerClose.Tick += new System.EventHandler(this.timerClose_Tick);
             // 
             // tLayoutHeader
             // 
@@ -54,7 +56,7 @@
             this.tLayoutHeader.Controls.Add(this.btnClose, 0, 0);
             this.tLayoutHeader.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tLayoutHeader.Location = new System.Drawing.Point(0, 0);
-            this.tLayoutHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tLayoutHeader.Margin = new System.Windows.Forms.Padding(4);
             this.tLayoutHeader.Name = "tLayoutHeader";
             this.tLayoutHeader.RowCount = 2;
             this.tLayoutHeader.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -100,10 +102,10 @@
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Century Gothic", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter);
             this.lblMessage.ForeColor = System.Drawing.Color.White;
-            this.lblMessage.Location = new System.Drawing.Point(150, 49);
+            this.lblMessage.Location = new System.Drawing.Point(161, 53);
             this.lblMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(100, 30);
+            this.lblMessage.Size = new System.Drawing.Size(77, 22);
             this.lblMessage.TabIndex = 2;
             this.lblMessage.Text = "Default";
             // 
@@ -132,7 +134,7 @@
             this.ClientSize = new System.Drawing.Size(507, 170);
             this.Controls.Add(this.tLayoutHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Message";

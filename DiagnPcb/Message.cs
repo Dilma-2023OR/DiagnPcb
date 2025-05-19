@@ -62,5 +62,12 @@ namespace DiagnPcb
             //Close Form
             this.Close();
         }
+
+        private void timerClose_Tick(object sender, EventArgs e)
+        {
+            //Timer Stop
+            timerClose.Stop();
+            this.Close();
+        }
     }
 }

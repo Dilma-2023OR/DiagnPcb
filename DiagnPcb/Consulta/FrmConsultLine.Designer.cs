@@ -76,7 +76,7 @@
             this.tbLinea.Location = new System.Drawing.Point(11, 50);
             this.tbLinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLinea.Name = "tbLinea";
-            this.tbLinea.Size = new System.Drawing.Size(202, 28);
+            this.tbLinea.Size = new System.Drawing.Size(202, 24);
             this.tbLinea.TabIndex = 27;
             this.tbLinea.Text = "Seleccionar opciones..";
             this.tbLinea.Click += new System.EventHandler(this.tbLinea_Click);
@@ -90,7 +90,7 @@
             this.label3.Location = new System.Drawing.Point(3, 3);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 34);
+            this.label3.Size = new System.Drawing.Size(60, 26);
             this.label3.TabIndex = 26;
             this.label3.Text = "Line:";
             // 
@@ -102,7 +102,7 @@
             this.checkedListBox1.Location = new System.Drawing.Point(11, 82);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(198, 154);
+            this.checkedListBox1.Size = new System.Drawing.Size(198, 148);
             this.checkedListBox1.TabIndex = 4;
             this.checkedListBox1.Visible = false;
             // 
@@ -243,9 +243,9 @@
             this.lblVersion.Location = new System.Drawing.Point(9, 5);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(72, 23);
+            this.lblVersion.Size = new System.Drawing.Size(57, 19);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "4.0.0.1";
+            this.lblVersion.Text = "4.0.0.4";
             // 
             // panelContenedor
             // 
@@ -281,14 +281,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 37);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(1215, 879);
+            this.dataGridView1.Size = new System.Drawing.Size(1215, 887);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);

@@ -82,7 +82,7 @@
             this.txtuser.ForeColor = System.Drawing.Color.Silver;
             this.txtuser.Location = new System.Drawing.Point(310, 79);
             this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(408, 25);
+            this.txtuser.Size = new System.Drawing.Size(408, 20);
             this.txtuser.TabIndex = 2;
             this.txtuser.Text = "USER";
             this.txtuser.Enter += new System.EventHandler(this.txtuser_Enter);
@@ -96,10 +96,11 @@
             this.txtPass.ForeColor = System.Drawing.Color.Silver;
             this.txtPass.Location = new System.Drawing.Point(310, 142);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(408, 25);
+            this.txtPass.Size = new System.Drawing.Size(408, 20);
             this.txtPass.TabIndex = 4;
             this.txtPass.Text = "PASSWORD";
             this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
             // panel3
@@ -117,7 +118,7 @@
             this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(460, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 40);
+            this.label1.Size = new System.Drawing.Size(100, 33);
             this.label1.TabIndex = 5;
             this.label1.Text = "LOGIN";
             // 
@@ -170,7 +171,7 @@
             this.lblErrorMessage.ForeColor = System.Drawing.Color.Red;
             this.lblErrorMessage.Location = new System.Drawing.Point(265, 282);
             this.lblErrorMessage.Name = "lblErrorMessage";
-            this.lblErrorMessage.Size = new System.Drawing.Size(45, 21);
+            this.lblErrorMessage.Size = new System.Drawing.Size(37, 17);
             this.lblErrorMessage.TabIndex = 9;
             this.lblErrorMessage.Text = "Error";
             this.lblErrorMessage.Visible = false;

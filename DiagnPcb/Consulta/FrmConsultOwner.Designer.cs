@@ -219,7 +219,7 @@
             this.lblOwner.Location = new System.Drawing.Point(3, 3);
             this.lblOwner.Margin = new System.Windows.Forms.Padding(0);
             this.lblOwner.Name = "lblOwner";
-            this.lblOwner.Size = new System.Drawing.Size(113, 34);
+            this.lblOwner.Size = new System.Drawing.Size(88, 26);
             this.lblOwner.TabIndex = 26;
             this.lblOwner.Text = "Owner:";
             // 
@@ -241,9 +241,9 @@
             this.lblVersion.Location = new System.Drawing.Point(9, 5);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(72, 23);
+            this.lblVersion.Size = new System.Drawing.Size(57, 19);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "4.0.0.1";
+            this.lblVersion.Text = "4.0.0.4";
             // 
             // panelContenedor
             // 
@@ -279,14 +279,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 37);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(1215, 879);
+            this.dataGridView1.Size = new System.Drawing.Size(1215, 887);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);

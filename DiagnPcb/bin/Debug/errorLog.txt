@@ -21,3 +21,6 @@
 13-05-2025 14:31:29,Error al conectar a la Base de Datos:Unable to connect to any of the specified MySQL hosts.
 16-05-2025 11:59:34,Error al obtener la información:Unknown column 'dse.line' in 'where clause'
 17-05-2025 12:11:42,Error getting information:Referencia a objeto no establecida como instancia de un objeto.
+17-05-2025 13:26:00,Error inserting data:La cadena de entrada no tiene el formato correcto.
+17-05-2025 13:26:51,Error inserting data:La cadena de entrada no tiene el formato correcto.
+18-05-2025 12:00:59,Error al insertar en la Base de Datos:Parameter '@failure' must be defined. To use this as a variable, set 'Allow User Variables=true' in the connection string.

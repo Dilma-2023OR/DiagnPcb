@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AForge.Imaging.Filters;
+using Common.Cache;
+using PCBDomain;
 using static System.Windows.Forms.LinkLabel;
 
 namespace DiagnPcb.Registros
@@ -23,45 +26,39 @@ namespace DiagnPcb.Registros
         {
             try
             {
-
-                string dBMsg = string.Empty;
-                int dbError = 0;
-
-
-                PCBDomain.DBConnection dB = new PCBDomain.DBConnection();
-                DataTable dtResult = new DataTable();
-
-                dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
-                dB.query = "Insert into diagn_pcb.diagnfailure(failure, config, failureEnglish )"
-                                            + "VALUES('" + tbFalla.Text + "', '" + cbCategoria.Text + "', '" + tbFalla.Text + "')";
-                
-                var dbResult = dB.InsertDataDiagn(out dBMsg, out dbError);
-
-                if (dbError != 0)
+                FailureModels failure = new FailureModels();
+                string fallaespañol = "no hay traducción";
+                var validInsert = failure.Insertar(fallaespañol, cbCategoria.Texts, tbFalla.Texts);
+                if (validInsert == true)
+                {
+                    Message mesage = new Message("Successful failure record");
+                    mesage.ShowDialog();
+                }
+                else
                 {
                     //Control Adjunt
                     tbFalla.Enabled = true;
 
                     //FeedBack
-                    Message mes = new Message("No se pudo realizar el registro");
+                    Message mes = new Message("The fault could not be recorded.");
                     mes.ShowDialog();
                 }
-
-                string log = Directory.GetCurrentDirectory() + @"\Log.txt";
-
-                File.AppendAllText(log, DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Falla registrada correctamente\n");
-                Message mesage = new Message("Rzegistro de falla éxitoso");
-                mesage.ShowDialog();
 
             }
             catch (Exception ex)
             {
-                Message mesage = new Message("Error al insertar los datos");
+                Message mesage = new Message("Error inserting data");
                 mesage.ShowDialog();
 
                 //Log
-                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al insertar los datos:" + ex.Message + "\n");
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error inserting data:" + ex.Message + "\n");
             }
+        }
+
+        public void limpiar()
+        {
+            cbCategoria.SelectedIndex = -1;
+            tbFalla.ClearText();
         }
     }
 }

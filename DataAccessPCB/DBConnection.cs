@@ -19,7 +19,7 @@ namespace DataAccessPCB
         string msg = "";
         int error = 0;
 
-        private void connectBD()
+        public void connectBD()
         {
             try
             {
@@ -253,7 +253,7 @@ namespace DataAccessPCB
                     }
 
                     rowsAffected = command.ExecuteNonQuery();
-                    
+
                     error = 0;
                 }
                 catch (Exception ex)
@@ -266,7 +266,6 @@ namespace DataAccessPCB
                     File.AppendAllText(Directory.GetCurrentDirectory() + "\\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al insertar en la Base de Datos:" + ex.Message + "\n");
                 }
             }
-
             //Disconnect
             disconnectBD();
 
@@ -277,5 +276,6 @@ namespace DataAccessPCB
             //Reader
             return rowsAffected;
         }
+
     }
 }
