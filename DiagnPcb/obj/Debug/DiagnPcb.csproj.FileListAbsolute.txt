@@ -310,3 +310,4 @@ C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\DataAccessPCB.dll
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\Common.pdb
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\DataAccessPCB.pdb
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.Registros.FrmRegisterUsers.resources

@@ -48,7 +48,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.94092F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.05908F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtIdFailure, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblVersion, 2, 1);
@@ -64,17 +64,17 @@
             // pictureBox1
             // 
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(101, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(100, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(792, 540);
+            this.pictureBox1.Size = new System.Drawing.Size(790, 539);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // txtIdFailure
             // 
             this.txtIdFailure.BackColor = System.Drawing.SystemColors.Control;
-            this.txtIdFailure.Location = new System.Drawing.Point(101, 546);
+            this.txtIdFailure.Location = new System.Drawing.Point(100, 546);
             this.txtIdFailure.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdFailure.Name = "txtIdFailure";
             this.txtIdFailure.Size = new System.Drawing.Size(100, 22);
@@ -88,12 +88,12 @@
             this.lblVersion.Font = new System.Drawing.Font("Ebrima", 4F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Millimeter);
             this.lblVersion.ForeColor = System.Drawing.Color.White;
             this.lblVersion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblVersion.Location = new System.Drawing.Point(955, 555);
+            this.lblVersion.Location = new System.Drawing.Point(942, 553);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(58, 21);
+            this.lblVersion.Size = new System.Drawing.Size(71, 25);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "4.0.0.4";
+            this.lblVersion.Text = "4.0.0.7";
             // 
             // BarraTitulo
             // 
@@ -102,6 +102,7 @@
             this.BarraTitulo.Controls.Add(this.btnCerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.BarraTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1016, 38);
             this.BarraTitulo.TabIndex = 4;
@@ -112,6 +113,7 @@
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = global::DiagnPcb.Properties.Resources.minimizar;
             this.btnMinimizar.Location = new System.Drawing.Point(948, 7);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -125,6 +127,7 @@
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::DiagnPcb.Properties.Resources.cerrar;
             this.btnCerrar.Location = new System.Drawing.Point(979, 7);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(25, 25);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

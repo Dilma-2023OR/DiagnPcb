@@ -97,7 +97,7 @@
             this.label3.Location = new System.Drawing.Point(5, -2);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 26);
+            this.label3.Size = new System.Drawing.Size(77, 34);
             this.label3.TabIndex = 26;
             this.label3.Text = "Line:";
             // 
@@ -108,7 +108,7 @@
             this.checkedListBox1.Location = new System.Drawing.Point(9, 73);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(235, 124);
+            this.checkedListBox1.Size = new System.Drawing.Size(235, 100);
             this.checkedListBox1.TabIndex = 4;
             this.checkedListBox1.Visible = false;
             // 
@@ -118,7 +118,7 @@
             this.tbLinea.Location = new System.Drawing.Point(5, 44);
             this.tbLinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLinea.Name = "tbLinea";
-            this.tbLinea.Size = new System.Drawing.Size(239, 24);
+            this.tbLinea.Size = new System.Drawing.Size(239, 28);
             this.tbLinea.TabIndex = 27;
             this.tbLinea.Text = "Select Options...";
             this.tbLinea.Click += new System.EventHandler(this.tbLinea_Click);
@@ -149,10 +149,10 @@
             this.lblDe.AutoSize = true;
             this.lblDe.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDe.ForeColor = System.Drawing.Color.White;
-            this.lblDe.Location = new System.Drawing.Point(0, 9);
+            this.lblDe.Location = new System.Drawing.Point(0, 7);
             this.lblDe.Margin = new System.Windows.Forms.Padding(0);
             this.lblDe.Name = "lblDe";
-            this.lblDe.Size = new System.Drawing.Size(36, 23);
+            this.lblDe.Size = new System.Drawing.Size(43, 27);
             this.lblDe.TabIndex = 30;
             this.lblDe.Text = "Of:";
             // 
@@ -160,10 +160,10 @@
             // 
             this.dateTimePickerDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerDe.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.dateTimePickerDe.Location = new System.Drawing.Point(3, 56);
+            this.dateTimePickerDe.Location = new System.Drawing.Point(3, 54);
             this.dateTimePickerDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerDe.Name = "dateTimePickerDe";
-            this.dateTimePickerDe.Size = new System.Drawing.Size(252, 24);
+            this.dateTimePickerDe.Size = new System.Drawing.Size(252, 28);
             this.dateTimePickerDe.TabIndex = 31;
             // 
             // lblA
@@ -172,10 +172,10 @@
             this.lblA.AutoSize = true;
             this.lblA.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblA.ForeColor = System.Drawing.Color.White;
-            this.lblA.Location = new System.Drawing.Point(0, 121);
+            this.lblA.Location = new System.Drawing.Point(0, 119);
             this.lblA.Margin = new System.Windows.Forms.Padding(0);
             this.lblA.Name = "lblA";
-            this.lblA.Size = new System.Drawing.Size(35, 23);
+            this.lblA.Size = new System.Drawing.Size(43, 27);
             this.lblA.TabIndex = 32;
             this.lblA.Text = "To:";
             // 
@@ -183,10 +183,10 @@
             // 
             this.dateTimePickerA.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerA.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.dateTimePickerA.Location = new System.Drawing.Point(3, 163);
+            this.dateTimePickerA.Location = new System.Drawing.Point(3, 161);
             this.dateTimePickerA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerA.Name = "dateTimePickerA";
-            this.dateTimePickerA.Size = new System.Drawing.Size(252, 24);
+            this.dateTimePickerA.Size = new System.Drawing.Size(252, 28);
             this.dateTimePickerA.TabIndex = 33;
             // 
             // tableLayoutPanel2
@@ -209,7 +209,8 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(3, 285);
+            this.panel4.Location = new System.Drawing.Point(3, 284);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(255, 123);
             this.panel4.TabIndex = 34;
@@ -227,7 +228,8 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::DiagnPcb.Properties.Resources.producto2;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(50, 21);
+            this.button1.Location = new System.Drawing.Point(51, 21);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 84);
             this.button1.TabIndex = 0;
@@ -240,7 +242,8 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btnExportar);
-            this.panel3.Location = new System.Drawing.Point(3, 144);
+            this.panel3.Location = new System.Drawing.Point(3, 143);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(255, 135);
             this.panel3.TabIndex = 33;
@@ -258,7 +261,8 @@
             this.btnExportar.ForeColor = System.Drawing.Color.White;
             this.btnExportar.Image = global::DiagnPcb.Properties.Resources.exportar;
             this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExportar.Location = new System.Drawing.Point(50, 25);
+            this.btnExportar.Location = new System.Drawing.Point(51, 25);
+            this.btnExportar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(165, 85);
             this.btnExportar.TabIndex = 1;
@@ -271,7 +275,8 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnConsultar);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 126);
             this.panel1.TabIndex = 2;
@@ -289,7 +294,8 @@
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnConsultar.Location = new System.Drawing.Point(50, 17);
+            this.btnConsultar.Location = new System.Drawing.Point(51, 17);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(165, 85);
             this.btnConsultar.TabIndex = 2;
@@ -305,12 +311,12 @@
             this.lblVersion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblVersion.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVersion.ForeColor = System.Drawing.Color.White;
-            this.lblVersion.Location = new System.Drawing.Point(271, 989);
+            this.lblVersion.Location = new System.Drawing.Point(271, 985);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(69, 23);
+            this.lblVersion.Size = new System.Drawing.Size(82, 27);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "4.0.0.4";
+            this.lblVersion.Text = "4.0.0.7";
             // 
             // tableLayoutPanel3
             // 
@@ -322,6 +328,7 @@
             this.tableLayoutPanel3.Controls.Add(this.chart1, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(271, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -341,14 +348,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(161, 492);
+            this.dataGridView1.Location = new System.Drawing.Point(162, 492);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(886, 328);
+            this.dataGridView1.Size = new System.Drawing.Size(885, 327);
             this.dataGridView1.TabIndex = 1;
             // 
             // chart1
@@ -360,13 +367,13 @@
             this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chart1.Location = new System.Drawing.Point(161, 22);
+            this.chart1.Location = new System.Drawing.Point(162, 22);
             this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(886, 466);
+            this.chart1.Size = new System.Drawing.Size(885, 466);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 

@@ -62,8 +62,9 @@
             this.PanelQuery.Controls.Add(this.tableLayoutPanel1);
             this.PanelQuery.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelQuery.Location = new System.Drawing.Point(0, 0);
+            this.PanelQuery.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelQuery.Name = "PanelQuery";
-            this.PanelQuery.Size = new System.Drawing.Size(1462, 158);
+            this.PanelQuery.Size = new System.Drawing.Size(1461, 158);
             this.PanelQuery.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -84,13 +85,14 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 4, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1462, 158);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1461, 158);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // dateTimePickerA
@@ -98,10 +100,10 @@
             this.dateTimePickerA.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerA.CalendarMonthBackground = System.Drawing.SystemColors.Control;
             this.dateTimePickerA.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.dateTimePickerA.Location = new System.Drawing.Point(849, 55);
+            this.dateTimePickerA.Location = new System.Drawing.Point(848, 59);
             this.dateTimePickerA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerA.Name = "dateTimePickerA";
-            this.dateTimePickerA.Size = new System.Drawing.Size(246, 24);
+            this.dateTimePickerA.Size = new System.Drawing.Size(247, 28);
             this.dateTimePickerA.TabIndex = 33;
             // 
             // lblA
@@ -110,10 +112,10 @@
             this.lblA.AutoSize = true;
             this.lblA.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblA.ForeColor = System.Drawing.Color.White;
-            this.lblA.Location = new System.Drawing.Point(846, 30);
+            this.lblA.Location = new System.Drawing.Point(845, 30);
             this.lblA.Margin = new System.Windows.Forms.Padding(0);
             this.lblA.Name = "lblA";
-            this.lblA.Size = new System.Drawing.Size(84, 23);
+            this.lblA.Size = new System.Drawing.Size(102, 27);
             this.lblA.TabIndex = 32;
             this.lblA.Text = "Date To:";
             // 
@@ -121,9 +123,10 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.doButton1);
-            this.panel3.Location = new System.Drawing.Point(590, 84);
+            this.panel3.Location = new System.Drawing.Point(589, 91);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(253, 63);
+            this.panel3.Size = new System.Drawing.Size(253, 50);
             this.panel3.TabIndex = 37;
             // 
             // doButton1
@@ -140,6 +143,7 @@
             this.doButton1.Image = global::DiagnPcb.Properties.Resources.producto2;
             this.doButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.doButton1.Location = new System.Drawing.Point(13, 5);
+            this.doButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.doButton1.Name = "doButton1";
             this.doButton1.Size = new System.Drawing.Size(235, 50);
             this.doButton1.TabIndex = 2;
@@ -154,10 +158,10 @@
             this.lblDe.AutoSize = true;
             this.lblDe.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDe.ForeColor = System.Drawing.Color.White;
-            this.lblDe.Location = new System.Drawing.Point(364, 30);
+            this.lblDe.Location = new System.Drawing.Point(363, 30);
             this.lblDe.Margin = new System.Windows.Forms.Padding(0);
             this.lblDe.Name = "lblDe";
-            this.lblDe.Size = new System.Drawing.Size(85, 23);
+            this.lblDe.Size = new System.Drawing.Size(102, 27);
             this.lblDe.TabIndex = 30;
             this.lblDe.Text = "Date Of:";
             // 
@@ -165,9 +169,10 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btnConsultar);
-            this.panel1.Location = new System.Drawing.Point(367, 84);
+            this.panel1.Location = new System.Drawing.Point(366, 91);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(217, 63);
+            this.panel1.Size = new System.Drawing.Size(217, 50);
             this.panel1.TabIndex = 35;
             // 
             // btnConsultar
@@ -175,7 +180,7 @@
             this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.btnConsultar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.btnConsultar.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.btnConsultar.BorderRadius = 50;
+            this.btnConsultar.BorderRadius = 44;
             this.btnConsultar.BorderSize = 3;
             this.btnConsultar.FlatAppearance.BorderSize = 2;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -183,9 +188,10 @@
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(2, 3);
+            this.btnConsultar.Location = new System.Drawing.Point(3, 2);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(206, 54);
+            this.btnConsultar.Size = new System.Drawing.Size(205, 54);
             this.btnConsultar.TabIndex = 34;
             this.btnConsultar.Text = "Consult";
             this.btnConsultar.TextColor = System.Drawing.Color.White;
@@ -197,18 +203,19 @@
             this.dateTimePickerDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerDe.CalendarMonthBackground = System.Drawing.SystemColors.Control;
             this.dateTimePickerDe.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerDe.Location = new System.Drawing.Point(367, 56);
+            this.dateTimePickerDe.Location = new System.Drawing.Point(366, 60);
             this.dateTimePickerDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerDe.Name = "dateTimePickerDe";
-            this.dateTimePickerDe.Size = new System.Drawing.Size(217, 22);
+            this.dateTimePickerDe.Size = new System.Drawing.Size(217, 26);
             this.dateTimePickerDe.TabIndex = 31;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnExportar);
-            this.panel2.Location = new System.Drawing.Point(849, 84);
+            this.panel2.Location = new System.Drawing.Point(848, 91);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(244, 63);
+            this.panel2.Size = new System.Drawing.Size(244, 50);
             this.panel2.TabIndex = 36;
             // 
             // btnExportar
@@ -216,7 +223,7 @@
             this.btnExportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.btnExportar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.btnExportar.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.btnExportar.BorderRadius = 50;
+            this.btnExportar.BorderRadius = 41;
             this.btnExportar.BorderSize = 3;
             this.btnExportar.FlatAppearance.BorderSize = 2;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -225,6 +232,7 @@
             this.btnExportar.Image = global::DiagnPcb.Properties.Resources.exportar;
             this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExportar.Location = new System.Drawing.Point(3, 5);
+            this.btnExportar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(235, 50);
             this.btnExportar.TabIndex = 2;
@@ -238,8 +246,9 @@
             this.panelVersion.Controls.Add(this.lblVersion);
             this.panelVersion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelVersion.Location = new System.Drawing.Point(0, 928);
+            this.panelVersion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelVersion.Name = "panelVersion";
-            this.panelVersion.Size = new System.Drawing.Size(1462, 37);
+            this.panelVersion.Size = new System.Drawing.Size(1461, 37);
             this.panelVersion.TabIndex = 1;
             // 
             // lblVersion
@@ -251,17 +260,18 @@
             this.lblVersion.Location = new System.Drawing.Point(9, 5);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(57, 19);
+            this.lblVersion.Size = new System.Drawing.Size(72, 23);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "4.0.0.4";
+            this.lblVersion.Text = "4.0.0.7";
             // 
             // panelContenedor
             // 
             this.panelContenedor.Controls.Add(this.gBoxValidation);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 158);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1462, 770);
+            this.panelContenedor.Size = new System.Drawing.Size(1461, 770);
             this.panelContenedor.TabIndex = 2;
             // 
             // gBoxValidation
@@ -271,10 +281,10 @@
             this.gBoxValidation.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBoxValidation.ForeColor = System.Drawing.Color.White;
             this.gBoxValidation.Location = new System.Drawing.Point(0, 0);
-            this.gBoxValidation.Margin = new System.Windows.Forms.Padding(4);
+            this.gBoxValidation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBoxValidation.Name = "gBoxValidation";
-            this.gBoxValidation.Padding = new System.Windows.Forms.Padding(4);
-            this.gBoxValidation.Size = new System.Drawing.Size(1462, 770);
+            this.gBoxValidation.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBoxValidation.Size = new System.Drawing.Size(1461, 770);
             this.gBoxValidation.TabIndex = 18;
             this.gBoxValidation.TabStop = false;
             this.gBoxValidation.Text = "Diagnostic";
@@ -289,14 +299,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 37);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 45);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(1454, 729);
+            this.dataGridView1.Size = new System.Drawing.Size(1453, 721);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
@@ -306,11 +316,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1462, 965);
+            this.ClientSize = new System.Drawing.Size(1461, 965);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelVersion);
             this.Controls.Add(this.PanelQuery);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmConsultDate";
             this.Text = "FrmConsultDate";
             this.PanelQuery.ResumeLayout(false);

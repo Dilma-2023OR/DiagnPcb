@@ -183,15 +183,15 @@ namespace DiagnPcb
 
                 if (estacionRecibida == "General")
                 {
-                    BD.query = "Select dp.DiagnPcb As 'Diagnostico', dpt.line AS 'linea' " +
+                    BD.query = "Select dp.DiagnPcbEnglish As 'Diagnostico', dpt.line AS 'linea' " +
                                 "from diagn_pcb.diagnpcbtech dpt " +
                                 "inner join diagn_pcb.DiagnPcb dp on dp.idDiagn = dpt.idDiagn " +
                                 condicion + " and dpt.shift between '" + fechaA + "' and '" + fechaB + "'" +
-                                " order by dp.DiagnPcb;";
+                                " order by dp.DiagnPcbEnglish;";
                 }
                 else if (estacionRecibida == "OP 30 - Soldier" & fecha_De < fechaDee)
                 {
-                    BD.query = "select dF.failure as 'Diagnostico', dse.line as 'linea' " +
+                    BD.query = "select dF.failureEnglish as 'Falla', dse.line as 'linea' " +
                                 " from diagn_pcb.DiagnSolEt dse " +
                                 " INNER JOIN diagn_pcb.diagnfailure Df on Df.idFaile = dse.idFaile " +
                                 condicion + " and dse.dayregister between '" + fechaA + "' and '" + fechaB + "'" +
@@ -199,21 +199,22 @@ namespace DiagnPcb
                 }
                 else if (estacionRecibida == "OP 30 - Soldier" & fecha_De >= fechaDee)
                 {
-                    BD.query = "Select dp.DiagnPcb As 'Diagnostico', dpt.line AS 'linea' " +
+                    BD.query = "Select dp.failureEnglish As 'Falla', dpt.line AS 'linea' " +
                                 "from diagn_pcb.diagnpcbtech dpt " +
-                                "inner join diagn_pcb.DiagnPcb dp on dp.idDiagn = dpt.idDiagn " +
+                                "inner join diagn_pcb.diagnfailure dp on dp.idFaile = dpt.idFaile " +
                                 condicion + " and dpt.shift between '" + fechaA + "' and '" + fechaB + "'" +
                                 " and dpt.opcode IN ('OP 30 - Soldier', '30') " +
-                                " order by dp.DiagnPcb;";
+                                " order by dp.failureEnglish;";
                 }
                 else if (estacionRecibida == "OP 60 - EOL")
                 { 
-                    BD.query = "Select dp.DiagnPcb As 'Diagnostico', dpt.line AS 'linea' " +
+                    BD.query = "Select dp.DiagnPcbEnglish As 'Diagnostico', dpt.line AS 'linea' " +
                                 "from diagn_pcb.diagnpcbtech dpt " +
                                 "inner join diagn_pcb.DiagnPcb dp on dp.idDiagn = dpt.idDiagn " +
                                 condicion + " and dpt.shift between '" + fechaA + "' and '" + fechaB + "'" +
+                                "and dp.DiagnPcb != 'N/A' " +
                                 " and dpt.opcode IN ('OP 60 - EOL', '60') " +
-                                " order by dp.DiagnPcb;";
+                                " order by dp.DiagnPcbEnglish;";
                 }
 
 
@@ -859,7 +860,7 @@ namespace DiagnPcb
 
             // Configurar títulos y leyenda
             chart1.Titles.Clear();
-            chart1.Titles.Add("Gráfico de Diagnóstico");
+            chart1.Titles.Add("Diagnostic Chart");
 
             //// Configurar leyenda (opcional)
             chart1.Legends.Clear();

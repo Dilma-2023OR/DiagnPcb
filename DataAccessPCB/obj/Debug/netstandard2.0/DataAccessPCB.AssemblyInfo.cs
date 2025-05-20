@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DataAccessPCB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d730963d8929c0ad75893e32af3eb95daf81752")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9a67b81bcf168df95afa764c9bb3f4f2bc35d8c")]
 [assembly: System.Reflection.AssemblyProductAttribute("DataAccessPCB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DataAccessPCB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

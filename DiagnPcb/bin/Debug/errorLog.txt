@@ -24,3 +24,6 @@
 17-05-2025 13:26:00,Error inserting data:La cadena de entrada no tiene el formato correcto.
 17-05-2025 13:26:51,Error inserting data:La cadena de entrada no tiene el formato correcto.
 18-05-2025 12:00:59,Error al insertar en la Base de Datos:Parameter '@failure' must be defined. To use this as a variable, set 'Allow User Variables=true' in the connection string.
+20-05-2025 12:43:39,Error al insertar en la Base de Datos:Unknown column 'FistName' in 'field list'
+20-05-2025 13:17:50,Error al insertar en la Base de Datos:Unknown column 'FistName' in 'field list'
+20-05-2025 13:20:31,Error al insertar en la Base de Datos:Unknown column 'FistName' in 'field list'

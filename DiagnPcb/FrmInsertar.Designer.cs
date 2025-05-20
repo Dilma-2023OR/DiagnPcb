@@ -122,15 +122,15 @@
             this.tbNumParte.IsFocused = false;
             this.tbNumParte.IsPasswordChar = false;
             this.tbNumParte.IsPlaceholder = true;
-            this.tbNumParte.Location = new System.Drawing.Point(680, 68);
-            this.tbNumParte.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNumParte.Location = new System.Drawing.Point(680, 69);
+            this.tbNumParte.Margin = new System.Windows.Forms.Padding(5);
             this.tbNumParte.Multiline = false;
             this.tbNumParte.Name = "tbNumParte";
-            this.tbNumParte.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbNumParte.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
             this.tbNumParte.PasswordChar = false;
             this.tbNumParte.PlaceholderColor = System.Drawing.Color.LightGray;
             this.tbNumParte.PlaceholderText = "Part Number";
-            this.tbNumParte.Size = new System.Drawing.Size(421, 37);
+            this.tbNumParte.Size = new System.Drawing.Size(421, 43);
             this.tbNumParte.TabIndex = 43;
             this.tbNumParte.Texts = "Part Number";
             this.tbNumParte.UnderlinedStyle = false;
@@ -141,10 +141,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(247, 19);
+            this.label3.Location = new System.Drawing.Point(244, 16);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 25);
+            this.label3.Size = new System.Drawing.Size(174, 31);
             this.label3.TabIndex = 5;
             this.label3.Text = "Serial Number:";
             // 
@@ -154,10 +154,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(676, 19);
+            this.label2.Location = new System.Drawing.Point(675, 16);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 25);
+            this.label2.Size = new System.Drawing.Size(158, 31);
             this.label2.TabIndex = 4;
             this.label2.Text = "Part Number:";
             // 
@@ -166,7 +166,7 @@
             this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.btnReset.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.btnReset.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.btnReset.BorderRadius = 50;
+            this.btnReset.BorderRadius = 47;
             this.btnReset.BorderSize = 3;
             this.btnReset.FlatAppearance.BorderSize = 2;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -174,9 +174,10 @@
             this.btnReset.ForeColor = System.Drawing.Color.White;
             this.btnReset.Image = global::DiagnPcb.Properties.Resources.reiniciar;
             this.btnReset.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReset.Location = new System.Drawing.Point(1108, 67);
+            this.btnReset.Location = new System.Drawing.Point(1109, 66);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(122, 58);
+            this.btnReset.Size = new System.Drawing.Size(123, 58);
             this.btnReset.TabIndex = 44;
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnReset.TextColor = System.Drawing.Color.White;
@@ -195,15 +196,15 @@
             this.tbNumSerie.IsFocused = false;
             this.tbNumSerie.IsPasswordChar = false;
             this.tbNumSerie.IsPlaceholder = true;
-            this.tbNumSerie.Location = new System.Drawing.Point(251, 68);
-            this.tbNumSerie.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNumSerie.Location = new System.Drawing.Point(249, 69);
+            this.tbNumSerie.Margin = new System.Windows.Forms.Padding(5);
             this.tbNumSerie.Multiline = false;
             this.tbNumSerie.Name = "tbNumSerie";
-            this.tbNumSerie.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbNumSerie.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
             this.tbNumSerie.PasswordChar = false;
             this.tbNumSerie.PlaceholderColor = System.Drawing.Color.LightGray;
             this.tbNumSerie.PlaceholderText = "Serial Number";
-            this.tbNumSerie.Size = new System.Drawing.Size(421, 37);
+            this.tbNumSerie.Size = new System.Drawing.Size(421, 43);
             this.tbNumSerie.TabIndex = 45;
             this.tbNumSerie.Texts = "Serial Number";
             this.tbNumSerie.UnderlinedStyle = false;
@@ -219,7 +220,7 @@
             this.gbDiagnostico.Margin = new System.Windows.Forms.Padding(4);
             this.gbDiagnostico.Name = "gbDiagnostico";
             this.gbDiagnostico.Padding = new System.Windows.Forms.Padding(4);
-            this.gbDiagnostico.Size = new System.Drawing.Size(692, 630);
+            this.gbDiagnostico.Size = new System.Drawing.Size(692, 631);
             this.gbDiagnostico.TabIndex = 15;
             this.gbDiagnostico.TabStop = false;
             this.gbDiagnostico.Text = "Diagnostic Entry";
@@ -254,7 +255,7 @@
             this.tableLayoutPanel7.Controls.Add(this.tbSemana, 1, 4);
             this.tableLayoutPanel7.Controls.Add(this.tbComentarios, 1, 11);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 32);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 39);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 12;
@@ -265,12 +266,12 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(684, 594);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(684, 588);
             this.tableLayoutPanel7.TabIndex = 12;
             // 
             // label10
@@ -280,10 +281,10 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(0, 35);
+            this.label10.Location = new System.Drawing.Point(0, 32);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(107, 25);
+            this.label10.Size = new System.Drawing.Size(128, 31);
             this.label10.TabIndex = 40;
             this.label10.Text = "Operation:";
             // 
@@ -301,11 +302,12 @@
             this.docbLinea.IconColor = System.Drawing.Color.OrangeRed;
             this.docbLinea.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.docbLinea.ListTextColor = System.Drawing.Color.SteelBlue;
-            this.docbLinea.Location = new System.Drawing.Point(269, 72);
+            this.docbLinea.Location = new System.Drawing.Point(269, 71);
+            this.docbLinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.docbLinea.MinimumSize = new System.Drawing.Size(200, 30);
             this.docbLinea.Name = "docbLinea";
-            this.docbLinea.Padding = new System.Windows.Forms.Padding(3);
-            this.docbLinea.Size = new System.Drawing.Size(406, 38);
+            this.docbLinea.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.docbLinea.Size = new System.Drawing.Size(405, 38);
             this.docbLinea.TabIndex = 16;
             this.docbLinea.Texts = "Selected Line...";
             this.docbLinea.OnSelectedIndexChanged += new System.EventHandler(this.cblinea_SelectedIndexChanged);
@@ -317,10 +319,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(0, 314);
+            this.label8.Location = new System.Drawing.Point(0, 311);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 25);
+            this.label8.Size = new System.Drawing.Size(135, 31);
             this.label8.TabIndex = 24;
             this.label8.Text = "Diagnostic:";
             // 
@@ -331,10 +333,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(0, 78);
+            this.label6.Location = new System.Drawing.Point(0, 75);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 25);
+            this.label6.Size = new System.Drawing.Size(65, 31);
             this.label6.TabIndex = 20;
             this.label6.Text = "Line:";
             // 
@@ -345,10 +347,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(266, 2);
+            this.label11.Location = new System.Drawing.Point(266, 1);
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(228, 21);
+            this.label11.Size = new System.Drawing.Size(282, 23);
             this.label11.TabIndex = 10;
             this.label11.Text = "1) Enter the requested data";
             // 
@@ -373,11 +375,12 @@
             "OP 60 - EOL"});
             this.cbOperacion.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbOperacion.ListTextColor = System.Drawing.Color.SteelBlue;
-            this.cbOperacion.Location = new System.Drawing.Point(269, 29);
+            this.cbOperacion.Location = new System.Drawing.Point(269, 28);
+            this.cbOperacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbOperacion.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbOperacion.Name = "cbOperacion";
-            this.cbOperacion.Padding = new System.Windows.Forms.Padding(3);
-            this.cbOperacion.Size = new System.Drawing.Size(406, 37);
+            this.cbOperacion.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbOperacion.Size = new System.Drawing.Size(405, 37);
             this.cbOperacion.TabIndex = 43;
             this.cbOperacion.Texts = "Selected Operation...";
             this.cbOperacion.OnSelectedIndexChanged += new System.EventHandler(this.cbOperacion_SelectedIndexChanged);
@@ -389,10 +392,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(0, 130);
+            this.label5.Location = new System.Drawing.Point(0, 127);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 25);
+            this.label5.Size = new System.Drawing.Size(146, 31);
             this.label5.TabIndex = 16;
             this.label5.Text = "Failure date:";
             // 
@@ -402,10 +405,10 @@
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.Control;
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(270, 129);
+            this.dateTimePicker1.Location = new System.Drawing.Point(270, 126);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(405, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(405, 32);
             this.dateTimePicker1.TabIndex = 15;
             // 
             // label4
@@ -415,10 +418,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(0, 180);
+            this.label4.Location = new System.Drawing.Point(0, 177);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(173, 25);
+            this.label4.Size = new System.Drawing.Size(206, 31);
             this.label4.TabIndex = 17;
             this.label4.Text = "Production Week:";
             // 
@@ -429,10 +432,10 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(0, 225);
+            this.label12.Location = new System.Drawing.Point(0, 222);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(103, 25);
+            this.label12.Size = new System.Drawing.Size(125, 31);
             this.label12.TabIndex = 28;
             this.label12.Text = "Ubication:";
             // 
@@ -443,10 +446,10 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(0, 357);
+            this.label13.Location = new System.Drawing.Point(0, 355);
             this.label13.Margin = new System.Windows.Forms.Padding(0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 25);
+            this.label13.Size = new System.Drawing.Size(90, 31);
             this.label13.TabIndex = 30;
             this.label13.Text = "Owner:";
             // 
@@ -457,10 +460,10 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(0, 399);
+            this.label9.Location = new System.Drawing.Point(0, 397);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 25);
+            this.label9.Size = new System.Drawing.Size(71, 31);
             this.label9.TabIndex = 26;
             this.label9.Text = "Wire:";
             // 
@@ -478,11 +481,12 @@
             this.cbUbicacion.IconColor = System.Drawing.Color.OrangeRed;
             this.cbUbicacion.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbUbicacion.ListTextColor = System.Drawing.Color.SteelBlue;
-            this.cbUbicacion.Location = new System.Drawing.Point(269, 217);
+            this.cbUbicacion.Location = new System.Drawing.Point(269, 216);
+            this.cbUbicacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbUbicacion.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbUbicacion.Name = "cbUbicacion";
-            this.cbUbicacion.Padding = new System.Windows.Forms.Padding(3);
-            this.cbUbicacion.Size = new System.Drawing.Size(406, 38);
+            this.cbUbicacion.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbUbicacion.Size = new System.Drawing.Size(405, 38);
             this.cbUbicacion.TabIndex = 45;
             this.cbUbicacion.Texts = "Selected Ubication...";
             this.cbUbicacion.OnSelectedIndexChanged += new System.EventHandler(this.cbUbicacion_SelectedIndexChanged);
@@ -501,11 +505,12 @@
             this.cbFalla.IconColor = System.Drawing.Color.OrangeRed;
             this.cbFalla.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbFalla.ListTextColor = System.Drawing.Color.SteelBlue;
-            this.cbFalla.Location = new System.Drawing.Point(269, 265);
+            this.cbFalla.Location = new System.Drawing.Point(269, 264);
+            this.cbFalla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFalla.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbFalla.Name = "cbFalla";
-            this.cbFalla.Padding = new System.Windows.Forms.Padding(3);
-            this.cbFalla.Size = new System.Drawing.Size(406, 36);
+            this.cbFalla.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbFalla.Size = new System.Drawing.Size(405, 36);
             this.cbFalla.TabIndex = 46;
             this.cbFalla.Texts = "Selected Failure...";
             this.cbFalla.OnSelectedIndexChanged += new System.EventHandler(this.cbFalla_SelectedIndexChanged);
@@ -517,10 +522,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 270);
+            this.label1.Location = new System.Drawing.Point(0, 267);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 25);
+            this.label1.Size = new System.Drawing.Size(93, 31);
             this.label1.TabIndex = 44;
             this.label1.Text = "Failure:";
             // 
@@ -538,11 +543,12 @@
             this.cbDiagnostico.IconColor = System.Drawing.Color.OrangeRed;
             this.cbDiagnostico.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbDiagnostico.ListTextColor = System.Drawing.Color.SteelBlue;
-            this.cbDiagnostico.Location = new System.Drawing.Point(269, 307);
+            this.cbDiagnostico.Location = new System.Drawing.Point(269, 306);
+            this.cbDiagnostico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbDiagnostico.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbDiagnostico.Name = "cbDiagnostico";
-            this.cbDiagnostico.Padding = new System.Windows.Forms.Padding(3);
-            this.cbDiagnostico.Size = new System.Drawing.Size(406, 36);
+            this.cbDiagnostico.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbDiagnostico.Size = new System.Drawing.Size(405, 36);
             this.cbDiagnostico.TabIndex = 47;
             this.cbDiagnostico.Texts = "Selected Diagnostic...";
             this.cbDiagnostico.OnSelectedIndexChanged += new System.EventHandler(this.cbDiagnostico_SelectedIndexChanged);
@@ -562,10 +568,11 @@
             this.cbOwner.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbOwner.ListTextColor = System.Drawing.Color.SteelBlue;
             this.cbOwner.Location = new System.Drawing.Point(269, 352);
+            this.cbOwner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbOwner.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbOwner.Name = "cbOwner";
-            this.cbOwner.Padding = new System.Windows.Forms.Padding(3);
-            this.cbOwner.Size = new System.Drawing.Size(406, 36);
+            this.cbOwner.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbOwner.Size = new System.Drawing.Size(405, 36);
             this.cbOwner.TabIndex = 48;
             this.cbOwner.Texts = "Selected Owner...";
             this.cbOwner.OnSelectedIndexChanged += new System.EventHandler(this.cbOwner_SelectedIndexChanged);
@@ -585,10 +592,11 @@
             this.cbCables.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbCables.ListTextColor = System.Drawing.Color.SteelBlue;
             this.cbCables.Location = new System.Drawing.Point(269, 394);
+            this.cbCables.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCables.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbCables.Name = "cbCables";
-            this.cbCables.Padding = new System.Windows.Forms.Padding(3);
-            this.cbCables.Size = new System.Drawing.Size(406, 35);
+            this.cbCables.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbCables.Size = new System.Drawing.Size(405, 34);
             this.cbCables.TabIndex = 49;
             this.cbCables.Texts = "Selected Wire..";
             this.cbCables.OnSelectedIndexChanged += new System.EventHandler(this.cbCables_SelectedIndexChanged);
@@ -600,10 +608,10 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(0, 441);
+            this.label16.Location = new System.Drawing.Point(0, 439);
             this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(72, 25);
+            this.label16.Size = new System.Drawing.Size(86, 31);
             this.label16.TabIndex = 34;
             this.label16.Text = "Robot:";
             // 
@@ -631,10 +639,11 @@
             this.cbMaquina.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbMaquina.ListTextColor = System.Drawing.Color.SteelBlue;
             this.cbMaquina.Location = new System.Drawing.Point(269, 435);
+            this.cbMaquina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMaquina.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbMaquina.Name = "cbMaquina";
-            this.cbMaquina.Padding = new System.Windows.Forms.Padding(3);
-            this.cbMaquina.Size = new System.Drawing.Size(406, 35);
+            this.cbMaquina.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbMaquina.Size = new System.Drawing.Size(405, 34);
             this.cbMaquina.TabIndex = 50;
             this.cbMaquina.Texts = "";
             // 
@@ -645,10 +654,10 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(0, 522);
+            this.label14.Location = new System.Drawing.Point(0, 516);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(112, 25);
+            this.label14.Size = new System.Drawing.Size(135, 31);
             this.label14.TabIndex = 32;
             this.label14.Text = "Comments:";
             // 
@@ -664,15 +673,15 @@
             this.tbSemana.IsFocused = false;
             this.tbSemana.IsPasswordChar = false;
             this.tbSemana.IsPlaceholder = false;
-            this.tbSemana.Location = new System.Drawing.Point(270, 176);
-            this.tbSemana.Margin = new System.Windows.Forms.Padding(4);
+            this.tbSemana.Location = new System.Drawing.Point(271, 177);
+            this.tbSemana.Margin = new System.Windows.Forms.Padding(5);
             this.tbSemana.Multiline = false;
             this.tbSemana.Name = "tbSemana";
-            this.tbSemana.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbSemana.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
             this.tbSemana.PasswordChar = false;
             this.tbSemana.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbSemana.PlaceholderText = "";
-            this.tbSemana.Size = new System.Drawing.Size(410, 31);
+            this.tbSemana.Size = new System.Drawing.Size(408, 35);
             this.tbSemana.TabIndex = 51;
             this.tbSemana.Texts = "";
             this.tbSemana.UnderlinedStyle = false;
@@ -689,15 +698,15 @@
             this.tbComentarios.IsFocused = false;
             this.tbComentarios.IsPasswordChar = false;
             this.tbComentarios.IsPlaceholder = false;
-            this.tbComentarios.Location = new System.Drawing.Point(270, 479);
-            this.tbComentarios.Margin = new System.Windows.Forms.Padding(4);
+            this.tbComentarios.Location = new System.Drawing.Point(271, 481);
+            this.tbComentarios.Margin = new System.Windows.Forms.Padding(5);
             this.tbComentarios.Multiline = true;
             this.tbComentarios.Name = "tbComentarios";
-            this.tbComentarios.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.tbComentarios.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
             this.tbComentarios.PasswordChar = false;
             this.tbComentarios.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbComentarios.PlaceholderText = "";
-            this.tbComentarios.Size = new System.Drawing.Size(410, 104);
+            this.tbComentarios.Size = new System.Drawing.Size(408, 95);
             this.tbComentarios.TabIndex = 52;
             this.tbComentarios.Texts = "";
             this.tbComentarios.UnderlinedStyle = false;
@@ -705,10 +714,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 37);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(602, 598);
+            this.pictureBox1.Size = new System.Drawing.Size(602, 596);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
@@ -723,20 +732,21 @@
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVersion.ForeColor = System.Drawing.Color.White;
-            this.lblVersion.Location = new System.Drawing.Point(21, 8);
+            this.lblVersion.Location = new System.Drawing.Point(21, 7);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(57, 19);
+            this.lblVersion.Size = new System.Drawing.Size(72, 23);
             this.lblVersion.TabIndex = 34;
-            this.lblVersion.Text = "4.0.0.4";
+            this.lblVersion.Text = "4.0.0.7";
             // 
             // panelVersion
             // 
             this.panelVersion.Controls.Add(this.lblVersion);
             this.panelVersion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelVersion.Location = new System.Drawing.Point(0, 972);
+            this.panelVersion.Location = new System.Drawing.Point(0, 973);
+            this.panelVersion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelVersion.Name = "panelVersion";
-            this.panelVersion.Size = new System.Drawing.Size(1480, 40);
+            this.panelVersion.Size = new System.Drawing.Size(1480, 39);
             this.panelVersion.TabIndex = 35;
             // 
             // panelContenedorDiag
@@ -744,8 +754,9 @@
             this.panelContenedorDiag.Controls.Add(this.tableLayoutPanel1);
             this.panelContenedorDiag.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorDiag.Location = new System.Drawing.Point(0, 128);
+            this.panelContenedorDiag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContenedorDiag.Name = "panelContenedorDiag";
-            this.panelContenedorDiag.Size = new System.Drawing.Size(1480, 844);
+            this.panelContenedorDiag.Size = new System.Drawing.Size(1480, 845);
             this.panelContenedorDiag.TabIndex = 36;
             // 
             // tableLayoutPanel1
@@ -760,12 +771,13 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.31898F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.55297F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1480, 844);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1480, 845);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // groupBox1
@@ -774,9 +786,11 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Ebrima", 16.2F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(786, 124);
+            this.groupBox1.Location = new System.Drawing.Point(786, 123);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(608, 632);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(608, 635);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Image";
@@ -789,23 +803,25 @@
             this.tableLayoutPanel3.ColumnCount = 4;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.53846F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.46154F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 262F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 261F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel3.Controls.Add(this.panel1, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.panel2, 2, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(786, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(786, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 108F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(608, 115);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 7F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(608, 117);
             this.tableLayoutPanel3.TabIndex = 41;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnCargarImagen);
-            this.panel1.Location = new System.Drawing.Point(78, 2);
+            this.panel1.Location = new System.Drawing.Point(78, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(212, 102);
             this.panel1.TabIndex = 42;
@@ -824,6 +840,7 @@
             this.btnCargarImagen.Image = global::DiagnPcb.Properties.Resources.camara;
             this.btnCargarImagen.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCargarImagen.Location = new System.Drawing.Point(36, 9);
+            this.btnCargarImagen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCargarImagen.Name = "btnCargarImagen";
             this.btnCargarImagen.Size = new System.Drawing.Size(165, 85);
             this.btnCargarImagen.TabIndex = 3;
@@ -836,7 +853,8 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnGuardar);
-            this.panel2.Location = new System.Drawing.Point(296, 2);
+            this.panel2.Location = new System.Drawing.Point(297, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 102);
             this.panel2.TabIndex = 43;
@@ -855,6 +873,7 @@
             this.btnGuardar.Image = global::DiagnPcb.Properties.Resources.guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnGuardar.Location = new System.Drawing.Point(36, 9);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(165, 85);
             this.btnGuardar.TabIndex = 3;

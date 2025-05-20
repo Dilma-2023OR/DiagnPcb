@@ -57,8 +57,9 @@
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1462, 178);
+            this.panel5.Size = new System.Drawing.Size(1461, 178);
             this.panel5.TabIndex = 7;
             // 
             // panel4
@@ -86,9 +87,10 @@
             this.cbDiagnostico.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbDiagnostico.ListTextColor = System.Drawing.Color.SteelBlue;
             this.cbDiagnostico.Location = new System.Drawing.Point(3, 54);
+            this.cbDiagnostico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbDiagnostico.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbDiagnostico.Name = "cbDiagnostico";
-            this.cbDiagnostico.Padding = new System.Windows.Forms.Padding(3);
+            this.cbDiagnostico.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbDiagnostico.Size = new System.Drawing.Size(559, 37);
             this.cbDiagnostico.TabIndex = 45;
             this.cbDiagnostico.Texts = "Selected Diagnostic...";
@@ -103,7 +105,7 @@
             this.label3.Location = new System.Drawing.Point(5, 16);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 26);
+            this.label3.Size = new System.Drawing.Size(158, 34);
             this.label3.TabIndex = 26;
             this.label3.Text = "Diagnostic";
             // 
@@ -113,8 +115,9 @@
             this.panel8.Controls.Add(this.btnExportar);
             this.panel8.Controls.Add(this.btnConsultar);
             this.panel8.Location = new System.Drawing.Point(595, 28);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(730, 126);
+            this.panel8.Size = new System.Drawing.Size(731, 126);
             this.panel8.TabIndex = 2;
             // 
             // button1
@@ -131,6 +134,7 @@
             this.button1.Image = global::DiagnPcb.Properties.Resources.producto2;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(545, 21);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 84);
             this.button1.TabIndex = 0;
@@ -153,7 +157,8 @@
             this.btnExportar.ForeColor = System.Drawing.Color.White;
             this.btnExportar.Image = global::DiagnPcb.Properties.Resources.exportar;
             this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExportar.Location = new System.Drawing.Point(298, 20);
+            this.btnExportar.Location = new System.Drawing.Point(299, 20);
+            this.btnExportar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(165, 85);
             this.btnExportar.TabIndex = 1;
@@ -177,6 +182,7 @@
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnConsultar.Location = new System.Drawing.Point(15, 20);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(165, 85);
             this.btnConsultar.TabIndex = 2;
@@ -191,8 +197,9 @@
             this.panelVersion.Controls.Add(this.lblVersion);
             this.panelVersion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelVersion.Location = new System.Drawing.Point(0, 928);
+            this.panelVersion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelVersion.Name = "panelVersion";
-            this.panelVersion.Size = new System.Drawing.Size(1462, 37);
+            this.panelVersion.Size = new System.Drawing.Size(1461, 37);
             this.panelVersion.TabIndex = 8;
             // 
             // lblVersion
@@ -204,17 +211,18 @@
             this.lblVersion.Location = new System.Drawing.Point(9, 5);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(57, 19);
+            this.lblVersion.Size = new System.Drawing.Size(72, 23);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "4.0.0.4";
+            this.lblVersion.Text = "4.0.0.7";
             // 
             // panelContenedor
             // 
             this.panelContenedor.Controls.Add(this.gBoxValidation);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 178);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1462, 750);
+            this.panelContenedor.Size = new System.Drawing.Size(1461, 750);
             this.panelContenedor.TabIndex = 9;
             // 
             // gBoxValidation
@@ -224,10 +232,10 @@
             this.gBoxValidation.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBoxValidation.ForeColor = System.Drawing.Color.White;
             this.gBoxValidation.Location = new System.Drawing.Point(0, 0);
-            this.gBoxValidation.Margin = new System.Windows.Forms.Padding(4);
+            this.gBoxValidation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBoxValidation.Name = "gBoxValidation";
-            this.gBoxValidation.Padding = new System.Windows.Forms.Padding(4);
-            this.gBoxValidation.Size = new System.Drawing.Size(1462, 750);
+            this.gBoxValidation.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBoxValidation.Size = new System.Drawing.Size(1461, 750);
             this.gBoxValidation.TabIndex = 18;
             this.gBoxValidation.TabStop = false;
             this.gBoxValidation.Text = "Diagnostic";
@@ -242,14 +250,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 37);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 45);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(1454, 709);
+            this.dataGridView1.Size = new System.Drawing.Size(1453, 701);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
@@ -259,11 +267,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1462, 965);
+            this.ClientSize = new System.Drawing.Size(1461, 965);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelVersion);
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmConsultDiag";
             this.Text = "FrmConsultDiag";
             this.panel5.ResumeLayout(false);

@@ -73,7 +73,7 @@ namespace DiagnPcb.Inicio
                 panel16.Location = new Point(4, b + 35);
                 panelSubmenuCatalogs.Location = new Point(a + 40, b + 35);
             }
-            else if (lblConfig.Text.Equals("Engineer"))
+            else if (lblConfig.Text.Equals("Engineer") || lblConfig.Text.Equals("Calidad"))
             {
                 btnCatalogos.Visible = false;
                 panel16.Visible = false;
@@ -342,12 +342,13 @@ namespace DiagnPcb.Inicio
         {
             if (panelSubmenuCatalogs.Visible)
             {
+                
                 panelSubmenuCatalogs.Visible = false;
                 int x = btnConsultar.Location.X;
                 int y = btnConsultar.Location.Y;
                 btnCatalogos.Location = new Point(12, y+35);
                 panel16.Location = new Point(4, y+35);
-                panelSubmenuCatalogs.Location = new Point(x + 40, y + 70);
+                panelSubmenuCatalogs.Location = new Point(x, y + 70);
             }
             else
             {
@@ -361,7 +362,35 @@ namespace DiagnPcb.Inicio
                 int newYe = btnCatalogos.Location.X;
                 int newXe = btnCatalogos.Location.Y + btnConsultar.Height;
 
-                panelSubmenuCatalogs.Location = new Point(newYe+40, newXe);
+                panelSubmenuCatalogs.Location = new Point(newYe, newXe);
+            }
+        }
+
+        private void btnRegisterUser_Click(object sender, EventArgs e)
+        {
+            if (panelSubmenuCatalogs.Visible)
+            {
+                AbrirFormHoja(new FrmRegisterUsers());
+                panelSubmenuCatalogs.Visible = false;
+                int x = btnConsultar.Location.X;
+                int y = btnConsultar.Location.Y;
+                btnCatalogos.Location = new Point(12, y + 35);
+                panel16.Location = new Point(4, y + 35);
+                panelSubmenuCatalogs.Location = new Point(x + 40, y + 70);
+            }
+            else
+            {
+                panelSubmenuCatalogs.Visible = true;
+                int newX = SubMenuConsult.Location.X;
+                int newY = SubMenuConsult.Location.Y;
+
+                btnCatalogos.Location = new Point(12, newY);
+                panel16.Location = new Point(4, 240);
+
+                int newYe = btnCatalogos.Location.X;
+                int newXe = btnCatalogos.Location.Y + btnConsultar.Height;
+
+                panelSubmenuCatalogs.Location = new Point(newYe + 40, newXe);
             }
         }
     }

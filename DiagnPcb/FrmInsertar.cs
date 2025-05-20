@@ -757,8 +757,8 @@ namespace DiagnPcb
 
                 DateTime fecha_F = Convert.ToDateTime(dateTimePicker1.Text);
 
-                string fecha_Falla = fecha_F.ToString("yyyy-MM-dd hh:mm:ss");
-                string fecha_turno = turno.ToString("yyyy-MM-dd hh:mm:ss");
+                string fecha_Falla = fecha_F.ToString("yyyy-MM-dd HH:mm:ss");
+                string fecha_turno = turno.ToString("yyyy-MM-dd HH:mm:ss");
                 int semana = Convert.ToInt32(tbSemana.Texts);
                 byte[] imageBytes = null;
 
