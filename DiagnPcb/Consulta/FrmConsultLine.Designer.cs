@@ -253,7 +253,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(72, 23);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "4.0.0.7";
+            this.lblVersion.Text = "4.0.0.9";
             // 
             // panelContenedor
             // 
@@ -272,9 +272,9 @@
             this.gBoxValidation.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBoxValidation.ForeColor = System.Drawing.Color.White;
             this.gBoxValidation.Location = new System.Drawing.Point(0, 0);
-            this.gBoxValidation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBoxValidation.Margin = new System.Windows.Forms.Padding(4);
             this.gBoxValidation.Name = "gBoxValidation";
-            this.gBoxValidation.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBoxValidation.Padding = new System.Windows.Forms.Padding(4);
             this.gBoxValidation.Size = new System.Drawing.Size(1222, 928);
             this.gBoxValidation.TabIndex = 18;
             this.gBoxValidation.TabStop = false;

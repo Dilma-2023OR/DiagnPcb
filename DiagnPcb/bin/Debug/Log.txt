@@ -18,3 +18,4 @@
 20-05-2025 13:24:47,User registered correctly
 20-05-2025 13:25:34,User registered correctly
 20-05-2025 16:44:24,Defect recorded for serial: T3N251153M0000020 By the technician: Guillermo
+27-05-2025 19:25:38,Defect recorded for serial: T3D251053M0000059 By the technician: Alex

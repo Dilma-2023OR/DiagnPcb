@@ -138,8 +138,17 @@ namespace DiagnPcb
                 DateTime fecha_A = Convert.ToDateTime(dateTimePickerA.Text);
                 DateTime fecha_De = Convert.ToDateTime(dateTimePickerDe.Text);
 
-                string fechaA = fecha_De.ToString("yyyy-MM-dd");
-                string fechaB = fecha_A.ToString("yyyy-MM-dd");
+                //string fechaA = fecha_De.ToString("yyyy-MM-dd");
+                //string fechaB = fecha_A.ToString("yyyy-MM-dd");
+
+                string horaDe = cbHoraDe.Texts;
+                string horaA = CbHoraA.Texts;
+                //Combinar fecha y hora 
+                DateTime fechaHoraDe = DateTime.Parse($"{fecha_De.ToShortDateString()} {horaDe}");
+                DateTime fechaHoraA = DateTime.Parse($"{fecha_A.ToShortDateString()} {horaA}");
+
+                string fechaB = fechaHoraA.ToString("yyyy-MM-dd HH:mm:ss");
+                string fechaA = fechaHoraDe.ToString("yyyy-MM-dd HH:mm:ss");
 
                 DateTime fechaDee = Convert.ToDateTime("02-05-2025");
 

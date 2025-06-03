@@ -60,7 +60,7 @@
             this.tableLayoutPanel3.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -152,7 +152,7 @@
             this.tbFalla.IsPasswordChar = false;
             this.tbFalla.IsPlaceholder = false;
             this.tbFalla.Location = new System.Drawing.Point(301, 5);
-            this.tbFalla.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbFalla.Margin = new System.Windows.Forms.Padding(5);
             this.tbFalla.Multiline = false;
             this.tbFalla.Name = "tbFalla";
             this.tbFalla.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
@@ -257,7 +257,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(72, 23);
             this.lblVersion.TabIndex = 34;
-            this.lblVersion.Text = "4.0.0.7";
+            this.lblVersion.Text = "4.0.0.9";
             // 
             // FrmRegistroFallas
             // 

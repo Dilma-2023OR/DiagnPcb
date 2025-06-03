@@ -48,7 +48,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.94092F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.05908F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtIdFailure, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblVersion, 2, 1);
@@ -67,7 +67,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(100, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(790, 539);
+            this.pictureBox1.Size = new System.Drawing.Size(788, 539);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -93,7 +93,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(71, 25);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "4.0.0.7";
+            this.lblVersion.Text = "4.0.0.9";
             // 
             // BarraTitulo
             // 

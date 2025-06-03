@@ -784,10 +784,11 @@ namespace DiagnPcb
                 DBConnection dB = new DBConnection();
                 DataTable dtResult = new DataTable();
 
+
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
                 dB.query = "Insert into diagn_pcb.diagnpcbtech(qty, faile_date, serie_num, part_number, productWeek, line, idFaile, idDiagn, idWire, idDiagnUbic, coment, image, shift, idOwner, opcode, robot)"
                                             + "VALUES(1, '" + fecha_Falla + "', '" + tbNumSerie.Texts + "', '" + tbNumParte.Texts + "', " + semana + ", '" + docbLinea.Texts + "', " + idFaile + ", " + idDiagn + ", " + idWire + ", " + idDiagnUbic + ", "
-                                            + "'" + tbComentarios.Texts + "', @Imagen, '" + fecha_turno + "', " + id_owner + ", '" + cbOperacion.Texts + "', " + robot + ");";
+                                            + "'" + tbComentarios.Texts + "', @Imagen, CURRENT_TIMESTAMP, " + id_owner + ", '" + cbOperacion.Texts + "', " + robot + ");";
                 dB.link = link;
 
                 var dbResult = dB.InsertDataDiagn(out dBMsg, out dbError);
@@ -826,8 +827,72 @@ namespace DiagnPcb
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            insertarDatos();
-            Limpiar();
+                if (cbOperacion.Texts != string.Empty || cbOperacion.Texts != "Selected Operation...")
+                {
+                    if (docbLinea.Texts != string.Empty && docbLinea.Texts != "Selected Line...")
+                    {
+                        if (cbUbicacion.Texts != string.Empty && cbUbicacion.Texts != "Selected Ubication...")
+                        {
+                            if (cbFalla.Texts != string.Empty && cbFalla.Texts != "Selected Failure...")
+                            {
+                                if (cbDiagnostico.Texts != string.Empty && cbDiagnostico.Texts != "Selected Diagnostic...")
+                                {
+                                    if (cbOwner.Texts != string.Empty && cbOwner.Texts != "Selected Owner...")
+                                    {
+                                        if (pictureBox1.Image != null)
+                                        {
+                                            insertarDatos();
+                                            Limpiar();
+                                        }
+                                        else
+                                        {
+                                            Message message = new Message("Please add the PHOTO");
+                                            message.ShowDialog();
+                                            pictureBox1.Focus();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Message message = new Message("Please add the Owner");
+                                        message.ShowDialog();
+                                        cbOwner.Focus();
+                                    }
+                                }
+                                else
+                                {
+                                    Message message = new Message("Please add the Diagnostic");
+                                    message.ShowDialog();
+                                    cbDiagnostico.Focus();
+                                }
+                            }
+                            else
+                            {
+                                Message message = new Message("Please add the Failure");
+                                message.ShowDialog();
+                                cbFalla.Focus();
+                            }
+                        }
+                        else
+                        {
+                            Message message = new Message("Please add the Ubication");
+                            message.ShowDialog();
+                            cbUbicacion.Focus();
+                        }
+                    }
+                    else
+                    {
+                        Message message = new Message("Please add the line");
+                        message.ShowDialog();
+                        docbLinea.Focus();
+                    }
+                } 
+                else
+                {
+                    Message message = new Message("Please add the operation");
+                    message.ShowDialog();
+                    cbOperacion.Focus();
+                }
+            
         }
 
         public void Limpiar()

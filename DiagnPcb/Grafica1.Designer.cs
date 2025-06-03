@@ -41,6 +41,10 @@
             this.dateTimePickerDe = new System.Windows.Forms.DateTimePicker();
             this.lblA = new System.Windows.Forms.Label();
             this.dateTimePickerA = new System.Windows.Forms.DateTimePicker();
+            this.lblHoraDe = new System.Windows.Forms.Label();
+            this.cbHoraDe = new DiagnPcb.Styles.DOComboBox();
+            this.lblHoraA = new System.Windows.Forms.Label();
+            this.CbHoraA = new DiagnPcb.Styles.DOComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new DiagnPcb.Styles.DOButton();
@@ -131,16 +135,26 @@
             this.tableLayoutPanel1.Controls.Add(this.dateTimePickerDe, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblA, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePickerA, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lblHoraDe, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.cbHoraDe, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lblHoraA, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.CbHoraA, 0, 10);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 208);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowCount = 11;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(261, 197);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(261, 350);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // lblDe
@@ -149,7 +163,7 @@
             this.lblDe.AutoSize = true;
             this.lblDe.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDe.ForeColor = System.Drawing.Color.White;
-            this.lblDe.Location = new System.Drawing.Point(0, 7);
+            this.lblDe.Location = new System.Drawing.Point(0, 1);
             this.lblDe.Margin = new System.Windows.Forms.Padding(0);
             this.lblDe.Name = "lblDe";
             this.lblDe.Size = new System.Drawing.Size(43, 27);
@@ -160,7 +174,7 @@
             // 
             this.dateTimePickerDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerDe.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.dateTimePickerDe.Location = new System.Drawing.Point(3, 54);
+            this.dateTimePickerDe.Location = new System.Drawing.Point(3, 32);
             this.dateTimePickerDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerDe.Name = "dateTimePickerDe";
             this.dateTimePickerDe.Size = new System.Drawing.Size(252, 28);
@@ -172,7 +186,7 @@
             this.lblA.AutoSize = true;
             this.lblA.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblA.ForeColor = System.Drawing.Color.White;
-            this.lblA.Location = new System.Drawing.Point(0, 119);
+            this.lblA.Location = new System.Drawing.Point(0, 73);
             this.lblA.Margin = new System.Windows.Forms.Padding(0);
             this.lblA.Name = "lblA";
             this.lblA.Size = new System.Drawing.Size(43, 27);
@@ -183,11 +197,133 @@
             // 
             this.dateTimePickerA.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerA.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.dateTimePickerA.Location = new System.Drawing.Point(3, 161);
+            this.dateTimePickerA.Location = new System.Drawing.Point(3, 114);
             this.dateTimePickerA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerA.Name = "dateTimePickerA";
             this.dateTimePickerA.Size = new System.Drawing.Size(252, 28);
             this.dateTimePickerA.TabIndex = 33;
+            // 
+            // lblHoraDe
+            // 
+            this.lblHoraDe.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblHoraDe.AutoSize = true;
+            this.lblHoraDe.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblHoraDe.ForeColor = System.Drawing.Color.White;
+            this.lblHoraDe.Location = new System.Drawing.Point(0, 169);
+            this.lblHoraDe.Margin = new System.Windows.Forms.Padding(0);
+            this.lblHoraDe.Name = "lblHoraDe";
+            this.lblHoraDe.Size = new System.Drawing.Size(101, 27);
+            this.lblHoraDe.TabIndex = 39;
+            this.lblHoraDe.Text = "Hour Of:";
+            // 
+            // cbHoraDe
+            // 
+            this.cbHoraDe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbHoraDe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbHoraDe.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.cbHoraDe.BackColor = System.Drawing.Color.SteelBlue;
+            this.cbHoraDe.BorderColor = System.Drawing.Color.SteelBlue;
+            this.cbHoraDe.BorderSize = 3;
+            this.cbHoraDe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbHoraDe.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cbHoraDe.ForeColor = System.Drawing.Color.AliceBlue;
+            this.cbHoraDe.IconColor = System.Drawing.Color.OrangeRed;
+            this.cbHoraDe.Items.AddRange(new object[] {
+            "01:00",
+            "02:00",
+            "03:00",
+            "04:00",
+            "05:00",
+            "06:00",
+            "07:00",
+            "08:00",
+            "09:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            "23:00",
+            "24:00"});
+            this.cbHoraDe.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbHoraDe.ListTextColor = System.Drawing.Color.SteelBlue;
+            this.cbHoraDe.Location = new System.Drawing.Point(3, 202);
+            this.cbHoraDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbHoraDe.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbHoraDe.Name = "cbHoraDe";
+            this.cbHoraDe.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbHoraDe.Size = new System.Drawing.Size(245, 37);
+            this.cbHoraDe.TabIndex = 45;
+            this.cbHoraDe.Texts = "Selected Hour of..";
+            // 
+            // lblHoraA
+            // 
+            this.lblHoraA.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblHoraA.AutoSize = true;
+            this.lblHoraA.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lblHoraA.ForeColor = System.Drawing.Color.White;
+            this.lblHoraA.Location = new System.Drawing.Point(0, 265);
+            this.lblHoraA.Margin = new System.Windows.Forms.Padding(0);
+            this.lblHoraA.Name = "lblHoraA";
+            this.lblHoraA.Size = new System.Drawing.Size(101, 27);
+            this.lblHoraA.TabIndex = 47;
+            this.lblHoraA.Text = "Hour To:";
+            // 
+            // CbHoraA
+            // 
+            this.CbHoraA.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.CbHoraA.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CbHoraA.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.CbHoraA.BackColor = System.Drawing.Color.SteelBlue;
+            this.CbHoraA.BorderColor = System.Drawing.Color.SteelBlue;
+            this.CbHoraA.BorderSize = 3;
+            this.CbHoraA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.CbHoraA.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.CbHoraA.ForeColor = System.Drawing.Color.AliceBlue;
+            this.CbHoraA.IconColor = System.Drawing.Color.OrangeRed;
+            this.CbHoraA.Items.AddRange(new object[] {
+            "01:00",
+            "02:00",
+            "03:00",
+            "04:00",
+            "05:00",
+            "06:00",
+            "07:00",
+            "08:00",
+            "09:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            "23:00",
+            "24:00"});
+            this.CbHoraA.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.CbHoraA.ListTextColor = System.Drawing.Color.SteelBlue;
+            this.CbHoraA.Location = new System.Drawing.Point(3, 300);
+            this.CbHoraA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CbHoraA.MinimumSize = new System.Drawing.Size(200, 30);
+            this.CbHoraA.Name = "CbHoraA";
+            this.CbHoraA.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CbHoraA.Size = new System.Drawing.Size(243, 37);
+            this.CbHoraA.TabIndex = 48;
+            this.CbHoraA.Texts = "Selected Hour to..";
             // 
             // tableLayoutPanel2
             // 
@@ -196,7 +332,7 @@
             this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 409);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 562);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
@@ -278,7 +414,7 @@
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 126);
+            this.panel1.Size = new System.Drawing.Size(255, 126);
             this.panel1.TabIndex = 2;
             // 
             // btnConsultar
@@ -316,7 +452,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(82, 27);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "4.0.0.7";
+            this.lblVersion.Text = "4.0.0.9";
             // 
             // tableLayoutPanel3
             // 
@@ -435,5 +571,9 @@
         private Styles.DOButton button1;
         private Styles.DOButton btnExportar;
         private Styles.DOButton btnConsultar;
+        private System.Windows.Forms.Label lblHoraDe;
+        private Styles.DOComboBox cbHoraDe;
+        private System.Windows.Forms.Label lblHoraA;
+        private Styles.DOComboBox CbHoraA;
     }
 }
