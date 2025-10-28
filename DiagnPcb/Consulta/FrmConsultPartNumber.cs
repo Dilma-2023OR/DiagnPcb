@@ -21,6 +21,7 @@ namespace DiagnPcb.Consulta
         DBConnection dB = new DBConnection();
         System.Data.DataTable dtResult = new System.Data.DataTable();
         System.Data.DataTable dtResultCon = new System.Data.DataTable();
+        bool obtenerInfo = false;
 
         public FrmConsultPartNumber()
         {
@@ -185,6 +186,7 @@ namespace DiagnPcb.Consulta
                 dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
 
                 dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                obtenerInfo = true;
 
             }
 
@@ -250,14 +252,36 @@ namespace DiagnPcb.Consulta
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            if (obtenerInfo == true)
+            {
+                limpiagrid();
+            }
+
             obtenerStep();
             //obtenerStep();
-            limpiar();
+            //limpiar();
             btnExportar.Enabled = true;
             cbNumPart.SelectedIndex = -1;
-            cbNumPart.Enabled = false;
+            cbNumPart.Texts = "Selected part number...";
+            obtenerInfo = true;
+            //cbNumPart.Enabled = false;
         }
 
+        public void limpiagrid()
+        {
+            //limpiar();
+            dtResult.Clear();
+            dtResultCon.Clear();
+            if (dataGridView1.Rows.Count != 0)
+            {
+                dataGridView1.Controls.Clear();
+                dataGridView1.Columns.Clear();
+            }
+            dataGridView1.DataSource = null;
+            dataGridView1.Visible = true;
+            btnExportar.Enabled = false;
+            obtenerInfo = false;
+        }
         private void cbNumPart_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             

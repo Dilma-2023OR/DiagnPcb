@@ -287,10 +287,15 @@ namespace DiagnPcb.Styles
         private void AdjustComboBoxDimensions()
         {
             cmbList.Width = lblText.Width;
+            //cmbList.Location = new Point()
+            //{
+            //    X = this.Width - this.Padding.Right - cmbList.Width + 60,
+            //    Y = lblText.Bottom - cmbList.Height-5
+            //};
             cmbList.Location = new Point()
             {
-                X = this.Width - this.Padding.Right - cmbList.Width + 60,
-                Y = lblText.Bottom - cmbList.Height-5
+                X = this.Width - this.Padding.Right - cmbList.Width-10,
+                Y = lblText.Bottom - cmbList.Height
             };
         }
         private void Surface_MouseLeave(object sender, EventArgs e)
@@ -316,8 +321,8 @@ namespace DiagnPcb.Styles
         private void Icon_Paint(object sender, PaintEventArgs e)
         {
             //Fields
-            int iconWidht = 14;
-            int iconHeight = 6;
+            int iconWidht = 5;
+            int iconHeight = 2;
             var rectIcon = new Rectangle((btnIcon.Width - iconWidht) / 2, (btnIcon.Height - iconHeight) / 2, iconWidht, iconHeight);
             Graphics graph = e.Graphics;
             //Draw arrow down icon

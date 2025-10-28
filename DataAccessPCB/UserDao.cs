@@ -85,6 +85,78 @@ namespace DataAccessPCB
             }
         }
 
+        public bool QueryUser(string FirstName, string LastName)
+        {
+            using (var connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+
+
+                using (var command = new MySqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "select * from diagn_pcb.users where (FirstName = @fistName and LastName = @lastName); ";
+                    // Pasar los parámetros desde el objeto Cliente
+                    command.Parameters.AddWithValue("@fistName", FirstName);
+                    command.Parameters.AddWithValue("@lastName", LastName);
+                    command.CommandType = CommandType.Text;
+
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            UserCache.UserID = Convert.ToInt32(reader["UserID"].ToString());
+                            UserCache.LoginName = reader["LoginName"].ToString();
+                            UserCache.Password = reader["Password"].ToString();
+                            UserCache.FirstName = reader["FirstName"].ToString();
+                            UserCache.LastName = reader["LastName"].ToString();
+                            UserCache.Position = reader["Position"].ToString();
+                            UserCache.NumberEmployee = reader["NumberEmployee"].ToString();
+                            UserCache.config = reader["config"].ToString();
+                        }
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
+
+        public bool UpdateAccess(int UserId, string config)
+        {
+            string dBMsg = string.Empty;
+            int dbError = 0;
+
+
+            DBConnection dB = new DBConnection();
+            DataTable dtResult = new DataTable();
+
+            dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
+            dB.query = "Update diagn_pcb.Users" +
+                        "SET Config = '" + config + "'" +
+                        "WHERE UserID = " + UserId + ";";
+
+            var dbResult = dB.InsertData(out dBMsg, out dbError);
+
+
+
+            if (dbError != 0)
+            {
+                return false;
+            }
+            else
+            {
+                string log = Directory.GetCurrentDirectory() + @"\Log.txt";
+
+                File.AppendAllText(log, DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",User registered correctly\n");
+
+                return true;
+            }
+        }
     }
 }
     

@@ -90,6 +90,8 @@ namespace DiagnPcb
         string opcode = string.Empty;
         string seqnum = string.Empty;
 
+        string status = string.Empty;
+
         string numero_serial = string.Empty;
 
         string link = string.Empty;
@@ -209,7 +211,7 @@ namespace DiagnPcb
             }
         }
 
-        private void ObtenerUbicaciones()
+        private void ObtenerUbicaciones(string linea)
         {
             try
             {
@@ -221,9 +223,22 @@ namespace DiagnPcb
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
 
                 string consultUbic = string.Empty;
-                    consultUbic = "select idDiagnUbic, UbicationEnglish from diagn_pcb.DiagnUbicacion where config = 'GENERAL'";
 
-                //dB.query = "select idDiagnUbic, Ubication from diagn_pcb.DiagnUbicacion";
+                switch (linea)
+                {
+                    case "FCA":
+                        consultUbic = "select idDiagnUbic, UbicationEnglish from diagn_pcb.DiagnUbicacion where config = 'FCA'";
+                        break;
+                    case "AUDI":
+                        consultUbic = "select idDiagnUbic, UbicationEnglish from diagn_pcb.DiagnUbicacion where config = 'AUDI'";
+                        break;
+                    case "VOLVO":
+                        consultUbic = "select idDiagnUbic, UbicationEnglish from diagn_pcb.DiagnUbicacion where config = 'VOLVO'";
+                        break;
+                    default:
+                        consultUbic = "select idDiagnUbic, UbicationEnglish from diagn_pcb.DiagnUbicacion where config = 'GENERAL'";
+                        break;
+                }
                 dB.query = consultUbic;
 
                 var dbResult = dB.getData(out dBMsg, out dbError);
@@ -291,7 +306,7 @@ namespace DiagnPcb
                 DataTable dtResult = new DataTable();
                 dB.dataBase = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
                 string consulta = string.Empty;
-                if (cbOperacion.Texts.Equals("OP 30 - Soldier") || cbOperacion.Texts.Equals("OP 40 - Screwed"))
+                if (cbOperacion.Texts.Equals("OP 30 - Solder") || cbOperacion.Texts.Equals("OP 40 - Screwed"))
                     consulta = "select idFaile, failureEnglish from diagn_pcb.DiagnFailure where config = 'SOLDADO'";
                 else
                     consulta = "select idFaile, failureEnglish from diagn_pcb.DiagnFailure where config = 'GENERAL'";
@@ -841,8 +856,28 @@ namespace DiagnPcb
                                     {
                                         if (pictureBox1.Image != null)
                                         {
-                                            insertarDatos();
-                                            Limpiar();
+                                            //temporal Data
+                                            int response = 0;
+
+                                            if (status != "SCRAPPED")
+                                            {
+                                                serialTransaction(tbNumSerie.Texts, out response);
+
+                                                if (response != 0)
+                                                {
+                                                    ////Control Adjust
+                                                    Limpiar();
+                                                    tbNumSerie.Focus();
+                                                    return;
+                                                }
+                                                insertarDatos();
+                                                Limpiar();
+                                            }
+                                            else
+                                            {
+                                                insertarDatos();
+                                                Limpiar();
+                                            }
                                         }
                                         else
                                         {
@@ -893,6 +928,120 @@ namespace DiagnPcb
                     cbOperacion.Focus();
                 }
             
+        }
+
+        private void serialTransaction(string serial, out int response)
+        {
+            InventoryItem[] fetchInv = null;
+            string workorder = string.Empty;
+            string operation = string.Empty;
+            string partnum = string.Empty;
+            string partrev = string.Empty;
+            string status = string.Empty;
+            int step = 0;
+            //Response 
+            response = 0;
+
+            try
+            {
+                fetchInv = servicio.fetchInventoryItems(serial, "", "", "", "", "", 0, "", "", out error, out msg);
+                workorder = fetchInv[0].workorder;
+                operation = fetchInv[0].opcode;
+                partnum = fetchInv[0].partnum;
+                partrev = fetchInv[0].partrev;
+                status = fetchInv[0].status;
+                step = fetchInv[0].seqnum;
+            }
+            catch (Exception ex)
+            {
+                //Feedback
+                Message message = new Message("Error al consultar el status del serial " + serial);
+                message.ShowDialog();
+
+                //Log
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al consultar el status del serial " + serial + ":" + ex.Message + "\n");
+
+                //Response
+                response = -1;
+                return;
+            }
+
+            if (status == "IN QUEUE" | status == "IN PROGRESS")
+            {
+                // Transaction Item
+                transactionItem transItem = new transactionItem();
+                transItem.workorder = workorder;
+                transItem.warehouseloc = "SCRAP";
+                transItem.warehousebin = "SCRAP";
+                transItem.username = "ftest";
+                transItem.machine_id = machineId;
+                transItem.transaction = "SCRAP";
+                transItem.opcode = operation;
+                transItem.serial = serial;
+                transItem.trans_qty = 1;
+                transItem.seqnum = step;
+                transItem.comment = "TRANSACCION HECHA POR SISTEMA";
+
+                //Data/BOM Item
+                bomItem[] bomData = new bomItem[] { };
+                dataItem[] inputData = new dataItem[] { };
+
+                //Counter
+                int bom = 0;
+
+                string partnum1 = string.Empty;
+                string uniqueId = string.Empty;
+                int cantidad = 0;
+                string rev = string.Empty;
+
+
+
+                try
+                {
+                    //Transaction
+                    var transaction = servicio.transactUnit(transItem, inputData, bomData, out msg);
+
+                    string ms = Convert.ToString(msg);
+                    //MessageBox.Show(msg);
+                    if (!msg.Contains("SCRAP"))
+                    {
+                        //Feedback
+                        MostrarMensajeFlotanteNoPass(" Error al mandar SCRAP");
+
+                        //Log
+                        File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Scrap NO otorgado al serial " + serial + ":" + msg + "\n");
+
+                        //Response
+                        response = -1;
+                        return;
+                    }
+
+                    //Log
+                    File.AppendAllText(Directory.GetCurrentDirectory() + @"\Log.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + "," + msg + "\n");
+                }
+                catch (Exception ex)
+                {
+                    //Feedback
+                    Message message = new Message("Error al dar el pase al serial " + serial);
+                    message.ShowDialog();
+
+                    //Log
+                    File.AppendAllText(Directory.GetCurrentDirectory() + @"\errorLog.txt", DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + ",Error al dar el pase al serial " + serial + ":" + ex.Message + "\n");
+                    //Response
+                    response = -1;
+                    return;
+                }
+            }
+            else
+            {
+                //Get Instructions
+                var getInstructions = servicio.getWorkOrderStepInstructions(workorder.ToString(), step.ToString(), out error, out msg);
+
+                //Feedback
+
+                //Response
+                response = -1;
+            }
         }
 
         public void Limpiar()
@@ -1048,6 +1197,7 @@ namespace DiagnPcb
                     string part = UnitStatus.partnum;
                     tbNumParte.Texts = part;
                     tbNumSerie.Texts = mySerial;
+                    status = UnitStatus.status;
 
                     ObtenerParNum(mySerial);
 
@@ -1089,6 +1239,8 @@ namespace DiagnPcb
 
                 string linea = docbLinea.Texts;
 
+                ObtenerUbicaciones(linea);
+
                 if (linea.Equals("FILTROS") || linea.Equals("AMPLIFICADORES"))
                 {
 
@@ -1117,7 +1269,7 @@ namespace DiagnPcb
             try
             {
                 // Ejemplo de agregar elementos desde una lista
-                List<string> opciones = new List<string> { "FORD A", "FORD B", "FORD C", "MARIS 1", "MARIS 2", "SANCO", "FILTROS", "AMPLIFICADORES" };
+                List<string> opciones = new List<string> { "FORD A", "FORD B", "FORD C", "MARIS 1", "MARIS 2", "SANCO", "FILTROS", "AMPLIFICADORES", "FCA", "AUDI", "VOLVO" };
 
 
                 foreach (var item in opciones)
@@ -1154,10 +1306,10 @@ namespace DiagnPcb
                 cbUbicacion.Items.Clear();
                 cbUbicacion.SelectedIndex = -1;
                 ObtenerFallas();
-                ObtenerUbicaciones();
+                
 
                 string operacion = cbOperacion.Texts;
-                if (operacion.Equals("OP 30 - Soldier") || operacion.Equals("OP 40 - Screwed"))
+                if (operacion.Equals("OP 30 - Solder") || operacion.Equals("OP 40 - Screwed"))
                 {
                     cbDiagnostico.Enabled = false;
                     cbDiagnostico.Texts = "N/A";
@@ -1190,7 +1342,7 @@ namespace DiagnPcb
 
                         cbMaquina.Enabled = true;
                     }
-                    else if (operacion.Equals("OP 30 - Soldier") || operacion.Equals("OP 50 - Leak tester radome"))
+                    else if (operacion.Equals("OP 30 - Solder") || operacion.Equals("OP 50 - Leak tester radome"))
                     {
                         cbMaquina.Enabled = true;
                     }

@@ -26,8 +26,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>10</ApplicationRevision>
-    <ApplicationVersion>4.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>4.0.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -186,6 +186,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Consulta Scrap\FrmConsultaDateScrap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta Scrap\FrmConsultaDateScrap.Designer.cs">
+      <DependentUpon>FrmConsultaDateScrap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consulta\ConSoldadoEt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +327,12 @@
     <Compile Include="RegistroSoldadoEtiquetado.Designer.cs">
       <DependentUpon>RegistroSoldadoEtiquetado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\FrmAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\FrmAccess.Designer.cs">
+      <DependentUpon>FrmAccess.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\FrmRegisterUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +344,12 @@
     </Compile>
     <Compile Include="Registros\FrmRegistroFallas.Designer.cs">
       <DependentUpon>FrmRegistroFallas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\FrmScrapRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\FrmScrapRegister.Designer.cs">
+      <DependentUpon>FrmScrapRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Styles\CustomMenuRender.cs" />
     <Compile Include="Styles\DOButton.cs">
@@ -346,6 +364,9 @@
     <Compile Include="Styles\DOTextBox.Designer.cs">
       <DependentUpon>DOTextBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Consulta Scrap\FrmConsultaDateScrap.resx">
+      <DependentUpon>FrmConsultaDateScrap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta\ConSoldadoEt.resx">
       <DependentUpon>ConSoldadoEt.cs</DependentUpon>
     </EmbeddedResource>
@@ -417,11 +438,17 @@
     <EmbeddedResource Include="RegistroSoldadoEtiquetado.resx">
       <DependentUpon>RegistroSoldadoEtiquetado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\FrmAccess.resx">
+      <DependentUpon>FrmAccess.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\FrmRegisterUsers.resx">
       <DependentUpon>FrmRegisterUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\FrmRegistroFallas.resx">
       <DependentUpon>FrmRegistroFallas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\FrmScrapRegister.resx">
+      <DependentUpon>FrmScrapRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Styles\DOTextBox.resx">
       <DependentUpon>DOTextBox.cs</DependentUpon>

@@ -19,3 +19,7 @@
 20-05-2025 13:25:34,User registered correctly
 20-05-2025 16:44:24,Defect recorded for serial: T3N251153M0000020 By the technician: Guillermo
 27-05-2025 19:25:38,Defect recorded for serial: T3D251053M0000059 By the technician: Alex
+25-09-2025 14:35:58,Defect recorded for serial: 64107011B07253510531 By the technician: Diego
+29-09-2025 17:11:40,SCRAP successfully processed for T2N252701M0000049 on EWO-9AHF:60:T207
+29-09-2025 17:11:46,Defect recorded for serial: T2N252701M0000049 By the technician: Diego
+30-09-2025 16:40:52,Defect recorded for serial: T2N252701M0000049 By the technician: 

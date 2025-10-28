@@ -19,6 +19,7 @@ namespace DiagnPcb.Consulta
         DBConnection dB = new DBConnection();
         System.Data.DataTable dtResult = new System.Data.DataTable();
         System.Data.DataTable dtResultCon = new System.Data.DataTable();
+        bool obtenerInfo = false;
 
         public FrmConsultWire()
         {
@@ -107,7 +108,7 @@ namespace DiagnPcb.Consulta
                 int dbError = 0;
 
                 dB.query = connect;
-                dB.query = "select idWire, WireEnglish from diagn_pcb.DiagnWire;";
+                dB.query = "select * from diagn_pcb.DiagnWire;";
 
                 var dbResult = dB.getData(out dBMsg, out dbError);
 
@@ -128,7 +129,7 @@ namespace DiagnPcb.Consulta
                     if (!cbCables.Items.Contains(row[0].ToString()))
                     {
                         int id = Convert.ToInt32(row[0].ToString());
-                        string WireEnglish = row.ItemArray[1].ToString();
+                        string WireEnglish = row.ItemArray[2].ToString();
 
                         // Agregar el nuevo objeto ComboBoxItem al ComboBox
                         cbCables.Items.Add(new ComboBoxItemCable { idWire = id, WireEnglish = WireEnglish });
@@ -218,6 +219,7 @@ namespace DiagnPcb.Consulta
                 dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
 
                 dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                obtenerInfo = true;
 
             }
 
@@ -243,13 +245,34 @@ namespace DiagnPcb.Consulta
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            if (obtenerInfo == true)
+            {
+                limpiagrid();
+            }
+
             obtenerStep();
             //obtenerStep();
-            limpiar();
+            //limpiar();
             btnExportar.Enabled = true;
 
             cbCables.SelectedIndex = -1;
-            cbCables.Enabled = false;
+            //cbCables.Enabled = false;
+            cbCables.Texts = "Selected Wire...";
+            obtenerInfo = true;
+        }
+        public void limpiagrid()
+        {
+            //limpiar();
+            dtResultCon.Clear();
+            if (dataGridView1.Rows.Count != 0)
+            {
+                dataGridView1.Controls.Clear();
+                dataGridView1.Columns.Clear();
+            }
+            dataGridView1.DataSource = null;
+            dataGridView1.Visible = true;
+            btnExportar.Enabled = false;
+            obtenerInfo = false;
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -8,8 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Excel = Microsoft.Office.Interop.Excel; 
 using PCBDomain;
+using static DiagnPcb.FrmConsultar;
+using Excel = Microsoft.Office.Interop.Excel; 
 
 namespace DiagnPcb.Consulta
 {
@@ -19,7 +20,7 @@ namespace DiagnPcb.Consulta
         DBConnection dB = new DBConnection();
         System.Data.DataTable dtResult = new System.Data.DataTable();
         System.Data.DataTable dtResultCon = new System.Data.DataTable();
-
+        bool obtenerInfo = false;
         public FrmConsultFalla()
         {
             InitializeComponent();
@@ -215,6 +216,7 @@ namespace DiagnPcb.Consulta
                 dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
 
                 dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                obtenerInfo = true;
 
             }
 
@@ -280,12 +282,34 @@ namespace DiagnPcb.Consulta
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            if (obtenerInfo == true)
+            {
+                limpiagrid();
+            }
+
             obtenerStep();
             //obtenerStep();
-            limpiar();
             btnExportar.Enabled = true;
             cbFallas.SelectedIndex = -1;
-            cbFallas.Enabled = false;
+            //cbFallas.Enabled = false;
+            cbFallas.Texts = "Selected Failure...";
+            obtenerInfo = true;
+        }
+
+        public void limpiagrid()
+        {
+            //limpiar();
+            dtResult.Clear();
+            dtResultCon.Clear();
+            if (dataGridView1.Rows.Count != 0)
+            {
+                dataGridView1.Controls.Clear();
+                dataGridView1.Columns.Clear();
+            }
+            dataGridView1.DataSource = null;
+            dataGridView1.Visible = true;
+            btnExportar.Enabled = false;
+            obtenerInfo = false;
         }
 
         private void btnExportar_Click(object sender, EventArgs e)

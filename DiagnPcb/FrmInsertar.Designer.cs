@@ -128,7 +128,7 @@
             this.tbNumParte.Name = "tbNumParte";
             this.tbNumParte.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
             this.tbNumParte.PasswordChar = false;
-            this.tbNumParte.PlaceholderColor = System.Drawing.Color.LightGray;
+            this.tbNumParte.PlaceholderColor = System.Drawing.Color.PaleTurquoise;
             this.tbNumParte.PlaceholderText = "Part Number";
             this.tbNumParte.Size = new System.Drawing.Size(421, 43);
             this.tbNumParte.TabIndex = 43;
@@ -188,7 +188,7 @@
             // 
             this.tbNumSerie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.tbNumSerie.BorderColor = System.Drawing.Color.SteelBlue;
-            this.tbNumSerie.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.tbNumSerie.BorderFocusColor = System.Drawing.Color.Crimson;
             this.tbNumSerie.BorderRadius = 15;
             this.tbNumSerie.BorderSize = 2;
             this.tbNumSerie.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -202,7 +202,7 @@
             this.tbNumSerie.Name = "tbNumSerie";
             this.tbNumSerie.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
             this.tbNumSerie.PasswordChar = false;
-            this.tbNumSerie.PlaceholderColor = System.Drawing.Color.LightGray;
+            this.tbNumSerie.PlaceholderColor = System.Drawing.Color.PaleTurquoise;
             this.tbNumSerie.PlaceholderText = "Serial Number";
             this.tbNumSerie.Size = new System.Drawing.Size(421, 43);
             this.tbNumSerie.TabIndex = 45;
@@ -264,8 +264,8 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
@@ -301,7 +301,7 @@
             this.docbLinea.ForeColor = System.Drawing.Color.AliceBlue;
             this.docbLinea.IconColor = System.Drawing.Color.OrangeRed;
             this.docbLinea.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.docbLinea.ListTextColor = System.Drawing.Color.SteelBlue;
+            this.docbLinea.ListTextColor = System.Drawing.Color.Black;
             this.docbLinea.Location = new System.Drawing.Point(269, 71);
             this.docbLinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.docbLinea.MinimumSize = new System.Drawing.Size(200, 30);
@@ -369,19 +369,19 @@
             this.cbOperacion.Items.AddRange(new object[] {
             "OP 10 - Chasis",
             "OP 20 - PCBA Tester",
-            "OP 30 - Soldier",
+            "OP 30 - Solder",
             "OP 40 - Screwed",
             "OP 50 - Leak tester radome",
             "OP 60 - EOL"});
-            this.cbOperacion.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbOperacion.ListTextColor = System.Drawing.Color.SteelBlue;
+            this.cbOperacion.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbOperacion.ListTextColor = System.Drawing.Color.Black;
             this.cbOperacion.Location = new System.Drawing.Point(269, 28);
             this.cbOperacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbOperacion.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbOperacion.Name = "cbOperacion";
             this.cbOperacion.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbOperacion.Size = new System.Drawing.Size(405, 37);
-            this.cbOperacion.TabIndex = 43;
+            this.cbOperacion.Size = new System.Drawing.Size(405, 38);
+            this.cbOperacion.TabIndex = 16;
             this.cbOperacion.Texts = "Selected Operation...";
             this.cbOperacion.OnSelectedIndexChanged += new System.EventHandler(this.cbOperacion_SelectedIndexChanged);
             // 
@@ -480,7 +480,7 @@
             this.cbUbicacion.ForeColor = System.Drawing.Color.AliceBlue;
             this.cbUbicacion.IconColor = System.Drawing.Color.OrangeRed;
             this.cbUbicacion.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbUbicacion.ListTextColor = System.Drawing.Color.SteelBlue;
+            this.cbUbicacion.ListTextColor = System.Drawing.Color.Black;
             this.cbUbicacion.Location = new System.Drawing.Point(269, 216);
             this.cbUbicacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbUbicacion.MinimumSize = new System.Drawing.Size(200, 30);
@@ -504,13 +504,13 @@
             this.cbFalla.ForeColor = System.Drawing.Color.AliceBlue;
             this.cbFalla.IconColor = System.Drawing.Color.OrangeRed;
             this.cbFalla.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbFalla.ListTextColor = System.Drawing.Color.SteelBlue;
-            this.cbFalla.Location = new System.Drawing.Point(269, 264);
+            this.cbFalla.ListTextColor = System.Drawing.Color.Black;
+            this.cbFalla.Location = new System.Drawing.Point(269, 263);
             this.cbFalla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFalla.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbFalla.Name = "cbFalla";
             this.cbFalla.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbFalla.Size = new System.Drawing.Size(405, 36);
+            this.cbFalla.Size = new System.Drawing.Size(405, 38);
             this.cbFalla.TabIndex = 46;
             this.cbFalla.Texts = "Selected Failure...";
             this.cbFalla.OnSelectedIndexChanged += new System.EventHandler(this.cbFalla_SelectedIndexChanged);
@@ -542,13 +542,13 @@
             this.cbDiagnostico.ForeColor = System.Drawing.Color.AliceBlue;
             this.cbDiagnostico.IconColor = System.Drawing.Color.OrangeRed;
             this.cbDiagnostico.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbDiagnostico.ListTextColor = System.Drawing.Color.SteelBlue;
+            this.cbDiagnostico.ListTextColor = System.Drawing.Color.Black;
             this.cbDiagnostico.Location = new System.Drawing.Point(269, 306);
             this.cbDiagnostico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbDiagnostico.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbDiagnostico.Name = "cbDiagnostico";
             this.cbDiagnostico.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbDiagnostico.Size = new System.Drawing.Size(405, 36);
+            this.cbDiagnostico.Size = new System.Drawing.Size(405, 38);
             this.cbDiagnostico.TabIndex = 47;
             this.cbDiagnostico.Texts = "Selected Diagnostic...";
             this.cbDiagnostico.OnSelectedIndexChanged += new System.EventHandler(this.cbDiagnostico_SelectedIndexChanged);
@@ -566,13 +566,13 @@
             this.cbOwner.ForeColor = System.Drawing.Color.AliceBlue;
             this.cbOwner.IconColor = System.Drawing.Color.OrangeRed;
             this.cbOwner.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbOwner.ListTextColor = System.Drawing.Color.SteelBlue;
+            this.cbOwner.ListTextColor = System.Drawing.Color.Black;
             this.cbOwner.Location = new System.Drawing.Point(269, 352);
             this.cbOwner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbOwner.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbOwner.Name = "cbOwner";
             this.cbOwner.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbOwner.Size = new System.Drawing.Size(405, 36);
+            this.cbOwner.Size = new System.Drawing.Size(405, 37);
             this.cbOwner.TabIndex = 48;
             this.cbOwner.Texts = "Selected Owner...";
             this.cbOwner.OnSelectedIndexChanged += new System.EventHandler(this.cbOwner_SelectedIndexChanged);
@@ -590,13 +590,13 @@
             this.cbCables.ForeColor = System.Drawing.Color.AliceBlue;
             this.cbCables.IconColor = System.Drawing.Color.OrangeRed;
             this.cbCables.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbCables.ListTextColor = System.Drawing.Color.SteelBlue;
+            this.cbCables.ListTextColor = System.Drawing.Color.Black;
             this.cbCables.Location = new System.Drawing.Point(269, 394);
             this.cbCables.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCables.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbCables.Name = "cbCables";
             this.cbCables.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbCables.Size = new System.Drawing.Size(405, 34);
+            this.cbCables.Size = new System.Drawing.Size(405, 36);
             this.cbCables.TabIndex = 49;
             this.cbCables.Texts = "Selected Wire..";
             this.cbCables.OnSelectedIndexChanged += new System.EventHandler(this.cbCables_SelectedIndexChanged);
@@ -637,13 +637,13 @@
             "7",
             "8"});
             this.cbMaquina.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbMaquina.ListTextColor = System.Drawing.Color.SteelBlue;
+            this.cbMaquina.ListTextColor = System.Drawing.Color.Black;
             this.cbMaquina.Location = new System.Drawing.Point(269, 435);
             this.cbMaquina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMaquina.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbMaquina.Name = "cbMaquina";
             this.cbMaquina.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbMaquina.Size = new System.Drawing.Size(405, 34);
+            this.cbMaquina.Size = new System.Drawing.Size(405, 38);
             this.cbMaquina.TabIndex = 50;
             this.cbMaquina.Texts = "";
             // 
@@ -681,7 +681,7 @@
             this.tbSemana.PasswordChar = false;
             this.tbSemana.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.tbSemana.PlaceholderText = "";
-            this.tbSemana.Size = new System.Drawing.Size(408, 35);
+            this.tbSemana.Size = new System.Drawing.Size(209, 35);
             this.tbSemana.TabIndex = 51;
             this.tbSemana.Texts = "";
             this.tbSemana.UnderlinedStyle = false;
@@ -704,7 +704,7 @@
             this.tbComentarios.Name = "tbComentarios";
             this.tbComentarios.Padding = new System.Windows.Forms.Padding(11, 7, 11, 7);
             this.tbComentarios.PasswordChar = false;
-            this.tbComentarios.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.tbComentarios.PlaceholderColor = System.Drawing.Color.PaleTurquoise;
             this.tbComentarios.PlaceholderText = "";
             this.tbComentarios.Size = new System.Drawing.Size(408, 95);
             this.tbComentarios.TabIndex = 52;
@@ -737,7 +737,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(72, 23);
             this.lblVersion.TabIndex = 34;
-            this.lblVersion.Text = "4.0.0.9";
+            this.lblVersion.Text = "4.0.2.2";
             // 
             // panelVersion
             // 
@@ -804,7 +804,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.53846F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.46154F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 261F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
             this.tableLayoutPanel3.Controls.Add(this.panel1, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.panel2, 2, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(786, 2);
@@ -820,10 +820,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnCargarImagen);
-            this.panel1.Location = new System.Drawing.Point(78, 4);
+            this.panel1.Location = new System.Drawing.Point(67, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(212, 102);
+            this.panel1.Size = new System.Drawing.Size(180, 103);
             this.panel1.TabIndex = 42;
             // 
             // btnCargarImagen
@@ -839,7 +839,7 @@
             this.btnCargarImagen.ForeColor = System.Drawing.Color.White;
             this.btnCargarImagen.Image = global::DiagnPcb.Properties.Resources.camara;
             this.btnCargarImagen.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCargarImagen.Location = new System.Drawing.Point(36, 9);
+            this.btnCargarImagen.Location = new System.Drawing.Point(17, 9);
             this.btnCargarImagen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCargarImagen.Name = "btnCargarImagen";
             this.btnCargarImagen.Size = new System.Drawing.Size(165, 85);
@@ -853,7 +853,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnGuardar);
-            this.panel2.Location = new System.Drawing.Point(297, 4);
+            this.panel2.Location = new System.Drawing.Point(253, 4);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 102);

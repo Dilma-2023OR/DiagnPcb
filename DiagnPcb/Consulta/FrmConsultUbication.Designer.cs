@@ -34,7 +34,6 @@
             this.cbUbicacion = new DiagnPcb.Styles.DOComboBox();
             this.lblUbication = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button1 = new DiagnPcb.Styles.DOButton();
             this.btnExportar = new DiagnPcb.Styles.DOButton();
             this.btnConsultar = new DiagnPcb.Styles.DOButton();
             this.panelVersion = new System.Windows.Forms.Panel();
@@ -85,7 +84,7 @@
             this.cbUbicacion.ForeColor = System.Drawing.Color.AliceBlue;
             this.cbUbicacion.IconColor = System.Drawing.Color.OrangeRed;
             this.cbUbicacion.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbUbicacion.ListTextColor = System.Drawing.Color.SteelBlue;
+            this.cbUbicacion.ListTextColor = System.Drawing.Color.Black;
             this.cbUbicacion.Location = new System.Drawing.Point(3, 54);
             this.cbUbicacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbUbicacion.MinimumSize = new System.Drawing.Size(200, 30);
@@ -110,7 +109,6 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.button1);
             this.panel8.Controls.Add(this.btnExportar);
             this.panel8.Controls.Add(this.btnConsultar);
             this.panel8.Location = new System.Drawing.Point(595, 28);
@@ -118,30 +116,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(731, 126);
             this.panel8.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.button1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.button1.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.BorderRadius = 50;
-            this.button1.BorderSize = 3;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::DiagnPcb.Properties.Resources.producto2;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(545, 21);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 84);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Another";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextColor = System.Drawing.Color.White;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnExportar
             // 
@@ -212,7 +186,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(72, 23);
             this.lblVersion.TabIndex = 35;
-            this.lblVersion.Text = "4.0.0.9";
+            this.lblVersion.Text = "4.0.2.2";
             // 
             // panelContenedor
             // 
@@ -294,7 +268,6 @@
         private Styles.DOComboBox cbUbicacion;
         private System.Windows.Forms.Label lblUbication;
         private System.Windows.Forms.Panel panel8;
-        private Styles.DOButton button1;
         private Styles.DOButton btnExportar;
         private Styles.DOButton btnConsultar;
         private System.Windows.Forms.Panel panelVersion;

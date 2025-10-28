@@ -19,7 +19,7 @@ namespace DiagnPcb.Consulta
         DBConnection dB = new DBConnection();
         System.Data.DataTable dtResult = new System.Data.DataTable();
 
-
+        bool obtenerInfo = false;
         public FrmConsultDate()
         {
             InitializeComponent();
@@ -147,6 +147,8 @@ namespace DiagnPcb.Consulta
 
                 dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 
+                obtenerInfo = true;
+
             }
 
             catch (Exception ex)
@@ -208,6 +210,11 @@ namespace DiagnPcb.Consulta
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            if (obtenerInfo == true)
+            {
+                limpiagrid();
+            }
+
             obtenerStep();
             //obtenerStep();
             limpiar();
@@ -221,6 +228,21 @@ namespace DiagnPcb.Consulta
         {
             ExportarAExcel();
             MessageBox.Show("DATA EXPORTED CORRECTLY");
+        }
+
+        public void limpiagrid()
+        {
+            //limpiar();
+            dtResult.Clear();
+            if (dataGridView1.Rows.Count != 0)
+            {
+                dataGridView1.Controls.Clear();
+                dataGridView1.Columns.Clear();
+            }
+            dataGridView1.DataSource = null;
+            dataGridView1.Visible = true;
+            btnExportar.Enabled = false;
+            obtenerInfo = false;
         }
     }
 }

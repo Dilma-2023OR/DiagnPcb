@@ -60,6 +60,7 @@ namespace DiagnPcb.Inicio
             lblUserName.Text = UserCache.LoginName;
             lblPosition.Text = UserCache.Position;
             lblConfig.Text = UserCache.config;
+            lblIdUser.Text = Convert.ToString(UserCache.UserID);
 
             if (lblConfig.Text.Equals("Administrador"))
             {
@@ -80,6 +81,17 @@ namespace DiagnPcb.Inicio
                 btnRegistrar.Visible = false;
                 panel1.Visible = false;
             }
+            else if (lblConfig.Text.Equals("Operador"))
+            {
+                btnGraficas.Visible = false;
+                panel2.Visible = false;
+                btnConsultar.Visible = false;
+                panel3.Visible = false;
+                btnConsultScrap.Visible = false;
+                panel21.Visible = false;
+                btnCatalogos.Visible = false;
+                panel16.Visible = false;
+            }
             else
             {
                 btnCatalogos.Visible = false;
@@ -98,97 +110,115 @@ namespace DiagnPcb.Inicio
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+       
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-
-            if (SubMenuConsult.Visible)
-            {
-                SubMenuConsult.Visible = false;
-                int x = SubMenuConsult.Location.X;
-                int y = SubMenuConsult.Location.Y;
-                btnCatalogos.Location = SubMenuConsult.Location;
-                panel16.Location = new Point(4, y);
-                panelSubmenuCatalogs.Location = new Point(x + 40, y + 40);
-            }
-            else
-            {
-                SubMenuConsult.Visible = true;
-                int newX = SubMenuConsult.Location.X;
-                int newY = SubMenuConsult.Location.Y + SubMenuConsult.Height;
-
-                btnCatalogos.Location = new Point(newX, newY);
-                panel16.Location = new Point(4, newY);
-            }
+            // Cambiar visibilidad del submenú
+            subMenuConsultarVisible = !subMenuConsultarVisible;
+            ActualizarPosicionesConsultar();
         }
 
         private void btnConsultDate_Click(object sender, EventArgs e)
         {
-            SubMenuConsult.Visible = false;
             AbrirFormHoja(new FrmConsultDate());
+
+            // Cambiar visibilidad del submenú
+            subMenuConsultarVisible = !subMenuConsultarVisible;
+            ActualizarPosicionesConsultar();
         }
 
         private void btnConsultDateHour_Click(object sender, EventArgs e)
         {
-            SubMenuConsult.Visible = false;
             AbrirFormHoja(new FrmDateHour());
+
+            // Cambiar visibilidad del submenú
+            subMenuConsultarVisible = !subMenuConsultarVisible;
+            ActualizarPosicionesConsultar();
         }
 
         private void btnConsultLine_Click(object sender, EventArgs e)
         {
-            SubMenuConsult.Visible = false;
             AbrirFormHoja(new FrmConsultLine());
+
+            // Cambiar visibilidad del submenú
+            subMenuConsultarVisible = !subMenuConsultarVisible;
+            ActualizarPosicionesConsultar();
+
         }
 
         private void btnConsultPartNumb_Click(object sender, EventArgs e)
         {
-            SubMenuConsult.Visible = false;
             AbrirFormHoja(new FrmConsultPartNumber());
+
+            // Cambiar visibilidad del submenú
+            subMenuConsultarVisible = !subMenuConsultarVisible;
+            ActualizarPosicionesConsultar();
         }
 
         private void btnConsultFalla_Click(object sender, EventArgs e)
         {
-            SubMenuConsult.Visible = false;
             AbrirFormHoja(new FrmConsultFalla());
+
+            // Cambiar visibilidad del submenú
+            subMenuConsultarVisible = !subMenuConsultarVisible;
+            ActualizarPosicionesConsultar();
         }
 
         private void btnConsultDiag_Click(object sender, EventArgs e)
         {
-            SubMenuConsult.Visible = false;
             AbrirFormHoja(new FrmConsultDiag());
+
+            // Cambiar visibilidad del submenú
+            subMenuConsultarVisible = !subMenuConsultarVisible;
+            ActualizarPosicionesConsultar();
         }
 
         private void btnOwner_Click(object sender, EventArgs e)
         {
-            SubMenuConsult.Visible = false;
             AbrirFormHoja(new FrmConsultOwner());
+
+            // Cambiar visibilidad del submenú
+            subMenuConsultarVisible = !subMenuConsultarVisible;
+            ActualizarPosicionesConsultar();
         }
 
         private void btnConsultCable_Click(object sender, EventArgs e)
         {
-            SubMenuConsult.Visible = false;
             AbrirFormHoja(new FrmConsultWire());
+
+            // Cambiar visibilidad del submenú
+            subMenuConsultarVisible = !subMenuConsultarVisible;
+            ActualizarPosicionesConsultar();
         }
 
         private void btnConsultSemana_Click(object sender, EventArgs e)
         {
-            SubMenuConsult.Visible = false;
             AbrirFormHoja(new FrmConsultWeek());
+
+            // Cambiar visibilidad del submenú
+            subMenuConsultarVisible = !subMenuConsultarVisible;
+            ActualizarPosicionesConsultar();
         }
 
         private void btnConsultUbic_Click(object sender, EventArgs e)
         {
-            SubMenuConsult.Visible = false;
             AbrirFormHoja(new FrmConsultUbication());
+
+            // Cambiar visibilidad del submenú
+            subMenuConsultarVisible = !subMenuConsultarVisible;
+            ActualizarPosicionesConsultar();
         }
 
         private void btnConsultOperation_Click(object sender, EventArgs e)
         {
-            SubMenuConsult.Visible = false;
             AbrirFormHoja(new FrmConsultOperacion());
+
+            // Cambiar visibilidad del submenú
+            subMenuConsultarVisible = !subMenuConsultarVisible;
+            ActualizarPosicionesConsultar();
         }
 
-
-        private void AbrirFormHoja(object formHija)
+        private void AbrirFormHoja(Form formHija)//object formHija)
         {
             if (this.panelContenedor.Controls.Count > 0)
                 this.panelContenedor.Controls.RemoveAt(0);
@@ -204,194 +234,291 @@ namespace DiagnPcb.Inicio
             AbrirFormHoja(new LogInicio());
         }
 
+        private bool subMenuRegistrarVisible = false;
+
+        private void ActualizarPosicionesRegistrar()
+        {
+            int espacio = 5;
+
+            // Posición inicial después del panel del botón Registrar
+            int yActual = btnRegistrar.Location.Y + btnRegistrar.Height + espacio;
+
+            // Si el submenú está visible, mostrarlo y ajustar su posición
+            if (subMenuRegistrarVisible)
+            {
+                panelSubMenuRegister.Visible = true;
+                panelSubMenuRegister.Location = new Point(btnRegistrar.Location.X, yActual);
+                yActual += panelSubMenuRegister.Height + espacio;
+            }
+            else
+            {
+                panelSubMenuRegister.Visible = false;
+            }
+
+            // Consultar
+            btnGraficas.Location = new Point(btnGraficas.Location.X, yActual);
+            panel2.Location = new Point(btnGraficas.Left - 8, btnGraficas.Top);
+            yActual += btnGraficas.Height + espacio;
+
+            // Gráficos
+            btnConsultar.Location = new Point(btnConsultar.Location.X, yActual);
+            panel3.Location = new Point(btnConsultar.Left -8 , btnConsultar.Top);
+            yActual += btnConsultar.Height + espacio;
+
+            //Consultar scrap
+
+            btnConsultScrap.Location = new Point(btnConsultScrap.Location.X, yActual);
+            panel21.Location = new Point(btnConsultScrap.Left - 8 , btnConsultScrap.Top);
+            yActual += btnConsultScrap.Height + espacio;
+
+            // Catálogos
+            btnCatalogos.Location = new Point(btnCatalogos.Location.X, yActual);
+            panel16.Location = new Point(btnCatalogos.Left -8, btnCatalogos.Top);
+        }
+
+        private bool subMenuGraficasVisible = false;
+        private void ActualizarPosicionesGraficas()
+        {
+            int espacio = 5;
+
+            // Posición inicial después del panel del botón Graficas
+            int yActual = btnGraficas.Location.Y + btnGraficas.Height + espacio;
+
+            // Si el submenú está visible, mostrarlo y ajustar su posición
+            if (subMenuGraficasVisible)
+            {
+                panelSubmenuGraphics.Visible = true;
+                panelSubmenuGraphics.Location = new Point(btnGraficas.Location.X, yActual);
+                yActual += panelSubmenuGraphics.Height + espacio;
+            }
+            else
+            {
+                panelSubmenuGraphics.Visible = false;
+            }
+
+            // Consultar
+            btnConsultar.Location = new Point(btnConsultar.Location.X, yActual);
+            panel3.Location = new Point(btnConsultar.Left - 8, btnConsultar.Top);
+            yActual += btnConsultar.Height + espacio;
+
+            btnConsultScrap.Location = new Point(btnConsultScrap.Location.X, yActual);
+            panel21.Location = new Point(btnConsultScrap.Left -  8, btnConsultScrap.Top);
+            yActual += btnConsultScrap.Height + espacio;
+
+            // Catálogos
+            btnCatalogos.Location = new Point(btnCatalogos.Location.X, yActual);
+            panel16.Location = new Point(btnCatalogos.Left - 8, btnCatalogos.Top);
+        }
+
+        private bool subMenuConsultarVisible = false;
+        private void ActualizarPosicionesConsultar()
+        {
+            int espacio = 5;
+
+            // Posición inicial después del panel del botón Registrar
+            int yActual = btnConsultar.Location.Y + btnConsultar.Height + espacio;
+
+            // Si el submenú está visible, mostrarlo y ajustar su posición
+            if (subMenuConsultarVisible)
+            {
+                SubMenuConsult.Visible = true;
+                SubMenuConsult.Location = new Point(btnConsultar.Location.X, yActual);
+                yActual += SubMenuConsult.Height + espacio;
+            }
+            else
+            {
+                SubMenuConsult.Visible = false;
+            }
+
+            // Consulta Scrap
+            btnConsultScrap.Location = new Point(btnConsultScrap.Location.X, yActual);
+            panel21.Location = new Point(btnConsultScrap.Left - 8, btnConsultScrap.Top);
+            yActual += btnConsultScrap.Height + espacio;
+
+            // Catálogos
+            btnCatalogos.Location = new Point(btnCatalogos.Location.X, yActual);
+            panel16.Location = new Point(btnCatalogos.Left - 8, btnCatalogos.Top);
+        }
+
+        private bool subMenuConsultScrapVisible = false;
+        private void ActualizarPosicionesConsultaScrap()
+        {
+            int espacio = 5;
+
+            // Posición inicial después del panel del botón Registrar
+            int yActual = btnConsultScrap.Location.Y + btnConsultScrap.Height + espacio;
+
+            // Si el submenú está visible, mostrarlo y ajustar su posición
+            if (subMenuConsultScrapVisible)
+            {
+                panelSubmenuScrap.Visible = true;
+                panelSubmenuScrap.Location = new Point(btnConsultScrap.Location.X, yActual);
+                yActual += panelSubmenuScrap.Height + espacio;
+            }
+            else
+            {
+                panelSubmenuScrap.Visible = false;
+            }
+
+            //Catalogos
+            btnCatalogos.Location = new Point(btnCatalogos.Location.X, yActual);
+            panel16.Location = new Point(btnCatalogos.Left - 8, btnCatalogos.Top);
+
+        }
+        private bool subMenuCatalogosVisible = false;
+        private void ActualizarPosicionesCatalogos()
+        {
+            int espacio = 5;
+
+            // Posición inicial después del panel del botón Registrar
+            int yActual = btnCatalogos.Location.Y + btnCatalogos.Height + espacio;
+
+            // Si el submenú está visible, mostrarlo y ajustar su posición
+            if (subMenuCatalogosVisible)
+            {
+                panelSubmenuCatalogs.Visible = true;
+                panelSubmenuCatalogs.Location = new Point(btnCatalogos.Location.X, yActual);
+                yActual += panelSubmenuCatalogs.Height + espacio;
+            }
+            else
+            {
+                panelSubmenuCatalogs.Visible = false;
+            }
+
+        }
+        #region boton_registrar
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            AbrirFormHoja(new FrmInsertar());
+            // Cambiar visibilidad del submenú
+            subMenuRegistrarVisible = !subMenuRegistrarVisible;
+            ActualizarPosicionesRegistrar();
         }
+        #endregion
 
+        #region boton_Graficas
+        
         private void btnGraficas_Click(object sender, EventArgs e)
         {
-            if (SubMenuConsult.Visible)
-            {
-                if (panelSubmenuGraphics.Visible)
-                {
-                    panelSubmenuGraphics.Visible = false;
-                    int x = panelSubmenuGraphics.Location.X;
-                    int y = panelSubmenuGraphics.Location.Y;
-                    btnConsultar.Location = panelSubmenuGraphics.Location;
-                    panel3.Location = new Point(4, y);
-                    SubMenuConsult.Location = new Point(x, y + 40);
 
-                    int a = SubMenuConsult.Location.X;
-                    int b = SubMenuConsult.Location.Y;
-                    btnCatalogos.Location = new Point(17, 563);
-                    panel16.Location = new Point(4, 563);
-                    panelSubmenuCatalogs.Location = new Point(44, 563);
-                }
-                else
-                {
-                    panelSubmenuGraphics.Visible = true;
-                    int newX = panelSubmenuGraphics.Location.X;
-                    int newY = panelSubmenuGraphics.Location.Y + panelSubmenuGraphics.Height;
-
-                    btnConsultar.Location = new Point(newX, newY);
-                    panel3.Location = new Point(4, newY);
-
-                    int newYe = btnConsultar.Location.X;
-                    int newXe = btnConsultar.Location.Y + btnConsultar.Height;
-
-                    SubMenuConsult.Location = new Point(newYe, newXe);
-
-                    int a = SubMenuConsult.Location.X;
-                    int b = SubMenuConsult.Location.Y;
-                    btnCatalogos.Location = new Point(a, b+310);
-                    panel16.Location = new Point(4, b + 310);
-                    panelSubmenuCatalogs.Location = new Point(a + 40, b + 320);
-                }
-            }
-            else {
-                if (panelSubmenuGraphics.Visible)
-                {
-                    panelSubmenuGraphics.Visible = false;
-                    int x = panelSubmenuGraphics.Location.X;
-                    int y = panelSubmenuGraphics.Location.Y;
-                    btnConsultar.Location = panelSubmenuGraphics.Location;
-                    panel3.Location = new Point(4, y);
-                    SubMenuConsult.Location = new Point(x, y + 40);
-
-                    int a = btnConsultar.Location.X;
-                    int b = btnConsultar.Location.Y;
-                    btnCatalogos.Location = new Point(a, b + 40);
-                    panel16.Location = new Point(4, b + 40);
-                    panelSubmenuCatalogs.Location = new Point(a + 40, b + 40);
-                }
-                else
-                {
-                    panelSubmenuGraphics.Visible = true;
-                    int newX = panelSubmenuGraphics.Location.X;
-                    int newY = panelSubmenuGraphics.Location.Y + panelSubmenuGraphics.Height;
-
-                    btnConsultar.Location = new Point(newX, newY);
-                    panel3.Location = new Point(4, newY);
-
-                    int newYe = btnConsultar.Location.X;
-                    int newXe = btnConsultar.Location.Y + btnConsultar.Height;
-
-                    SubMenuConsult.Location = new Point(newYe, newXe);
-
-                    int a = btnConsultar.Location.X;
-                    int b = btnConsultar.Location.Y;
-                    btnCatalogos.Location = new Point(a, b + 40);
-                    panel16.Location = new Point(4, b + 40);
-                    panelSubmenuCatalogs.Location = new Point(a + 40, b + 40);
-                }
-            }
-            
-
+            // Cambiar visibilidad del submenú
+            subMenuGraficasVisible = !subMenuGraficasVisible;
+            ActualizarPosicionesGraficas();
         }
+
+        #endregion
 
         private void btnGeneral_Click(object sender, EventArgs e)
         {
-            panelSubmenuGraphics.Visible = false;
-            btnConsultar.Visible = true;
-            int x = panelSubmenuGraphics.Location.X;
-            int y = panelSubmenuGraphics.Location.Y;
-            btnConsultar.Location = panelSubmenuGraphics.Location;
-            panel3.Location = new Point(4, y);
-            SubMenuConsult.Location = new Point(x + 40, y + 30);
-
             AbrirFormHoja(new Grafica1(btnGeneral.Text));
+
+            subMenuGraficasVisible = false;
+            ActualizarPosicionesGraficas();
         }
 
         private void btnSoldado_Click(object sender, EventArgs e)
         {
-            panelSubmenuGraphics.Visible = false;
-            btnConsultar.Visible = true;
-
-            int x = panelSubmenuGraphics.Location.X;
-            int y = panelSubmenuGraphics.Location.Y;
-            btnConsultar.Location = panelSubmenuGraphics.Location;
-            panel3.Location = new Point(4, y);
-            SubMenuConsult.Location = new Point(x + 40, y + 30);
-
             AbrirFormHoja(new Grafica1(btnSoldado.Text));
+
+            subMenuGraficasVisible = false;
+            ActualizarPosicionesGraficas();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            panelSubmenuGraphics.Visible = false;
-            btnConsultar.Visible = true;
+           AbrirFormHoja(new Grafica1(btnEOL.Text));
 
-            int x = panelSubmenuGraphics.Location.X;
-            int y = panelSubmenuGraphics.Location.Y;
-            btnConsultar.Location = panelSubmenuGraphics.Location;
-            panel3.Location = new Point(4, y);
-            SubMenuConsult.Location = new Point(x + 40, y + 30);
-
-            AbrirFormHoja(new Grafica1(btnEOL.Text));
+            subMenuGraficasVisible = false;
+            ActualizarPosicionesGraficas();
 
         }
 
         private void btnRegFallas_Click(object sender, EventArgs e)
         {
-            panelSubmenuCatalogs.Visible = false;
             AbrirFormHoja(new FrmRegistroFallas());
+
+            subMenuCatalogosVisible = false;
+            ActualizarPosicionesCatalogos();
+
         }
 
         private void btnCatalogos_Click(object sender, EventArgs e)
         {
-            if (panelSubmenuCatalogs.Visible)
-            {
-                
-                panelSubmenuCatalogs.Visible = false;
-                int x = btnConsultar.Location.X;
-                int y = btnConsultar.Location.Y;
-                btnCatalogos.Location = new Point(12, y+35);
-                panel16.Location = new Point(4, y+35);
-                panelSubmenuCatalogs.Location = new Point(x, y + 70);
-            }
-            else
-            {
-                panelSubmenuCatalogs.Visible = true;
-                int newX = SubMenuConsult.Location.X;
-                int newY = SubMenuConsult.Location.Y;
 
-                btnCatalogos.Location = new Point(12,newY);
-                panel16.Location = new Point(4, 240);
-
-                int newYe = btnCatalogos.Location.X;
-                int newXe = btnCatalogos.Location.Y + btnConsultar.Height;
-
-                panelSubmenuCatalogs.Location = new Point(newYe, newXe);
-            }
+            // Cambiar visibilidad del submenú
+            subMenuCatalogosVisible = !subMenuCatalogosVisible;
+            ActualizarPosicionesCatalogos();
         }
 
         private void btnRegisterUser_Click(object sender, EventArgs e)
         {
-            if (panelSubmenuCatalogs.Visible)
-            {
-                AbrirFormHoja(new FrmRegisterUsers());
-                panelSubmenuCatalogs.Visible = false;
-                int x = btnConsultar.Location.X;
-                int y = btnConsultar.Location.Y;
-                btnCatalogos.Location = new Point(12, y + 35);
-                panel16.Location = new Point(4, y + 35);
-                panelSubmenuCatalogs.Location = new Point(x + 40, y + 70);
-            }
-            else
-            {
-                panelSubmenuCatalogs.Visible = true;
-                int newX = SubMenuConsult.Location.X;
-                int newY = SubMenuConsult.Location.Y;
+            AbrirFormHoja(new FrmRegisterUsers());
 
-                btnCatalogos.Location = new Point(12, newY);
-                panel16.Location = new Point(4, 240);
+            subMenuCatalogosVisible = false;
+            ActualizarPosicionesCatalogos();
+        }
 
-                int newYe = btnCatalogos.Location.X;
-                int newXe = btnCatalogos.Location.Y + btnConsultar.Height;
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormHoja(new FrmAccess());
 
-                panelSubmenuCatalogs.Location = new Point(newYe + 40, newXe);
-            }
+            subMenuCatalogosVisible = false;
+            ActualizarPosicionesCatalogos();
+
+        }
+
+        private void btnDiagnostico_Click(object sender, EventArgs e)
+        {
+            AbrirFormHoja(new FrmInsertar());
+
+            subMenuRegistrarVisible = false;
+            ActualizarPosicionesRegistrar();
+        }
+
+        private void btnScrap_Click(object sender, EventArgs e)
+        {
+            AbrirFormHoja(new FrmScrapRegister());
+
+            subMenuRegistrarVisible = false;
+            ActualizarPosicionesRegistrar();
+        }
+
+        private void btnDateScrap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDateandhourScrap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLineScrap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPartNumberScrap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFailureScrap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOwnerScrap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConsultScrap_Click(object sender, EventArgs e)
+        {
+            // Cambiar visibilidad del submenú
+            subMenuConsultScrapVisible = !subMenuConsultScrapVisible;
+            ActualizarPosicionesConsultaScrap();
         }
     }
 }

@@ -152,7 +152,7 @@ namespace DiagnPcb
 
                 DateTime fechaDee = Convert.ToDateTime("02-05-2025");
 
-                if (estacionRecibida == "OP 30 - Soldier" & fecha_De < fechaDee)
+                if (estacionRecibida == "OP 30 - Solder" & fecha_De < fechaDee)
                 {
                     bdatos = "dse.";
 
@@ -198,7 +198,7 @@ namespace DiagnPcb
                                 condicion + " and dpt.shift between '" + fechaA + "' and '" + fechaB + "'" +
                                 " order by dp.DiagnPcbEnglish;";
                 }
-                else if (estacionRecibida == "OP 30 - Soldier" & fecha_De < fechaDee)
+                else if (estacionRecibida == "OP 30 - Solder" & fecha_De < fechaDee)
                 {
                     BD.query = "select dF.failureEnglish as 'Falla', dse.line as 'linea' " +
                                 " from diagn_pcb.DiagnSolEt dse " +
@@ -206,13 +206,13 @@ namespace DiagnPcb
                                 condicion + " and dse.dayregister between '" + fechaA + "' and '" + fechaB + "'" +
                                 " order by dF.failure;";
                 }
-                else if (estacionRecibida == "OP 30 - Soldier" & fecha_De >= fechaDee)
+                else if (estacionRecibida == "OP 30 - Solder" & fecha_De >= fechaDee)
                 {
                     BD.query = "Select dp.failureEnglish As 'Falla', dpt.line AS 'linea' " +
                                 "from diagn_pcb.diagnpcbtech dpt " +
                                 "inner join diagn_pcb.diagnfailure dp on dp.idFaile = dpt.idFaile " +
                                 condicion + " and dpt.shift between '" + fechaA + "' and '" + fechaB + "'" +
-                                " and dpt.opcode IN ('OP 30 - Soldier', '30') " +
+                                " and dpt.opcode IN ('OP 30 - Solder', '30') " +
                                 " order by dp.failureEnglish;";
                 }
                 else if (estacionRecibida == "OP 60 - EOL")

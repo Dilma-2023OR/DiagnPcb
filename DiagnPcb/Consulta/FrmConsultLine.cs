@@ -18,7 +18,7 @@ namespace DiagnPcb.Consulta
         string connect = "datasource=MLXGUMVWPAPP02;port=3306;username=diaguser;password=diaguser123;database=diagn_pcb;";
         DBConnection dB = new DBConnection();
         System.Data.DataTable dtResult = new System.Data.DataTable();
-
+        bool obtenerInfo = false;
         public FrmConsultLine()
         {
             InitializeComponent();
@@ -44,6 +44,9 @@ namespace DiagnPcb.Consulta
             checkedListBox1.Items.Add("SANCO");
             checkedListBox1.Items.Add("AMPLIFICADORES");
             checkedListBox1.Items.Add("FILTROS");
+            checkedListBox1.Items.Add("FCA");
+            checkedListBox1.Items.Add("AUDI");
+            checkedListBox1.Items.Add("VOLVO");
 
             // Ocultar el CheckedListBox al inicio
             checkedListBox1.Visible = false;
@@ -174,6 +177,19 @@ namespace DiagnPcb.Consulta
                     case 8:
                         condicion = " WHERE `Line` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "', '" + partesLineas[6].Trim() + "', '" + partesLineas[7].Trim() + "')";
                         break;
+                    case 9:
+                        condicion = " WHERE `Line` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "', '" + partesLineas[6].Trim() + "', '" + partesLineas[7].Trim() + "', '" + partesLineas[8].Trim() + "')";
+                        break;
+                    case 10:
+                        condicion = " WHERE `Line` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" 
+                                                        + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "', '" + partesLineas[6].Trim() + "', '" + partesLineas[7].Trim() + "', '" 
+                                                        + partesLineas[8].Trim() + "', '" + partesLineas[9].Trim() + "')";
+                        break;
+                    case 11:
+                        condicion = " WHERE `Line` IN ('" + partesLineas[0].Trim() + "', '" + partesLineas[1].Trim() + "', '" + partesLineas[2].Trim() + "', '" + partesLineas[3].Trim() + "', '" 
+                                                        + partesLineas[4].Trim() + "', '" + partesLineas[5].Trim() + "', '" + partesLineas[6].Trim() + "', '" + partesLineas[7].Trim() + "', '" 
+                                                        + partesLineas[8].Trim() + "', '" + partesLineas[9].Trim() + "', '" + partesLineas[10].Trim() + "')";
+                        break;
                 }
 
                 BD.query = "SELECT * FROM vista_diagnostico "
@@ -184,10 +200,6 @@ namespace DiagnPcb.Consulta
 
                 if (dbError != 0)
                 {
-                    //Control Adjunt
-
-                    //FeedBack
-
                     //MessageBox.Show(dBMsg);
                     Message message = new Message(dBMsg);
                     message.ShowDialog();
@@ -217,6 +229,7 @@ namespace DiagnPcb.Consulta
                 dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
 
                 dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                obtenerInfo = true;
 
             }
 
@@ -261,15 +274,22 @@ namespace DiagnPcb.Consulta
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            if (obtenerInfo == true)
+            {
+                limpiagrid();
+            }
+
             checkedtrue();
             obtenerStep();
             //obtenerStep();
             limpiar();
             btnExportar.Enabled = true;
 
-            tbLinea.Text = "Select options...";
+            tbLinea.Text = "Selection options...";
             checkedListBox1.Visible = false;
-            tbLinea.Enabled = false;
+            //tbLinea.Enabled = false;
+            obtenerInfo = true;
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -292,6 +312,21 @@ namespace DiagnPcb.Consulta
         {
             Console.WriteLine(e.RowIndex + "," + e.ColumnIndex);
             e.Cancel = true;
+        }
+
+        public void limpiagrid()
+        {
+            //limpiar();
+            dtResult.Clear();
+            if (dataGridView1.Rows.Count != 0)
+            {
+                dataGridView1.Controls.Clear();
+                dataGridView1.Columns.Clear();
+            }
+            dataGridView1.DataSource = null;
+            dataGridView1.Visible = true;
+            btnExportar.Enabled = false;
+            obtenerInfo = false;
         }
 
         private void button1_Click(object sender, EventArgs e)

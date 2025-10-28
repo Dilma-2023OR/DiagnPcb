@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="DiagnPcb.exe" version="4.0.0.9" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="DiagnPcb.exe" version="4.0.2.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="icons8-doble-flecha-96.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -115,26 +115,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccessPCB.dll" size="10240">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataAccessPCB.dll" size="11264">
       <assemblyIdentity name="DataAccessPCB" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GxUrIvDRX69VMB4ttIxEqjZ1ca6uSA4tQiuiZ4UV3rU=</dsig:DigestValue>
+        <dsig:DigestValue>pKJuc5JKuwfr/ePJE2YimgBGzzEd3RplCKlkQKG8+eg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DiagnPcb.exe" size="964520">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DiagnPcb.exe" size="1009064">
       <assemblyIdentity name="DiagnPcb" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>EJFELdGIVw3ACzE/vn3Xmnz9MwOAJlcrbuqC9W++lJk=</dsig:DigestValue>
+        <dsig:DigestValue>v+bu6SneKpnRTGZ1TZl92nZwkZuMjcJM015Jrk3ePcg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -146,7 +146,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aIen2J7h/NQPy3BzBHSYBiTS1KJq2zudeAaJ9IXbL8E=</dsig:DigestValue>
+        <dsig:DigestValue>0DD/Xnegy8MPT4dosAlu2pvUsny2zuDS0/sysug+Vnw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -271,14 +271,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PCBDomain.dll" size="7680">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PCBDomain.dll" size="8192">
       <assemblyIdentity name="PCBDomain" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GXiGKuWDUj5VfJOCKG0wOeKGuChwCrT0ArHldt+IsWQ=</dsig:DigestValue>
+        <dsig:DigestValue>Uxk7oEByk0L7AJt/iCfX0ArtcTPLjzjeJ9Ub/UHVvWM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

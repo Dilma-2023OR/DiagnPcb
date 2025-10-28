@@ -311,3 +311,6 @@ C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\Common.pdb
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\bin\Debug\DataAccessPCB.pdb
 C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.Registros.FrmRegisterUsers.resources
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.Registros.FrmAccess.resources
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.Registros.FrmScrapRegister.resources
+C:\Users\dilao\OneDrive - kochind.com\Documents\DIAGN PCB\DiagnPcb1\DiagnPcb\obj\Debug\DiagnPcb.Consulta_Scrap.FrmConsultaDateScrap.resources

@@ -16,5 +16,14 @@ namespace PCBDomain
         {
             return userDao.InsertUser(loginName, password, FirstName, Lastname, position, numberemployee, config);
         }
+
+        public bool UpdateAccess(int userId, string config)
+        {
+            return userDao.UpdateAccess(userId, config);
+        }
+
+        public bool QueryUser(string FirstName, string LastName) { 
+            return userDao.QueryUser(FirstName, LastName);
+        }
     }
 }

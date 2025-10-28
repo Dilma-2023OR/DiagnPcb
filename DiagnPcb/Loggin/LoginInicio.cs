@@ -122,7 +122,8 @@ namespace DiagnPcb.Loggin
                 {
                     UserModel user = new UserModel();
                     var validLogin = user.LoginUser(txtuser.Text, txtPass.Text);
-                    if (validLogin == true)
+                    string configuracion = Convert.ToString(UserCache.config);
+                    if (validLogin == true && configuracion != "Sin permisos")
                     {
                         Message message = new Message("Bienvenido " + UserCache.FirstName + ", " + UserCache.LastName + ", " + UserCache.config);
                         message.Show();
