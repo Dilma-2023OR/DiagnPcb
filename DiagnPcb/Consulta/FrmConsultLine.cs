@@ -44,9 +44,11 @@ namespace DiagnPcb.Consulta
             checkedListBox1.Items.Add("SANCO");
             checkedListBox1.Items.Add("AMPLIFICADORES");
             checkedListBox1.Items.Add("FILTROS");
-            checkedListBox1.Items.Add("FCA");
-            checkedListBox1.Items.Add("AUDI");
-            checkedListBox1.Items.Add("VOLVO");
+            checkedListBox1.Items.Add("KIA");
+            checkedListBox1.Items.Add("Ford Modulos");
+            checkedListBox1.Items.Add("Nissan");
+            checkedListBox1.Items.Add("Toyota");
+            checkedListBox1.Items.Add("AOC");
 
             // Ocultar el CheckedListBox al inicio
             checkedListBox1.Visible = false;

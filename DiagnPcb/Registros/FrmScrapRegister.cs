@@ -326,7 +326,10 @@ namespace DiagnPcb.Registros
             try
             {
                 // Ejemplo de agregar elementos desde una lista
-                List<string> opciones = new List<string> { "FORD A", "FORD B", "FORD C", "MARIS 1", "MARIS 2", "SANCO", "FILTROS", "AMPLIFICADORES", "FCA", "AUDI", "VOLVO" };
+                List<string> opciones = new List<string> { "FORD A", "FORD B", "FORD C", "MARIS 1"
+                    , "MARIS 2", "SANCO", "FILTROS", "AMPLIFICADORES"
+                    , "FCA", "AUDI", "VOLVO", "KIA"
+                    ,"Ford Modulos", "Nissan", "Toyota", "AOC"};
 
 
                 foreach (var item in opciones)
